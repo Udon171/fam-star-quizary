@@ -1,189 +1,101 @@
-Fam Star Quizary
-
-Overview
-
-Fam Star Quizary is an exciting, family-friendly online quiz game designed to bring up to four family members together for a fun, competitive trivia showdown! Powered by a question generator API, the game offers unlimited multi-category questions, an interactive game-show-style UI, and thrilling gameplay mechanics. With 4-8 rounds of questions, lifelines, and a dramatic head-to-head (H2H) finale, players compete to become the "King of the Fam" with a dazzling victory celebration.
-
-Features
-
-
-
-
-
-Multiplayer Fun: Supports up to 4 players, perfect for family game nights.
-
-
-
-Dynamic Questions: Integrates a question generator API for unlimited, multi-category trivia questions.
-
-
-
-Game Show Vibes: Vibrant UI with lights, sounds, and animations, including curtains that reveal the game at startup, a countdown timer, and celebratory effects.
-
-
-
-Lifelines: Two unique lifelines ("AI Clue" and "Ask Google") to help players in the H2H round, each usable only once.
-
-
-
-Head-to-Head Finale: The top two players face off in a high-stakes final round.
-
-
-
-Customizable Profiles: Players can set their names and choose profile icons during game setup.
-
-
-
-Engaging Audio-Visuals: Features moving lights, tension-building music, ticking timers, and sound effects (e.g., "dwurhhh" for wrong answers, "bad da dinggg" for correct ones).
-
-
-
-Victory Celebration: The winner is crowned "King of the Fam" with fireworks, poppers, and a shining golden trophy banner.
-
-Gameplay
-
-Setup
-
-
-
-
-
-Player Configuration: Add up to 4 players by entering their names and selecting a profile icon for each.
-
-
-
-Difficulty Select: Select from 3 difficulty's offering 1,2 or 3min round games as well as advance questions, once hard is completed once the last sick mode where 15sec on H2H round 25 normal rounds and crazy questions give the ultimate challenge.
-
-
-
-Game Start: Curtains on either side of the screen part to reveal the game stage, accompanied by dramatic music and lights.
-
-Rounds (4-8 Rounds)
-
-
-
-
-
-Each player answers one question per round, with a 60-second timer to buzz in and respond, timer can be adjusted to 2 or 3 mins interval depending on the difficulty selected.
-
-
-
-The UI displays questions in the centre, with player profile images and names behind their coloured buzzer areas.
-
-
-
-Lights move around the screen, and a ticking sound plays to build tension, culminating in a "fin bounce" sound as the timer counts down.
-
-
-
-Correct answers trigger green lights and a "bad da dinggg" sound; incorrect answers or time-outs trigger red lights and a "dwurhhh" sound.
-
-
-
-Players earn lifelines based on performance:
-
-
-
-
-
-1st Lifeline: Earned by correctly answering in round 3 or 7.
-
-
-
-2nd Lifeline: Earned by correctly answering in round 4 or 8.
-
-Head-to-Head (H2H) Finale
-
-
-
-
-
-The top two players (based on points from earlier rounds) advance to the H2H round.
-
-
-
-Non-qualifying players’ profiles fade out to highlight the finalists.
-
-
-
-Each player gets one question, with a 30-second timer to buzz in and another 30 seconds to answer.
-
-
-
-Players can use their lifelines:
-
-
-
-
-
-AI Clue: Provides a hint toward the correct answer.
-
-
-
-Ask Google: Displays a quick search result to aid the player.
-
-
-
-Each lifeline can only be used once and is activated via easy-to-use buttons.
-
-
-
-The first player to lose both lifelines and answer incorrectly loses the round.
-
-
-
-The winner is celebrated with fireworks, poppers, and a banner proclaiming "Winner Winner Chicken Dinner!" with their name and a shining "King of the Fam" golden trophy.
-
-Technical Details
-
-
-
-
-
-Question Generator API: Integrates with an external API to fetch unlimited multi-category trivia questions.
-
-
-
-UI Design: Built with a game-show aesthetic, featuring:
-
-
-
-
-
-Central question display.
-
-
-
-Player buzzers with colored backgrounds, profile images, and scrolling name text.
-
-
-
-Animated lights, timers, and sound effects for immersion.
-
-
-
-Future Development: Additional features (e.g., expanded categories, custom question sets, or mobile support) can be added in future iterations.
-
-How to Play
-
-
-
-
-
-Start the game and enter the names and profile icons for up to 4 players.
-
-
-
-Play through 4-8 rounds, answering trivia questions under a 60-second timer.
-
-
-
-Earn lifelines by performing well in specific rounds.
-
-
-
-The top two players enter the H2H finale, using strategy and lifelines to outsmart their opponent.
-
-
-
-Celebrate the "King of the Fam" with a spectacular victory animation!
+<p align="center">
+  <img src="../fam-star-quizary/assets/docs/trophy.webp" width="60" alt="King of the Fam Trophy" />
+</p>
+
+<h1 align="center">🎉 <span style="color:#FFD700;">Fam Star Quizary</span> 🎉</h1>
+
+<p align="center">
+  <b>The Ultimate Family Game Show Experience!</b>
+</p>
+
+<hr/>
+
+<h2>🌟 Overview</h2>
+
+<blockquote>
+<b>Fam Star Quizary</b> is an exciting, family-friendly online quiz game designed to bring up to <b>four family members</b> together for a fun, competitive trivia showdown!<br>
+<br>
+<div align="center" style="padding: 12px; border-radius: 16px; box-shadow: 0 0 16px 2px #222; margin: 16px 0; background: transparent;">
+    <img src="../fam-star-quizary/assets/docs/fam-star-quizary-banner.webp" width="400" style="border-radius: 12px; box-shadow: none; background: transparent;" alt="Fam Star Quizary Banner"/>
+</div>
+</div>
+</blockquote>
+
+<ul>
+  <li>🎮 <b>Multiplayer Fun:</b> Up to 4 players, perfect for family game nights.</li>
+  <li>🔄 <b>Unlimited Questions:</b> Powered by a trivia API for endless, multi-category fun.</li>
+  <li>🎤 <b>Game Show Vibes:</b> Curtains, countdowns, lights, and sound effects for a true showtime feel.</li>
+  <li>🛡️ <b>Lifelines:</b> Unique "AI Clue" and "Ask Google" lifelines for the H2H finale.</li>
+  <li>🏆 <b>Victory Celebration:</b> Fireworks, poppers, and a golden trophy for the winner!</li>
+</ul>
+
+<hr/>
+
+<h2>🕹️ Gameplay</h2>
+
+<details>
+<summary><b>Setup</b></summary>
+
+<ul>
+  <li>👤 <b>Player Configuration:</b> Add up to 4 players with custom names and profile icons.</li>
+  <li>⚙️ <b>Difficulty Select:</b> Choose from 3 levels (1, 2, or 3 min rounds). Unlock <b>Sick Mode</b> for the ultimate challenge!</li>
+  <li>🎬 <b>Game Start:</b> Curtains part, dramatic music plays, and the stage is revealed.</li>
+</ul>
+
+</details>
+
+<details>
+<summary><b>Rounds (4-8)</b></summary>
+
+<ul>
+  <li>⏱️ <b>Timed Questions:</b> Each player has 60 seconds (or more, based on difficulty) to buzz in and answer.</li>
+  <li>🖼️ <b>Immersive UI:</b> Central question display, player buzzers, profile images, and animated lights.</li>
+  <li>🔊 <b>Sound & Lights:</b> Ticking timers, tension music, and fun sound effects for right/wrong answers.</li>
+  <li>💡 <b>Lifelines:</b> Earned by correct answers in rounds 3/7 (1st) and 4/8 (2nd).</li>
+</ul>
+
+</details>
+
+<details>
+<summary><b>Head-to-Head (H2H) Finale</b></summary>
+
+<ul>
+  <li>🥇 <b>Top 2 Players:</b> Advance to the H2H round based on points.</li>
+  <li>🌑 <b>Spotlight:</b> Non-finalists fade out, finalists take center stage.</li>
+  <li>⏳ <b>Quickfire:</b> 30 seconds to buzz, 30 seconds to answer.</li>
+  <li>🛡️ <b>Lifelines:</b> Use "AI Clue" or "Ask Google" (once each).</li>
+  <li>❌ <b>Elimination:</b> First to lose both lifelines and answer incorrectly loses.</li>
+  <li>🎉 <b>Victory:</b> Winner gets fireworks, poppers, and the <b>King of the Fam</b> trophy!</li>
+</ul>
+
+</details>
+
+<hr/>
+
+<h2>⚙️ Technical Details</h2>
+
+<ul>
+  <li>🧠 <b>Question Generator API:</b> Unlimited, multi-category trivia questions.</li>
+  <li>🎨 <b>Game-Show UI:</b> Central question display, colored buzzers, profile images, and scrolling names.</li>
+  <li>💡 <b>Animated Lights & Timers:</b> For maximum immersion.</li>
+  <li>🔊 <b>Sound Effects:</b> "dwurhhh" for wrong, "bad da dinggg" for correct answers.</li>
+  <li>🚀 <b>Future Development:</b> More categories, custom sets, and mobile support coming soon!</li>
+</ul>
+
+<hr/>
+
+<h2>📝 How to Play</h2>
+
+<ol>
+  <li>Start the game and enter names/profile icons for up to 4 players.</li>
+  <li>Play through 4-8 rounds, answering trivia questions under a 60-second timer.</li>
+  <li>Earn lifelines by performing well in specific rounds.</li>
+  <li>The top two players enter the H2H finale, using strategy and lifelines to outsmart their opponent.</li>
+  <li>Celebrate the <b>King of the Fam</b> with a spectacular victory animation!</li>
+</ol>
+
+<p align="center">
+  <img src="../fam-star-quizary/assets/docs/poppers.gif" width="200" alt="Poppers" />
+  <img src="../fam-star-quizary/assets/docs/fireworks.gif" height="200" alt="Fireworks" style=";" />
+  <img src="../fam-star-quizary/assets/docs/poppers.gif" width="200" alt="Poppers" />
+</p>
