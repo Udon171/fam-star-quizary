@@ -134,3 +134,56 @@ The first player to lose both lifelines and answer incorrectly loses the round.
 
 The winner is celebrated with fireworks, poppers, and a banner proclaiming "Winner Winner Chicken Dinner!" with their name and a shining "King of the Fam" golden trophy.
 
+Technical Details
+
+
+
+
+
+Question Generator API: Integrates with an external API to fetch unlimited multi-category trivia questions.
+
+
+
+UI Design: Built with a game-show aesthetic, featuring:
+
+
+
+
+
+Central question display.
+
+
+
+Player buzzers with colored backgrounds, profile images, and scrolling name text.
+
+
+
+Animated lights, timers, and sound effects for immersion.
+
+
+
+Future Development: Additional features (e.g., expanded categories, custom question sets, or mobile support) can be added in future iterations.
+
+How to Play
+
+
+
+
+
+Start the game and enter the names and profile icons for up to 4 players.
+
+
+
+Play through 4-8 rounds, answering trivia questions under a 60-second timer.
+
+
+
+Earn lifelines by performing well in specific rounds.
+
+
+
+The top two players enter the H2H finale, using strategy and lifelines to outsmart their opponent.
+
+
+
+Celebrate the "King of the Fam" with a spectacular victory animation!
