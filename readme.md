@@ -75,7 +75,7 @@
 <h2>⚙️ Technical Details</h2>
 
 <ul>
-  <li>🧠 <b>Question Generator API:</b> Unlimited, multi-category trivia questions.</li>
+  <li>🧠 <b>Question Generator API: opentdb.com</b> Unlimited, multi-category trivia questions.</li>
   <li>🎨 <b>Game-Show UI:</b> Central question display, colored buzzers, profile images, and scrolling names.</li>
   <li>💡 <b>Animated Lights & Timers:</b> For maximum immersion.</li>
   <li>🔊 <b>Sound Effects:</b> "dwurhhh" for wrong, "bad da dinggg" for correct answers.</li>
@@ -99,3 +99,75 @@
   <img src="../fam-star-quizary/assets/docs/fireworks.gif" height="200" alt="Fireworks" style=";" />
   <img src="../fam-star-quizary/assets/docs/poppers.gif" width="200" alt="Poppers" />
 </p>
+
+
+User Goals
+User Stories
+Website Goals & Objectives
+Wireframes
+Design Choices
+Typography
+Colour Scheme
+Images
+Responsiveness
+Features
+  Existing Features
+    Header
+    Instructions
+    Feedback
+Index
+
+Footer
+Technologies Used
+  Languages
+  Libraries
+  Framework
+  Tools
+Testing
+  Bugs Fixed
+  Responsiveness Tests
+  Code Validation
+    HTML
+    CSS
+  User Story Testing
+  Feature Testing
+  Accessibility Testing
+  Lighthouse Testing
+  Browser Testing
+Deployment
+  To Deploy the Project
+  To Fork the Project
+  To Clone the Project
+Images of Website
+Credits
+
+
+## 📔 Project Diary
+
+### Entry 1: Project Kickoff
+
+- **Fam Star Quizary** concept and gameplay outlined.
+- Defined multiplayer features, lifelines, and game show atmosphere.
+- Technical stack and API (opentdb.com) selected.
+- Initial UI/UX ideas, including banners, icons, and animations.
+- Planned future improvements: more categories, custom sets, mobile support.
+
+---
+
+### Entry 2: API infomation & Colour
+
+- Url links are provided for the API question sets like: 50 genral knowledge questions on easy.
+- URL link 50 genral easy: https://opentdb.com/api.php?amount=50&category=9&difficulty=easy
+- URL link 50 genral medium: https://opentdb.com/api.php?amount=50&category=9&difficulty=medium
+- URL link 50 genral hard: https://opentdb.com/api.php?amount=50&category=9&difficulty=hard
+- URL link 50 anime easy: https://opentdb.com/api.php?amount=50&category=31&difficulty=easy
+- URL link 50 anime medium: https://opentdb.com/api.php?amount=50&category=31&difficulty=medium
+- URL link 50 anime hard: https://opentdb.com/api.php?amount=50&category=31&difficulty=hard
+- URL link 50 film easy: https://opentdb.com/api.php?amount=50&category=11&difficulty=easy
+- URL link 50 film medium: https://opentdb.com/api.php?amount=50&category=11&difficulty=medium
+- URL link 50 film hard: https://opentdb.com/api.php?amount=50&category=11&difficulty=hard
+
+- Colour pallete options below:
+- Style A: ![img](docs\Fam-star-quizary-pallete-A.png)
+- Style B: ![img](docs\Fam-star-quizary-pallete-B.png)
+
