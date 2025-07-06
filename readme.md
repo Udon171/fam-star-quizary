@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="../fam-star-quizary/assets/docs/trophy.webp" width="60" alt="King of the Fam Trophy" />
+  <img src="../fam-star-quizary/docs/trophy.webp" width="60" alt="King of the Fam Trophy" />
 </p>
 
 <h1 align="center">🎉 <span style="color:#FFD700;">Fam Star Quizary</span> 🎉</h1>
@@ -16,7 +16,7 @@
 <b>Fam Star Quizary</b> is an exciting, family-friendly online quiz game designed to bring up to <b>four family members</b> together for a fun, competitive trivia showdown!<br>
 <br>
 <div align="center" style="padding: 12px; border-radius: 16px; box-shadow: 0 0 16px 2px #222; margin: 16px 0; background: transparent;">
-    <img src="../fam-star-quizary/assets/docs/fam-star-quizary-banner.webp" width="400" style="border-radius: 12px; box-shadow: none; background: transparent;" alt="Fam Star Quizary Banner"/>
+    <img src="../fam-star-quizary/docs/fam-star-quizary-banner.webp" width="400" style="border-radius: 12px; box-shadow: none; background: transparent;" alt="Fam Star Quizary Banner"/>
 </div>
 </div>
 </blockquote>
@@ -95,52 +95,51 @@
 </ol>
 
 <p align="center">
-  <img src="../fam-star-quizary/assets/docs/poppers.gif" width="200" alt="Poppers" />
-  <img src="../fam-star-quizary/assets/docs/fireworks.gif" height="200" alt="Fireworks" style=";" />
-  <img src="../fam-star-quizary/assets/docs/poppers.gif" width="200" alt="Poppers" />
+  <img src="../fam-star-quizary/docs/poppers.gif" width="200" alt="Poppers" />
+  <img src="../fam-star-quizary/docs/fireworks.gif" height="200" alt="Fireworks" style=";" />
+  <img src="../fam-star-quizary/docs/poppers.gif" width="200" alt="Poppers" />
 </p>
 
+## Final Readme Structure
 
-User Goals
-User Stories
-Website Goals & Objectives
-Wireframes
-Design Choices
-Typography
-Colour Scheme
-Images
-Responsiveness
-Features
-  Existing Features
-    Header
-    Instructions
-    Feedback
-Index
-
-Footer
-Technologies Used
-  Languages
-  Libraries
-  Framework
-  Tools
-Testing
-  Bugs Fixed
-  Responsiveness Tests
-  Code Validation
-    HTML
-    CSS
-  User Story Testing
-  Feature Testing
-  Accessibility Testing
-  Lighthouse Testing
-  Browser Testing
-Deployment
-  To Deploy the Project
-  To Fork the Project
-  To Clone the Project
-Images of Website
-Credits
-
+- User Goals
+- User Stories
+- Website Goals & Objectives
+- Wireframes
+- Design Choices
+- Typography
+- Colour Scheme
+- Images
+- Responsiveness
+- Features
+  - Existing Features
+    - Header
+    - Instructions
+    - Feedback
+    - Index
+- Footer
+- Technologies Used
+  - Languages
+  - Libraries
+  - Framework
+  - Tools
+- Testing
+  - Bugs Fixed
+  - Responsiveness Tests
+  - Code Validation
+    - HTML
+    - CSS
+  - User Story Testing
+  - Feature Testing
+  - Accessibility Testing
+  - Lighthouse Testing
+  - Browser Testing
+- Deployment
+  - To Deploy the Project
+  - To Fork the Project
+  - To Clone the Project
+- Images of Website
+- Credits
 
 ## 📔 Project Diary
 
@@ -167,7 +166,17 @@ Credits
 - URL link 50 film medium: https://opentdb.com/api.php?amount=50&category=11&difficulty=medium
 - URL link 50 film hard: https://opentdb.com/api.php?amount=50&category=11&difficulty=hard
 
-- Colour pallete options below:
+#### Colour pallete options below:
+
 - Style A: ![img](docs\Fam-star-quizary-pallete-A.png)
 - Style B: ![img](docs\Fam-star-quizary-pallete-B.png)
 
+### Entry 3: Concept update
+
+- make amendment to concept to include use of mobile or tablets to be interactive interface for profiles on the game to play.
+- Simplifie the UI for easy setup and game feel for round progress (interactive transitions).
+- clear question and counter displayed as well as life line unloack progress illustrations, profile charters inscene.
+- curtains animation of camera movment transitions between rounds.
+- wireframe design using visio next.
+
+### Entry 4: Wireframe Design
