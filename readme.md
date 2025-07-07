@@ -140,6 +140,7 @@
   - To Clone the Project
 - Images of Website
 - Credits
+- Project Diary
 
 ## 📔 Project Diary
 
@@ -177,6 +178,13 @@
 - Simplifie the UI for easy setup and game feel for round progress (interactive transitions).
 - clear question and counter displayed as well as life line unloack progress illustrations, profile charters inscene.
 - curtains animation of camera movment transitions between rounds.
+- The "Fam Star Quizary" name is derived from younger genrations adubtaion of language to apeal to a younger demagrath as operators of the app.
 - wireframe design using visio next.
 
 ### Entry 4: Wireframe Design
+
+- First design concept wireframe:
+ [View Wireframe Concept (PDF)](docs/FamStarQ%20Concept.pdf)
+
+ - Menu for setup design concept wireframe:
+ [View Wireframe Concept (PDF)](docs/FamStarQ%20Concept.pdf)
