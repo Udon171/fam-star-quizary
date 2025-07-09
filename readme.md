@@ -187,4 +187,4 @@
  [View Wireframe Concept (PDF)](docs/FamStarQ%20Concept.pdf)
 
  - Menu for setup design concept wireframe:
- [View Wireframe Concept (PDF)](docs/FamStarQ%20Concept.pdf)
+ [View Wireframe Concept (PDF)](docs/FamStarQ%20Setup%20Game%20Concept.pdf)
