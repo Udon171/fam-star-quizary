@@ -174,7 +174,7 @@
 
 ### Entry 3: Concept update
 
-- make amendment to concept to include use of mobile or tablets to be interactive interface for profiles on the game to play.
+- make amendment to concept to include use of mobile or tablets to be interactive interface for profiles on the game to play. After further examination a python based server would be needed so this feature may be good for future projects.
 - Simplifie the UI for easy setup and game feel for round progress (interactive transitions).
 - clear question and counter displayed as well as life line unloack progress illustrations, profile charters inscene.
 - curtains animation of camera movment transitions between rounds.
@@ -188,3 +188,10 @@
 
  - Menu for setup design concept wireframe:
  [View Wireframe Concept (PDF)](docs/FamStarQ%20Setup%20Game%20Concept.pdf)
+
+
+### Entry 5: Pre Programing Path
+
+ - HTML, CSS, Javascript
+ - Goals to organsize build focus
+ - User Experiance
