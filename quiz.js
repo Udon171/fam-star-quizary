@@ -199,3 +199,10 @@ function endGame() {
     categorySelect.disabled = false;
     difficultySelect.disabled = false;
 }
+
+// Ensure categories are loaded on page load
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', populateCategoryOptions);
+} else {
+    populateCategoryOptions();
+}
