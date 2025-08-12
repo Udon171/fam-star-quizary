@@ -14,23 +14,38 @@
         </header>
         <section class="game-settings">
         <div class="settings-title">CHOOSE YOUR CHALLENGE</div>
-        <div id="difficulty" class="difficulty">
-        <div class="difficulty"><span class="icon">✔️</span>EASY</div>
-        <div class="difficulty"><span class="icon">✔️</span>MEDIUM</div>
-        <div class="difficulty"><span class="icon">✔️</span>HARD</div>
-        <div class="difficulty"><span class="icon">✔️</span>SICK MODE</div>
+            <div id="settings">
+            <div id="category-selection">
+            <label for="category">Category:</label>
+            <select id="category">
+            <option value="">Select A Category</option>
+            </select></div>
+        </div>
+
+        <div id="difficulty-selection">
+            <label for="difficulty">Difficulty:</label>
+            <select id="difficulty">
+            <option value="">Select A Level</option>
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+        </select>
+        </div>
+    
         <div class="rounds">
-            <title>Rounds</title>
-            <label for="rounds-select">Select Number of Rounds:</label>
-            <select id="rounds-select" class="rounds-select">
-                <option value="1">1 Round</option>
-                <option value="2">2 Rounds</option>
-                <option value="3">3 Rounds</option>
-            </select>
-        <button class="sga-btn" onclick="window.location.href='quiz.html'">START GAME!</button>
+            <label for="rounds-slider">Select Number of Rounds:</label>
+            <input type="range" id="rounds-slider" class="rounds-slider" min="6" max="12" value="6" orient="vertical" >
+            <span id="rounds-value">6</span> Rounds
+            <script>
+            document.getElementById('rounds-slider').addEventListener('input', function() {
+                document.getElementById('rounds-value').textContent = this.value;
+            });
+            </script>
+        <button class="sga-btn">START GAME!</button>
         </div>
     </section>
         
     </main>
+    <script src="game-settings.js"></script>
 </body>
 </html>

@@ -39,19 +39,33 @@ async function fetchCategories() {
 
 // Populate the category select options
 async function populateCategoryOptions() {
+    // Only run if the selects exist on this page
+    if (!categorySelect || !difficultySelect) return;
     const categories = await fetchCategories();
     categories.forEach(category => {
-    const option = document.createElement('option');
-    option.value = category.id;
-    option.textContent = category.name;
-    categorySelect.appendChild(option);
+        const option = document.createElement('option');
+        option.value = category.id;
+        option.textContent = category.name;
+        categorySelect.appendChild(option);
     });
+}
+
+// Ensure categories are loaded on page load
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', populateCategoryOptions);
+} else {
+    populateCategoryOptions();
 }
 
 // Fetch questions from the Open Trivia Database API
 async function fetchQuestions() {
-    const categoryId = categorySelect.value;
-    const difficulty = difficultySelect.value;
+    // Read from localStorage if available
+    let categoryId = localStorage.getItem('quiz_category') || categorySelect?.value;
+    let difficulty = localStorage.getItem('quiz_difficulty') || difficultySelect?.value;
+    let rounds = parseInt(localStorage.getItem('quiz_rounds'), 10);
+    if (!isNaN(rounds) && rounds > 0) {
+        totalQuestions = rounds;
+    }
     const response = await fetch(`https://opentdb.com/api.php?amount=${totalQuestions}&type=multiple${categoryId ? `&category=${categoryId}` : ''}${difficulty ? `&difficulty=${difficulty}` : ''}`);
     const data = await response.json();
     return data.results;
@@ -200,9 +214,35 @@ function endGame() {
     difficultySelect.disabled = false;
 }
 
-// Ensure categories are loaded on page load
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', populateCategoryOptions);
-} else {
-    populateCategoryOptions();
+// Start the quiz on page load
+window.addEventListener('DOMContentLoaded', () => {
+    // Only clear after reading, so quiz uses the settings
+    setTimeout(() => {
+        localStorage.removeItem('quiz_category');
+        localStorage.removeItem('quiz_difficulty');
+        localStorage.removeItem('quiz_rounds');
+    }, 1000);
+    // Start the quiz
+    questionContainer.style.display = 'block';
+    controls.style.display = 'block';
+    gameOverContainer.style.display = 'none';
+    questionCount = 0;
+    score = 0;
+    previousQuestions = [];
+    isGameOver = false;
+    fetchAndDisplayQuestion();
+});
+
+// Next question button
+nextQuestionButton.addEventListener('click', () => {
+    fetchAndDisplayQuestion();
+});
+
+// Play again button
+if (playAgainButton) {
+    playAgainButton.addEventListener('click', () => {
+        window.location.reload();
+    });
 }
+
+

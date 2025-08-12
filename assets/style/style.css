@@ -15,10 +15,13 @@
 
 body {
     background-color: #f5f5f5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 #quiz-container {
@@ -28,17 +31,33 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     padding: 30px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 350px;
 }
 
 h1 {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+    margin-top: 0;
     color: #333;
     font-weight: 700;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
 }
 
 #settings {
     margin-bottom: 20px;
+}
+
+.rounds-slider {
+    writing-mode: bt-lr;
+    -webkit-appearance: slider-vertical;
+    width: 30px;
+    height: 150px;
 }
 
 #category-selection,
@@ -175,9 +194,11 @@ h1 {
 }
 
 #controls {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 30px;
     display: none;
 }
 
