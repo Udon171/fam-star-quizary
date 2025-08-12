@@ -77,3 +77,125 @@ function displayQuestion(question) {
     answerFeedback.style.display = 'none';
     isAnswerSelected = false;
 }
+
+// Decode HTML entities
+function decodeHtml(html) {
+    const txt = document.createElement('textarea');
+    txt.innerHTML = html;
+    return txt.value;
+}
+
+// Handle answer selection
+function selectAnswer(event) {
+    if (isGameOver || isAnswerSelected) return;
+
+    const selectedAnswer = event.target.textContent;
+    const isCorrect = selectedAnswer === decodeHtml(currentQuestion.correct_answer);
+
+    if (isCorrect) {
+    score++;
+    event.target.classList.add('correct');
+    answerFeedback.textContent = 'Correct Answer!';
+    answerFeedback.classList.remove('incorrect');
+    answerFeedback.classList.add('correct');
+    } else {
+    event.target.classList.add('incorrect');
+    answerFeedback.textContent = `Wrong Answer! The correct answer is: ${decodeHtml(currentQuestion.correct_answer)}`;
+    answerFeedback.classList.remove('correct');
+    answerFeedback.classList.add('incorrect');
+    }
+
+    scoreElement.textContent = `Score: ${score}`;
+    previousQuestions.push(currentQuestion);
+    questionCount++;
+    updateProgressBar();
+    clearTimer();
+    answerFeedback.style.display = 'block';
+    nextQuestionButton.style.display = 'block';
+    isAnswerSelected = true;
+
+  // Disable answer selection after an answer is selected or the timer runs out
+    const answerElements = answersElement.getElementsByClassName('answer');
+    Array.from(answerElements).forEach(answerElement => {
+    answerElement.removeEventListener('click', selectAnswer);
+    answerElement.classList.add('disabled');
+    });
+}
+
+// Fetch and display a new question
+async function fetchAndDisplayQuestion() {
+    if (questionCount === totalQuestions) {
+    endGame();
+    return;
+    }
+
+    let question;
+    do {
+    if (questions.length === 0) {
+        questions = await fetchQuestions();
+    }
+    question = questions.shift();
+    } while (previousQuestions.includes(question));
+
+    displayQuestion(question);
+    startTimer();
+}
+
+// Start the timer
+function startTimer() {
+    timerValue = 30;
+    timerElement.textContent = timerValue;
+    timerBar.style.width = '100%';
+    timer = setInterval(() => {
+    timerValue--;
+    timerElement.textContent = timerValue;
+    timerBar.style.width = `${(timerValue / 30) * 100}%`;
+    if (timerValue === 0) {
+        clearTimer();
+        answerFeedback.textContent = 'Time Up - No More Time Remaining';
+        answerFeedback.classList.remove('correct');
+        answerFeedback.classList.remove('incorrect');
+        answerFeedback.style.display = 'block';
+        nextQuestionButton.style.display = 'block';
+
+      // Display the correct answer when the timer runs out
+        const correctAnswerElement = document.createElement('div');
+        correctAnswerElement.textContent = `Correct Answer: ${decodeHtml(currentQuestion.correct_answer)}`;
+        correctAnswerElement.classList.add('correct');
+        answersElement.appendChild(correctAnswerElement);
+
+      // Disable answer selection after the timer runs out
+        const answerElements = answersElement.getElementsByClassName('answer');
+        Array.from(answerElements).forEach(answerElement => {
+        answerElement.removeEventListener('click', selectAnswer);
+        answerElement.classList.add('disabled');
+        });
+
+      // Increment the question count
+        questionCount++;
+        previousQuestions.push(currentQuestion);
+    }
+    }, 1000);
+}
+
+// Clear the timer
+function clearTimer() {
+    clearInterval(timer);
+}
+
+// Update the progress bar
+function updateProgressBar() {
+  const progressValue = (questionCount / totalQuestions) * 100;
+    progressBar.style.width = `${progressValue}%`;
+}
+
+// End the game
+function endGame() {
+    isGameOver = true;
+    questionContainer.style.display = 'none';
+    controls.style.display = 'none';
+    gameOverContainer.style.display = 'block';
+    finalScoreElement.textContent = `Your final score is: ${score}`;
+    categorySelect.disabled = false;
+    difficultySelect.disabled = false;
+}
