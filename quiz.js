@@ -1,0 +1,31 @@
+// quiz.js
+const quizContainer = document.getElementById('quiz-container');
+const questionNumberElement = document.getElementById('question-number');
+const questionElement = document.getElementById('question');
+const answersElement = document.getElementById('answers');
+const scoreElement = document.getElementById('score');
+const endGameButton = document.getElementById('end-game');
+const timerElement = document.getElementById('timer-value');
+const timerBar = document.getElementById('timer-progress');
+const progressBar = document.getElementById('progress-value');
+const categorySelect = document.getElementById('category');
+const difficultySelect = document.getElementById('difficulty');
+const questionContainer = document.getElementById('question-container');
+const controls = document.getElementById('controls');
+const answerFeedback = document.getElementById('answer-feedback');
+const nextQuestionButton = document.getElementById('next-question');
+const gameOverContainer = document.getElementById('game-over');
+const finalScoreElement = document.getElementById('final-score');
+const playAgainButton = document.getElementById('play-again');
+const quitButton = document.getElementById('quit');
+
+let currentQuestion = {};
+let score = 0;
+let isGameOver = false;
+let previousQuestions = [];
+let timer;
+let timerValue = 30;
+let questionCount = 0;
+let totalQuestions = 10;
+let questions = [];
+let isAnswerSelected = false;

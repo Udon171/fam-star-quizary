@@ -2,148 +2,260 @@
     This stylesheet styles the Fam Star Quizary game page with a vibrant, family-friendly theme.
     It includes custom fonts, animations, and responsive design for an engaging user experience.
 */
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat:wght@700&display=swap');
+
+/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
-    margin: 0;
-    background: #000000;
-    font-family: 'Montserrat', Arial, sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     min-height: 100vh;
-    overflow-x: hidden;
 }
 
-.how-to-play {
-    text-align: center;
-    font-size: 1.5rem;
-    color: #fffbe6;
-    margin: 1.5em 0;
-    font-weight: bold;
-    font-family: 'Bangers', cursive;
+#quiz-container {
+    max-width: 600px;
+    width: 90%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
 }
 
-.header {
-    font-family: 'Bangers', cursive;
-    font-size: 3.2rem;
-    letter-spacing: 2px;
+h1 {
     text-align: center;
-    margin-bottom: 0.2em;
-    font-weight: bold;
-}
-.header .fam {
-    color: #d7263d;
-    text-shadow: 0 2px 12px #d7263d88, 0 0 8px #fff;
-}
-.header .star {
-    color: #d7263d;
-    text-shadow: 0 2px 12px #ffd70088, 0 0 8px #fff;
-}
-.header .quizary {
-    color: #1b6ca8;
-    text-shadow: 0 2px 12px #1b6ca888, 0 0 8px #fff;
-}
-    
-.subtitle {
-    text-align: center;
-    font-size: 1.3rem;
-    color: #fffbe6;
-    margin-bottom: 1.5em;
-    font-family: 'Montserrat', Arial, sans-serif;
-    font-weight: 600;
-}
-.features {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 18px 24px;
-    justify-items: center;
-    margin: 0;
-}
-.feature {
-    background: #39ff14;
-    color: #000000;
-    border-radius: 10px;
-    padding: 16px 10px 16px 18px;
-    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #333;
     font-weight: 700;
-    box-shadow: none;
-    min-width: 0;
-    text-align: left;
-    border: none;
+}
+
+#settings {
+    margin-bottom: 20px;
+}
+
+#category-selection,
+#difficulty-selection {
+    margin-bottom: 10px;
+}
+
+#category-selection label,
+#difficulty-selection label {
+    font-weight: 500;
+    margin-right: 10px;
+    color: #555;
+}
+
+#category-selection select,
+#difficulty-selection select {
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    background-color: #fff;
+    color: #333;
+}
+
+#question-container {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: none;
+}
+
+#question-number {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #007bff; /* Changed question number color */
+}
+
+#question {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #007bff; /* Changed question color */
+}
+
+#timer-container {
     display: flex;
     align-items: center;
-    gap: 10px;
-    font-family: Arial, sans-serif;
+    margin-bottom: 20px;
 }
-.cta-btn {
-    display: block;
-    margin: 0 auto 1.5em auto;
-    background: #22cc0a;
-    color: #222;
-    font-family: Arial, sans-serif;
-    font-size: 2rem;
-    padding: 18px 48px;
-    border: none;
-    border-radius: 32px;
-    box-shadow: 0 4px 24px #39ff1488,;
+
+#timer {
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+    margin-right: 10px;
+}
+
+#timer-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#timer-progress {
+    height: 100%;
+    background-color: #007bff;
+    transition: width 0.3s ease;
+}
+
+.answer {
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    padding: 10px 15px;
+    margin-bottom: 10px;
     cursor: pointer;
-    transition: transform 0.1s, box-shadow 0.1s,
-    text-shadow: 0 2px 8px #fff, 0 0 8px #ffd700;
-    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
-.cta-btn:hover {
-    transform: scale(1.08);
-    box-shadow: 0 8px 32px #22cc0acc, 0 0 0 6px #ffd70088;
-    background: #169a07;
-}
-.cta-btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 32px #39ff14cc, 0 0 0 6px #ffd70088;
-    background: linear-gradient(90deg, #bfff00 60%, #39ff14 100%);
-}
-.game-features {
-    border: 2px solid #1b6ca8;
-    border-radius: 18px;
-    padding: 32px 18px 24px 18px;
-    margin: 2em 0 2.5em 0;
-    background: rgba(27,108,168,0.07);
-    box-shadow: 0 2px 16px #1b6ca822;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-}
-.features-title {
-    color: #ffd700;
-    font-family: 'Montserrat', Arial, sans-serif;
-    font-size: 2rem;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 18px;
-    letter-spacing: 1px;
-    text-shadow: 0 2px 8px #1b6ca8, 0 0 8px #d7263d;
-}
-footer {
-    text-align: center;
-    color: #fffbe6;
-    font-size: 1rem;
-    margin: 32px 0 8px 0;
-    letter-spacing: 1px;
-    opacity: 0.7;
-    }
 
+.answer:hover {
+    background-color: #d0d0d0;
+}
 
-@media (max-width: 800px) {
-    .container { margin-top: 60px; padding: 40px 8px; }
-    .header { font-size: 2.1rem; }
-    .features { grid-template-columns: 1fr; gap: 10px; }
-    .feature { min-width: 120px; font-size: 1rem; }
-    .cta-btn { font-size: 1.2rem; padding: 12px 24px; }
+.correct {
+    background-color: #d4edda;
+    color: #155724;
+    font-weight: 500;
+}
+
+.incorrect {
+    background-color: #f8d7da;
+    color: #721c24;
+    font-weight: 500;
+}
+
+#answer-feedback {
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 4px;
+    display: none;
+}
+
+#answer-feedback.correct {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+#answer-feedback.incorrect {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+#next-question {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    display: none;
+}
+
+#next-question:hover {
+    background-color: #0056b3;
+}
+
+#controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    display: none;
+}
+
+#score {
+    font-size: 16px;
+    font-weight: 700;
+    color: #007bff; /* Changed score color */
+}
+
+#progress-bar {
+    width: 200px;
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#progress-value {
+    height: 100%;
+    background-color: #007bff;
+    transition: width 0.3s ease;
+}
+
+#end-game {
+    background-color: #007bff; /* Same color as next button */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#end-game:hover {
+    background-color: #0056b3;
+}
+
+#game-over {
+    text-align: center;
+    margin-top: 30px;
+    display: none;
+}
+
+#game-over h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+#final-score {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+#play-again,
+#quit {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0 10px;
+}
+
+#play-again:hover,
+#quit:hover {
+    background-color: #0056b3;
+}
+
+.disabled {
+    background-color: #cccccc;
+    color: #666666;
+    cursor: not-allowed;
 }
