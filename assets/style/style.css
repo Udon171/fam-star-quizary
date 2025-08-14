@@ -1,6 +1,113 @@
-    This stylesheet styles the Fam Star Quizary game page with a vibrant, family-friendly theme.
-    It includes custom fonts, animations, and responsive design for an engaging user experience.
-*/
+/* Neon header styles for index.html */
+.neon-title {
+    text-align: center;
+    font-size: 3.5rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    margin-bottom: 18px;
+    margin-top: 0;
+    letter-spacing: 2px;
+    text-shadow: 0 0 20px #fff, 0 0 40px #ff3c3c, 0 0 60px #00bfff;
+}
+.fam-star {
+    color: #ff3c3c;
+    text-shadow: 0 0 10px #ff3c3c, 0 0 20px #fff;
+}
+.quizary {
+    color: #00bfff;
+    text-shadow: 0 0 10px #00bfff, 0 0 20px #fff;
+}
+.subtitle {
+    text-align: center;
+    font-size: 1.25rem;
+    color: #fff;
+    margin-bottom: 32px;
+    text-shadow: 0 0 8px #000;
+}
+.start-btn {
+    display: block;
+    margin: 0 auto 12px auto;
+    background: #2fff7f;
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 32px;
+    padding: 16px 40px;
+    box-shadow: 0 4px 24px rgba(0,255,127,0.2);
+    cursor: pointer;
+    transition: background 0.2s;
+    text-align: center;
+    text-decoration: none;
+}
+.start-btn:hover {
+    background: #1ed760;
+}
+.how-to-play-link {
+    text-align: center;
+    margin-bottom: 24px;
+}
+.how-to-play-link a {
+    color: #ffe600;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 1px;
+    text-shadow: 0 0 6px #000;
+}
+.how-to-play-link a:hover {
+    text-decoration: underline;
+}
+.feature-box {
+    margin: 0 auto;
+    margin-top: 18px;
+    background: rgba(0,0,0,0.5);
+    border-radius: 16px;
+    box-shadow: 0 0 12px #00bfff;
+    padding: 32px 24px;
+    max-width: 700px;
+    border: 1.5px solid #00bfff;
+}
+.features-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 900;
+    color: #ffe600;
+    margin-bottom: 18px;
+    letter-spacing: 2px;
+    text-shadow: 0 0 8px #000, 0 0 12px #ffe600;
+}
+.features-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 18px 0;
+}
+.feature {
+    flex: 1 1 220px;
+    font-size: 1.15rem;
+    color: #fff;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+    text-shadow: 0 0 6px #000;
+}
+.icon {
+    color: #2fff7f;
+    font-size: 1.25rem;
+    margin-right: 6px;
+    text-shadow: 0 0 6px #2fff7f;
+}
+footer {
+    text-align: center;
+    color: #fff;
+    font-size: 1rem;
+    margin-top: 32px;
+    text-shadow: 0 0 8px #000;
+}
+
 /* Video background for index.html */
 #bg-video {
     position: fixed;
