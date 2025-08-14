@@ -1,7 +1,18 @@
-/* Fam Star Quizary Stylesheet
     This stylesheet styles the Fam Star Quizary game page with a vibrant, family-friendly theme.
     It includes custom fonts, animations, and responsive design for an engaging user experience.
 */
+/* Video background for index.html */
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.5;
+    pointer-events: none;
+}
 
 /* styles.css */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
