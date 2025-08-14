@@ -1,3 +1,138 @@
+/* Game Settings Page Styles */
+.settings-header {
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    margin-bottom: 18px;
+    margin-top: 0;
+    letter-spacing: 2px;
+    color: #ff3c3c;
+    text-shadow: 0 0 20px #fff, 0 0 40px #ff3c3c;
+}
+.settings-header .star {
+    color: #ffe600;
+    text-shadow: 0 0 10px #ffe600, 0 0 20px #fff;
+}
+.challenge-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 900;
+    color: #ffe600;
+    margin-bottom: 18px;
+    letter-spacing: 2px;
+    text-shadow: 0 0 8px #000, 0 0 12px #ffe600;
+}
+.settings-box {
+    margin: 0 auto;
+    margin-top: 18px;
+    background: rgba(0,0,0,0.5);
+    border-radius: 16px;
+    box-shadow: 0 0 12px #00bfff;
+    padding: 32px 24px;
+    max-width: 700px;
+    border: 1.5px solid #00bfff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.difficulty-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 24px;
+    width: 100%;
+}
+.difficulty-card {
+    background: rgba(10,20,40,0.8);
+    border: 2px solid #00bfff;
+    border-radius: 12px;
+    box-shadow: 0 0 8px #00bfff;
+    padding: 24px 18px 16px 18px;
+    flex: 1 1 120px;
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.1rem;
+    position: relative;
+    transition: border 0.2s, box-shadow 0.2s, background 0.2s;
+}
+.difficulty-card.selected {
+    border: 2.5px solid #ffe600;
+    background: #ffe600;
+    color: #222;
+    box-shadow: 0 0 16px #ffe600;
+}
+.difficulty-card .icon {
+    font-size: 2rem;
+    margin-bottom: 8px;
+    display: block;
+}
+.difficulty-card.selected .icon {
+    color: #ff3c3c;
+    text-shadow: 0 0 8px #ff3c3c;
+}
+.diff-label {
+    font-size: 1.1rem;
+    font-weight: 900;
+    margin-bottom: 4px;
+    letter-spacing: 1px;
+}
+.diff-time {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+.difficulty-card input[type="radio"] {
+    margin-top: 8px;
+    accent-color: #ffe600;
+    transform: scale(1.2);
+}
+.rounds-slider-box {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 24px;
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: 700;
+}
+.rounds-slider {
+    width: 80%;
+    margin: 12px auto 0 auto;
+    accent-color: #00bfff;
+}
+.sga-btn {
+    display: block;
+    margin: 0 auto;
+    background: #2fff7f;
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 900;
+    border: none;
+    border-radius: 32px;
+    padding: 16px 40px;
+    box-shadow: 0 4px 24px rgba(0,255,127,0.2);
+    cursor: pointer;
+    transition: background 0.2s;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+.sga-btn:hover {
+    background: #1ed760;
+}
+/* Video background for game-settings.html */
+#bg-video-settings {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.5;
+    pointer-events: none;
+}
 /* Neon header styles for index.html */
 .neon-title {
     text-align: center;

@@ -8,43 +8,67 @@
 </head>
 
 <body>
+    <video id="bg-video-settings" autoplay muted loop>
+        <source src="assets/video/Particle Basics.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
     <main>
-        <header class="header">
+        <header class="settings-header">
             <span class="fam">GAME</span> <span class="star">SETTINGS</span>
         </header>
-        <section class="game-settings">
-        <div class="settings-title">CHOOSE YOUR CHALLENGE</div>
-            <div id="settings">
-            <div id="category-selection">
-            <label for="category">Category:</label>
-            <select id="category">
-            <option value="">Select A Category</option>
-            </select></div>
-        </div>
-
-        <div id="difficulty-selection">
-            <label for="difficulty">Difficulty:</label>
-            <select id="difficulty">
-            <option value="">Select A Level</option>
-            <option value="easy">Easy</option>
-            <option value="medium">Medium</option>
-            <option value="hard">Hard</option>
-        </select>
-        </div>
-    
-        <div class="rounds">
-            <label for="rounds-slider">Select Number of Rounds:</label>
-            <input type="range" id="rounds-slider" class="rounds-slider" min="6" max="12" value="6" orient="vertical" >
-            <span id="rounds-value">6</span> Rounds
-            <script>
-            document.getElementById('rounds-slider').addEventListener('input', function() {
-                document.getElementById('rounds-value').textContent = this.value;
+        <section class="settings-box">
+            <div class="challenge-title">CHOOSE YOUR CHALLENGE</div>
+            <div class="difficulty-cards">
+                <div class="difficulty-card" data-difficulty="easy">
+                    <div class="icon">&#128737;</div>
+                    <div class="diff-label">EASY</div>
+                    <div class="diff-time">60s</div>
+                    <input type="radio" name="difficulty" value="easy" id="diff-easy">
+                </div>
+                <div class="difficulty-card" data-difficulty="medium">
+                    <div class="icon">&#128293;</div>
+                    <div class="diff-label">MEDIUM</div>
+                    <div class="diff-time">45s</div>
+                    <input type="radio" name="difficulty" value="medium" id="diff-medium">
+                </div>
+                <div class="difficulty-card" data-difficulty="hard">
+                    <div class="icon">&#128142;</div>
+                    <div class="diff-label">HARD</div>
+                    <div class="diff-time">30s</div>
+                    <input type="radio" name="difficulty" value="hard" id="diff-hard">
+                </div>
+                <div class="difficulty-card" data-difficulty="sick">
+                    <div class="icon">&#128128;</div>
+                    <div class="diff-label">SICK MODE</div>
+                    <div class="diff-time">15s</div>
+                    <input type="radio" name="difficulty" value="sick" id="diff-sick">
+                </div>
+            </div>
+            <div class="rounds-slider-box">
+                <label for="rounds-slider">Number of Rounds: <span id="rounds-value">6</span></label>
+                <input type="range" id="rounds-slider" class="rounds-slider" min="5" max="12" value="5">
+            </div>
+            <button class="sga-btn">START GAME!</button>
+        </section>
+        <script>
+        // Difficulty selection logic (preserves previous select behavior)
+        const radios = document.querySelectorAll('.difficulty-card input[type="radio"]');
+        radios.forEach(radio => {
+            radio.addEventListener('change', function() {
+                radios.forEach(r => r.parentElement.classList.remove('selected'));
+                if (this.checked) {
+                    this.parentElement.classList.add('selected');
+                }
             });
-            </script>
-        <button class="sga-btn">START GAME!</button>
-        </div>
-    </section>
-        
+        });
+        // Default select medium
+        document.getElementById('diff-medium').checked = true;
+        document.getElementById('diff-medium').parentElement.classList.add('selected');
+        // Rounds slider logic
+        document.getElementById('rounds-slider').addEventListener('input', function() {
+            document.getElementById('rounds-value').textContent = this.value;
+        });
+        </script>
     </main>
     <script src="game-settings.js"></script>
 </body>
