@@ -27,8 +27,9 @@ if (document.readyState === 'loading') {
 
 // Save settings to localStorage and go to quiz page
 function startGame() {
-    const category = document.getElementById('category').value;
-    const difficulty = document.getElementById('difficulty').value;
+    const category = document.getElementById('category') ? document.getElementById('category').value : '';
+    const difficultyRadio = document.querySelector('.difficulty-card input[type="radio"]:checked');
+    const difficulty = difficultyRadio ? difficultyRadio.value : '';
     const rounds = document.getElementById('rounds-slider').value;
     localStorage.setItem('quiz_category', category);
     localStorage.setItem('quiz_difficulty', difficulty);
