@@ -97,12 +97,11 @@ function selectAnswer(event) {
     const selectedAnswer = event.target.textContent;
     const isCorrect = selectedAnswer === decodeHtml(currentQuestion.correct_answer);
     if (isCorrect) {
-        score++;
+        score += 10;
         event.target.classList.add('correct');
     } else {
         event.target.classList.add('incorrect');
     }
-    scoreDisplay.textContent = score;
     playerScoreElement.textContent = score;
     previousQuestions.push(currentQuestion);
     questionCount++;
@@ -142,8 +141,10 @@ async function fetchAndDisplayQuestion() {
 // Start the timer (auto-advance after timeout)
 function startTimer() {
     timerValue = 30;
+    updateTimerBar();
     timer = setInterval(() => {
         timerValue--;
+        updateTimerBar();
         if (timerValue === 0) {
             clearTimer();
             // Show correct answer
@@ -160,6 +161,13 @@ function startTimer() {
             setTimeout(fetchAndDisplayQuestion, 1200);
         }
     }, 1000);
+}
+
+function updateTimerBar() {
+    const timerBar = document.getElementById('timer-progress');
+    if (timerBar) {
+        timerBar.style.width = ((timerValue / 30) * 100) + '%';
+    }
 }
 
 // Clear the timer
@@ -188,6 +196,7 @@ window.addEventListener('DOMContentLoaded', () => {
     playerNameElement.textContent = 'Player';
     playerScoreElement.textContent = score;
     fetchAndDisplayQuestion();
+    updateTimerBar();
 });
 
 // No next question or play again button in new layout
