@@ -60,6 +60,7 @@ async function fetchQuestions() {
 
 // Display the question and answers
 function displayQuestion(question) {
+    console.log('displayQuestion called with:', question);
     if (!question || !question.question) {
         questionElement.textContent = 'No questions available. Please try a different category or difficulty, or wait and try again.';
         answersElement.innerHTML = '';
@@ -118,17 +119,20 @@ function selectAnswer(event) {
 
 // Fetch and display a new question
 async function fetchAndDisplayQuestion() {
+    console.log('fetchAndDisplayQuestion called, questionCount:', questionCount, 'totalQuestions:', totalQuestions);
     if (questionCount === totalQuestions) {
-    endGame();
-    return;
+        endGame();
+        return;
     }
 
     let question;
     do {
-    if (questions.length === 0) {
-        questions = await fetchQuestions();
-    }
-    question = questions.shift();
+        if (questions.length === 0) {
+            questions = await fetchQuestions();
+            console.log('Questions fetched:', questions);
+        }
+        question = questions.shift();
+        console.log('Next question:', question);
     } while (previousQuestions.includes(question));
 
     displayQuestion(question);
