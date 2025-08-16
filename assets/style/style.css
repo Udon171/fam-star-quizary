@@ -1,3 +1,165 @@
+#quiz-header, #question-container, #player-section {
+    background: rgba(0,0,0,0.7);
+    border-radius: 16px;
+    border: 2px solid #ffe600;
+    box-shadow: 0 0 16px #ffe600;
+    padding: 18px 24px;
+    margin-bottom: 24px;
+}
+/* Category select styles for game-settings */
+.category-select-box {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 24px;
+}
+.category-label {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #ffe600;
+    margin-right: 10px;
+}
+.category-select {
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: 1.5px solid #00bfff;
+    font-size: 1rem;
+    background: #222;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 0;
+    box-shadow: 0 0 8px #00bfff;
+}
+/* Video background for quiz.html */
+#bg-video-quiz {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.5;
+    pointer-events: none;
+}
+/* Quiz Page Styles (Single Player) */
+#quiz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto 24px auto;
+    font-family: 'Roboto', sans-serif;
+}
+#round-info {
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: #fff;
+    letter-spacing: 1px;
+    text-shadow: 0 0 8px #000;
+}
+#score-display {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #fff;
+    text-shadow: 0 0 8px #000;
+}
+#question-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto 32px auto;
+}
+#question-box {
+    background: rgba(0,0,0,0.8);
+    border: 3px solid #ffe600;
+    border-radius: 12px;
+    padding: 24px 18px;
+    margin-bottom: 32px;
+    color: #ffe600;
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-align: center;
+    box-shadow: 0 0 16px #ffe600;
+    text-shadow: 0 0 8px #000;
+}
+.answers-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px 24px;
+    width: 100%;
+    max-width: 600px;
+}
+.answers-grid .answer {
+    background: #2176ff;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: 18px 12px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 0 8px #2176ff;
+    border: none;
+    transition: background 0.2s, color 0.2s;
+}
+.answers-grid .answer:hover {
+    background: #0056b3;
+    color: #ffe600;
+}
+#player-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto 24px auto;
+}
+.player-card {
+    background: rgba(255,0,0,0.15);
+    border-radius: 12px;
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+    box-shadow: 0 0 8px #ff3c3c;
+}
+.player-icon {
+    font-size: 2rem;
+}
+.player-name {
+    font-size: 1.1rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+.player-score {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-left: 8px;
+}
+#end-game {
+    background: #2176ff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 32px;
+    font-size: 1.1rem;
+    font-weight: 900;
+    cursor: pointer;
+    box-shadow: 0 0 8px #2176ff;
+    transition: background 0.2s;
+}
+#end-game:hover {
+    background: #0056b3;
+    color: #ffe600;
+}
 /* Game Settings Page Styles */
 .settings-header {
     text-align: center;
@@ -306,11 +468,14 @@ h1 {
     margin-bottom: 20px;
 }
 
+/* Standard vertical slider for rounds */
 .rounds-slider {
-    writing-mode: bt-lr;
-    -webkit-appearance: slider-vertical;
+    writing-mode: vertical-lr;
+    direction: rtl;
     width: 30px;
     height: 150px;
+    appearance: none;
+}
 }
 
 #category-selection,

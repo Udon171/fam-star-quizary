@@ -10,37 +10,27 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
-    <div id="quiz-container">
-    <h1>Quiz Time</h1>
+    <video id="bg-video-quiz" autoplay muted loop>
+        <source src="assets/video/Particle Basics v2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div id="quiz-header">
+        <div id="round-info"><span id="round-label">ROUND</span> <span id="current-round">1</span> / <span id="total-rounds">5</span></div>
+    <div id="score-display">0</div>
     </div>
-    <div id="question-container" >
-        <div id="question-number"></div>
-        <div id="question"></div>
-        <div id="timer-container">
-        <div id="timer">Time remaining: <span id="timer-value">30</span> seconds</div>
-        <div id="timer-bar">
-            <div id="timer-progress"></div>
+    <div id="question-container">
+        <div id="question-box">
+            <div id="question"></div>
         </div>
+        <div id="answers" class="answers-grid"></div>
+    </div>
+    <div id="player-section">
+        <div class="player-card">
+            <div class="player-icon">😊</div>
+            <div class="player-name">Player</div>
+            <div class="player-score">0</div>
         </div>
-        <div id="answers"></div>
-        <div id="answer-feedback"></div>
-        <button id="next-question">Next</button>
-    </div>
-    <div id="controls">
-        <div id="score">Score: 0</div>
-    
-        <div id="progress-bar">
-        <div id="progress-value"></div>
-        </div>
-    
-    <button id="end-game" onclick="window.location.href='index.html'">End Game</button>
-    </div>
-    <div id="game-over">
-        <h2>Game Over</h2>
-        <p id="final-score"></p>
-        <button id="play-again">Play Again</button>
-        <button id="quit">Quit</button>
-    </div>
+        <button id="end-game" onclick="window.location.href='index.html'">Exit</button>
     </div>
     <script src="quiz.js"></script>
 </body>

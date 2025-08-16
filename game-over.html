@@ -1,0 +1,150 @@
+<!-- game-over.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Game Over!</title>
+	<link rel="stylesheet" href="assets/style/style.css">
+	<style>
+		body {
+			background: url('assets/images/fireworks.gif') center center/cover no-repeat, #222;
+			min-height: 100vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.game-over-box {
+			background: rgba(0,0,0,0.7);
+			border: 3px solid #ffe600;
+			border-radius: 16px;
+			box-shadow: 0 0 24px #ffe600;
+			padding: 40px 32px;
+			max-width: 420px;
+			width: 100%;
+			text-align: center;
+			color: #fff;
+			position: relative;
+		}
+		.game-over-title {
+			font-size: 2.5rem;
+			font-weight: 900;
+			color: #ffe600;
+			margin-bottom: 12px;
+			letter-spacing: 2px;
+			text-shadow: 0 0 8px #000, 0 0 12px #ffe600;
+		}
+		.difficulty {
+			font-size: 1.1rem;
+			color: #fff;
+			margin-bottom: 18px;
+		}
+		.winner-section {
+			margin-bottom: 18px;
+		}
+		.winner-label {
+			font-size: 1.3rem;
+			font-weight: 700;
+			color: #ffe600;
+			margin-bottom: 8px;
+		}
+		.winner-icon {
+			font-size: 3rem;
+			background: #ff3c3c;
+			border-radius: 50%;
+			width: 70px;
+			height: 70px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0 auto 8px auto;
+		}
+		.winner-name {
+			font-size: 1.2rem;
+			font-weight: 900;
+			color: #fff;
+			margin-bottom: 4px;
+		}
+		.winner-score {
+			font-size: 2rem;
+			font-weight: 900;
+			color: #ffe600;
+			margin-bottom: 8px;
+		}
+		.final-scores {
+			margin-top: 18px;
+			margin-bottom: 18px;
+		}
+		.score-list {
+			background: rgba(30,30,40,0.7);
+			border-radius: 8px;
+			padding: 8px 0;
+			margin: 0 auto;
+			max-width: 320px;
+		}
+		.score-row {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 6px 18px;
+			font-size: 1.1rem;
+			color: #fff;
+		}
+		.score-row .icon {
+			font-size: 1.3rem;
+			margin-right: 8px;
+		}
+		.score-row .score {
+			font-weight: 900;
+			color: #ffe600;
+		}
+		.play-again-btn {
+			background: #2176ff;
+			color: #fff;
+			border: none;
+			border-radius: 8px;
+			padding: 14px 38px;
+			font-size: 1.2rem;
+			font-weight: 900;
+			cursor: pointer;
+			box-shadow: 0 0 8px #2176ff;
+			transition: background 0.2s;
+			margin-top: 18px;
+		}
+		.play-again-btn:hover {
+			background: #0056b3;
+			color: #ffe600;
+		}
+	</style>
+</head>
+<body>
+	<div class="game-over-box">
+		<div class="game-over-title">GAME OVER!</div>
+		<div class="difficulty">Difficulty: <span id="difficulty-value">Medium</span></div>
+		<div class="winner-section">
+			<div class="winner-label">Winner! <span style="font-size:1.3rem;">🏆</span></div>
+			<div class="winner-icon">😊</div>
+			<div class="winner-name" id="winner-name">M</div>
+			<div class="winner-score" id="winner-score">115 pts</div>
+		</div>
+		<div class="final-scores">Final Scores:</div>
+		<div class="score-list">
+			<div class="score-row"><span class="icon">😊</span> <span>1. m</span> <span class="score" id="score1">115 pts</span></div>
+			<div class="score-row"><span class="icon">💙</span> <span>2. s</span> <span class="score" id="score2">0 pts</span></div>
+		</div>
+		<button class="play-again-btn" onclick="window.location.href='index.html'">Play Again</button>
+	</div>
+	<script>
+		// Read score, difficulty, and player from localStorage
+		const score = localStorage.getItem('final_score') || 0;
+		const difficulty = localStorage.getItem('final_difficulty') || 'Medium';
+		const player = localStorage.getItem('final_player') || 'M';
+		document.getElementById('winner-name').textContent = player;
+		document.getElementById('winner-score').textContent = score + ' pts';
+		document.getElementById('difficulty-value').textContent = difficulty.charAt(0).toUpperCase() + difficulty.slice(1);
+		document.getElementById('score1').textContent = score + ' pts';
+		// For single player, second score is always 0
+		document.getElementById('score2').textContent = '0 pts';
+	</script>
+</body>
+</html>

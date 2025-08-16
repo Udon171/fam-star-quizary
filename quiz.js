@@ -1,23 +1,13 @@
 // quiz.js
-const quizContainer = document.getElementById('quiz-container');
-const questionNumberElement = document.getElementById('question-number');
+
 const questionElement = document.getElementById('question');
 const answersElement = document.getElementById('answers');
-const scoreElement = document.getElementById('score');
+const scoreDisplay = document.getElementById('score-display');
+const currentRoundElement = document.getElementById('current-round');
+const totalRoundsElement = document.getElementById('total-rounds');
+const playerScoreElement = document.querySelector('.player-score');
+const playerNameElement = document.querySelector('.player-name');
 const endGameButton = document.getElementById('end-game');
-const timerElement = document.getElementById('timer-value');
-const timerBar = document.getElementById('timer-progress');
-const progressBar = document.getElementById('progress-value');
-const categorySelect = document.getElementById('category');
-const difficultySelect = document.getElementById('difficulty');
-const questionContainer = document.getElementById('question-container');
-const controls = document.getElementById('controls');
-const answerFeedback = document.getElementById('answer-feedback');
-const nextQuestionButton = document.getElementById('next-question');
-const gameOverContainer = document.getElementById('game-over');
-const finalScoreElement = document.getElementById('final-score');
-const playAgainButton = document.getElementById('play-again');
-const quitButton = document.getElementById('quit');
 
 let currentQuestion = {};
 let score = 0;
@@ -37,58 +27,59 @@ async function fetchCategories() {
     return data.trivia_categories;
 }
 
-// Populate the category select options
-async function populateCategoryOptions() {
-    // Only run if the selects exist on this page
-    if (!categorySelect || !difficultySelect) return;
-    const categories = await fetchCategories();
-    categories.forEach(category => {
-        const option = document.createElement('option');
-        option.value = category.id;
-        option.textContent = category.name;
-        categorySelect.appendChild(option);
-    });
-}
-
-// Ensure categories are loaded on page load
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', populateCategoryOptions);
-} else {
-    populateCategoryOptions();
-}
+// No category select on quiz page; skip category population
 
 // Fetch questions from the Open Trivia Database API
 async function fetchQuestions() {
     // Read from localStorage if available
-    let categoryId = localStorage.getItem('quiz_category') || categorySelect?.value;
-    let difficulty = localStorage.getItem('quiz_difficulty') || difficultySelect?.value;
+    let categoryId = localStorage.getItem('quiz_category');
+    let difficulty = localStorage.getItem('quiz_difficulty');
     let rounds = parseInt(localStorage.getItem('quiz_rounds'), 10);
-    if (!isNaN(rounds) && rounds > 0) {
-        totalQuestions = rounds;
-    }
-    const response = await fetch(`https://opentdb.com/api.php?amount=${totalQuestions}&type=multiple${categoryId ? `&category=${categoryId}` : ''}${difficulty ? `&difficulty=${difficulty}` : ''}`);
+    // Fallback defaults if not set
+    if (!categoryId) categoryId = '';
+    if (!difficulty) difficulty = 'medium';
+    if (isNaN(rounds) || rounds < 1) rounds = 5;
+    totalQuestions = rounds;
+    const apiUrl = `https://opentdb.com/api.php?amount=${totalQuestions}&type=multiple${categoryId ? `&category=${categoryId}` : ''}${difficulty ? `&difficulty=${difficulty}` : ''}`;
+    console.log('Quiz API URL:', apiUrl);
+    console.log('LocalStorage:', {
+        quiz_category: categoryId,
+        quiz_difficulty: difficulty,
+        quiz_rounds: rounds
+    });
+    const response = await fetch(apiUrl);
     const data = await response.json();
+    console.log('Quiz API Response:', data);
+    if (!data.results || data.results.length === 0) {
+        questionElement.textContent = 'No questions found for your selection. Please try a different category or difficulty.';
+        answersElement.innerHTML = '';
+        return [];
+    }
     return data.results;
 }
 
 // Display the question and answers
 function displayQuestion(question) {
+    if (!question || !question.question) {
+        questionElement.textContent = 'No questions available. Please try a different category or difficulty, or wait and try again.';
+        answersElement.innerHTML = '';
+        return;
+    }
     currentQuestion = question;
-    questionNumberElement.textContent = `Question ${questionCount + 1}`;
+    currentRoundElement.textContent = questionCount + 1;
+    totalRoundsElement.textContent = totalQuestions;
     questionElement.textContent = decodeHtml(question.question);
     answersElement.innerHTML = '';
     const answers = [...question.incorrect_answers];
     answers.push(question.correct_answer);
     answers.sort(() => Math.random() - 0.5);
     answers.forEach(answer => {
-    const answerElement = document.createElement('div');
-    answerElement.textContent = decodeHtml(answer);
-    answerElement.classList.add('answer');
-    answerElement.addEventListener('click', selectAnswer);
-    answersElement.appendChild(answerElement);
+        const answerElement = document.createElement('div');
+        answerElement.textContent = decodeHtml(answer);
+        answerElement.classList.add('answer');
+        answerElement.addEventListener('click', selectAnswer);
+        answersElement.appendChild(answerElement);
     });
-    nextQuestionButton.style.display = 'none';
-    answerFeedback.style.display = 'none';
     isAnswerSelected = false;
 }
 
@@ -102,38 +93,27 @@ function decodeHtml(html) {
 // Handle answer selection
 function selectAnswer(event) {
     if (isGameOver || isAnswerSelected) return;
-
     const selectedAnswer = event.target.textContent;
     const isCorrect = selectedAnswer === decodeHtml(currentQuestion.correct_answer);
-
     if (isCorrect) {
-    score++;
-    event.target.classList.add('correct');
-    answerFeedback.textContent = 'Correct Answer!';
-    answerFeedback.classList.remove('incorrect');
-    answerFeedback.classList.add('correct');
+        score++;
+        event.target.classList.add('correct');
     } else {
-    event.target.classList.add('incorrect');
-    answerFeedback.textContent = `Wrong Answer! The correct answer is: ${decodeHtml(currentQuestion.correct_answer)}`;
-    answerFeedback.classList.remove('correct');
-    answerFeedback.classList.add('incorrect');
+        event.target.classList.add('incorrect');
     }
-
-    scoreElement.textContent = `Score: ${score}`;
+    scoreDisplay.textContent = score;
+    playerScoreElement.textContent = score;
     previousQuestions.push(currentQuestion);
     questionCount++;
-    updateProgressBar();
     clearTimer();
-    answerFeedback.style.display = 'block';
-    nextQuestionButton.style.display = 'block';
     isAnswerSelected = true;
-
-  // Disable answer selection after an answer is selected or the timer runs out
+    // Disable answer selection after an answer is selected
     const answerElements = answersElement.getElementsByClassName('answer');
     Array.from(answerElements).forEach(answerElement => {
-    answerElement.removeEventListener('click', selectAnswer);
-    answerElement.classList.add('disabled');
+        answerElement.removeEventListener('click', selectAnswer);
+        answerElement.classList.add('disabled');
     });
+    setTimeout(fetchAndDisplayQuestion, 1200);
 }
 
 // Fetch and display a new question
@@ -155,40 +135,26 @@ async function fetchAndDisplayQuestion() {
     startTimer();
 }
 
-// Start the timer
+// Start the timer (auto-advance after timeout)
 function startTimer() {
     timerValue = 30;
-    timerElement.textContent = timerValue;
-    timerBar.style.width = '100%';
     timer = setInterval(() => {
-    timerValue--;
-    timerElement.textContent = timerValue;
-    timerBar.style.width = `${(timerValue / 30) * 100}%`;
-    if (timerValue === 0) {
-        clearTimer();
-        answerFeedback.textContent = 'Time Up - No More Time Remaining';
-        answerFeedback.classList.remove('correct');
-        answerFeedback.classList.remove('incorrect');
-        answerFeedback.style.display = 'block';
-        nextQuestionButton.style.display = 'block';
-
-      // Display the correct answer when the timer runs out
-        const correctAnswerElement = document.createElement('div');
-        correctAnswerElement.textContent = `Correct Answer: ${decodeHtml(currentQuestion.correct_answer)}`;
-        correctAnswerElement.classList.add('correct');
-        answersElement.appendChild(correctAnswerElement);
-
-      // Disable answer selection after the timer runs out
-        const answerElements = answersElement.getElementsByClassName('answer');
-        Array.from(answerElements).forEach(answerElement => {
-        answerElement.removeEventListener('click', selectAnswer);
-        answerElement.classList.add('disabled');
-        });
-
-      // Increment the question count
-        questionCount++;
-        previousQuestions.push(currentQuestion);
-    }
+        timerValue--;
+        if (timerValue === 0) {
+            clearTimer();
+            // Show correct answer
+            const answerElements = answersElement.getElementsByClassName('answer');
+            Array.from(answerElements).forEach(answerElement => {
+                answerElement.removeEventListener('click', selectAnswer);
+                if (answerElement.textContent === decodeHtml(currentQuestion.correct_answer)) {
+                    answerElement.classList.add('correct');
+                }
+                answerElement.classList.add('disabled');
+            });
+            questionCount++;
+            previousQuestions.push(currentQuestion);
+            setTimeout(fetchAndDisplayQuestion, 1200);
+        }
     }, 1000);
 }
 
@@ -197,52 +163,29 @@ function clearTimer() {
     clearInterval(timer);
 }
 
-// Update the progress bar
-function updateProgressBar() {
-  const progressValue = (questionCount / totalQuestions) * 100;
-    progressBar.style.width = `${progressValue}%`;
-}
+// No progress bar in new layout
 
 // End the game
 function endGame() {
     isGameOver = true;
-    questionContainer.style.display = 'none';
-    controls.style.display = 'none';
-    gameOverContainer.style.display = 'block';
-    finalScoreElement.textContent = `Your final score is: ${score}`;
-    categorySelect.disabled = false;
-    difficultySelect.disabled = false;
+    // Save score, difficulty, and player info to localStorage
+    localStorage.setItem('final_score', score);
+    localStorage.setItem('final_difficulty', localStorage.getItem('quiz_difficulty') || 'medium');
+    localStorage.setItem('final_player', 'Player');
+    window.location.href = 'game-over.html';
 }
 
 // Start the quiz on page load
 window.addEventListener('DOMContentLoaded', () => {
-    // Only clear after reading, so quiz uses the settings
-    setTimeout(() => {
-        localStorage.removeItem('quiz_category');
-        localStorage.removeItem('quiz_difficulty');
-        localStorage.removeItem('quiz_rounds');
-    }, 1000);
-    // Start the quiz
-    questionContainer.style.display = 'block';
-    controls.style.display = 'block';
-    gameOverContainer.style.display = 'none';
     questionCount = 0;
     score = 0;
     previousQuestions = [];
     isGameOver = false;
+    playerNameElement.textContent = 'Player';
+    playerScoreElement.textContent = score;
     fetchAndDisplayQuestion();
 });
 
-// Next question button
-nextQuestionButton.addEventListener('click', () => {
-    fetchAndDisplayQuestion();
-});
-
-// Play again button
-if (playAgainButton) {
-    playAgainButton.addEventListener('click', () => {
-        window.location.reload();
-    });
-}
+// No next question or play again button in new layout
 
 
