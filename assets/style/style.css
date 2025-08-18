@@ -384,19 +384,23 @@ footer {
     max-width: 700px !important;
     margin: 0 auto 32px auto !important;
     opacity: 1 !important;
+    background: rgba(0,0,0,0.85) !important;
+    border-radius: 16px !important;
+    border: 2px solid #00bfff !important;
+    box-shadow: 0 0 16px #00bfff !important;
 }
 #question-box {
-    background: rgba(0,0,0,0.85) !important;
-    border: 2px solid #ffe600 !important;
+    background: rgba(0,0,0,0.7) !important;
+    border: 2px solid #00bfff !important;
     border-radius: 16px !important;
     padding: 24px 18px !important;
     margin-bottom: 32px !important;
-    color: #ffe600 !important;
-    font-size: 1.5rem !important;
+    color: #fff !important;
+    font-size: 1.7rem !important;
     font-weight: 900 !important;
     text-align: center !important;
-    box-shadow: 0 0 24px #ffe600 !important;
-    text-shadow: 0 0 8px #000, 0 0 16px #ffe600 !important;
+    box-shadow: 0 0 24px #00bfff !important;
+    text-shadow: 0 0 8px #000, 0 0 16px #00bfff !important;
     opacity: 1 !important;
 }
 
@@ -408,6 +412,11 @@ footer {
     max-width: 700px !important;
     opacity: 1 !important;
     visibility: visible !important;
+    background: rgba(0,0,0,0.7) !important;
+    border-radius: 16px !important;
+    border: 2px solid #00bfff !important;
+    box-shadow: 0 0 16px #00bfff !important;
+    padding: 24px 0 !important;
 }
 .answers-grid .answer {
     background: #fff !important;
@@ -532,7 +541,7 @@ footer {
     font-size: 1.5rem !important;
     font-weight: 700 !important;
     margin-bottom: 20px !important;
-    color: #222 !important;
+    color: #fff !important;
     opacity: 1 !important;
 }
 
@@ -586,17 +595,19 @@ footer {
 .correct {
     background-color: #2fff7f !important;
     color: #fff !important;
-    box-shadow: 0 0 24px #2fff7f, 0 0 48px #2fff7f;
+    box-shadow: 0 0 32px #2fff7f, 0 0 64px #2fff7f !important;
     border: 2px solid #2fff7f !important;
     animation: correct-glow 0.7s;
+    transition: background-color 0.2s, box-shadow 0.2s, color 0.2s;
 }
 
 .incorrect {
     background-color: #ff3c3c !important;
     color: #fff !important;
-    box-shadow: 0 0 24px #ff3c3c, 0 0 48px #ff3c3c;
+    box-shadow: 0 0 32px #ff3c3c, 0 0 64px #ff3c3c !important;
     border: 2px solid #ff3c3c !important;
     animation: shake 0.5s;
+    transition: background-color 0.2s, box-shadow 0.2s, color 0.2s;
 }
 @keyframes shake {
     0% { transform: translateX(0); }
