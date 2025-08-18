@@ -157,12 +157,12 @@ Two colour palette options were considered to evoke a vibrant, game show atmosph
 3. Update the base URL in API calls if deploying to a custom domain.
 
 ### To Fork the Project
-1. Navigate to the repository: [Fam Star Quizary](https://gameplan.databutton.app/fam-star-quizary).
+1. Navigate to the repository: [Fam Star Quizary](https://github.com/Udon171/fam-star-quizary).
 2. Click "Fork" on GitHub to create a copy in your repository.
 3. Clone your fork locally to make changes.
 
 ### To Clone the Project
-1. Run `git clone https://gameplan.databutton.app/fam-star-quizary.git`.
+1. Run `git clone https://github.com/Udon171/fam-star-quizary`.
 2. Open the project in a code editor (e.g., VS Code).
 3. Serve locally using a tool like Live Server or deploy to a web server.
 
@@ -170,6 +170,9 @@ Two colour palette options were considered to evoke a vibrant, game show atmosph
 - **Game Interface**: [View Banner](docs/fam-star-quizary-banner.webp)
 - **Victory Animation**: [View Poppers](docs/poppers.gif), [View Fireworks](docs/fireworks.gif)
 - **Trophy**: [View Trophy](docs/trophy.webp)
+
+## Website
+- **Website Link**: [View Website](https://udon171.github.io/fam-star-quizary/)
 
 ## Credits
 - **OpenTDB API**: For providing unlimited trivia questions ([opentdb.com](https://opentdb.com)).
@@ -216,3 +219,5 @@ Two colour palette options were considered to evoke a vibrant, game show atmosph
 - Selected HTML, CSS, and JavaScript for development.
 - Focused on user experience goals: intuitive setup, immersive gameplay, and clear feedback.
 - Used projects in github for build goals
+
+### Entry 6: Development Insight
