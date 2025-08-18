@@ -221,3 +221,18 @@ Two colour palette options were considered to evoke a vibrant, game show atmosph
 - Used projects in github for build goals
 
 ### Entry 6: Development Insight
+- Change of prioriatise using Minimum Viable Product (MVP) Princables
+
+Starting out I had my project section of github loaded with my planned development path. 
+One thing I wanted to implement (but couldn't) was the tick box for the inner content which would have helped after using MVP pricables. Regardless, I used the project section of github, to manage the extra tasks from the basic, for a working product. The first complication of having 4 players over a one player setup were easy to see, needed a redirection to the one player setup.
+
+This was then followed by a complete overlook at some features of show elements and was cut from the current direction of the project. This brought it back to a handfull of my project titles and content to produce a functioning one player quiz with a settings page and a start page to work (this is reflected in my projects section). 
+Looking online at other quiz's JS code through github to understand the natue of using the api also made me realize I can call the single api instead of pre 50 questions as researched prior(as shown above int he diary). Making the basic working site was rewarding in itself but was done for a timed deadline and still needs more work to style and add any missing elements. I did not expect any issues as I had the basic's working. 
+
+- The re-direct of style for the application of CSS
+
+With the quick help from inspiration of design I had a direction for the new basic build of the project. Getting the first pages done was a breeze and established the new look for the first time. With no hicups i moved on to the quiz page and applied the same style elements to the quiz with a few changes of timer location and other bits moving to a prevous page nothing too drastic. Once done the quiz was gone, but the style was almost there but no quiz. after trying some basic changes like changing z-index as well as otheres, I moved on to making element @important which fixed the none showing quiz section further adjustments to style to get the quiz completley right became a bit more of a challenge with sevral attempts to achive the final look (this included change of txt colour to name one).
+
+- Final adjustments, Testing, Resposive and Accessablity
+
+### Entry 7: Project Reflection
