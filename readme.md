@@ -233,6 +233,7 @@ Looking online at other quiz's JS code through github to understand the natue of
 
 With the quick help from inspiration of design I had a direction for the new basic build of the project. Getting the first pages done was a breeze and established the new look for the first time. With no hicups i moved on to the quiz page and applied the same style elements to the quiz with a few changes of timer location and other bits moving to a prevous page nothing too drastic. Once done the quiz was gone, but the style was almost there but no quiz. after trying some basic changes like changing z-index as well as otheres, I moved on to making element @important which fixed the none showing quiz section further adjustments to style to get the quiz completley right became a bit more of a challenge with sevral attempts to achive the final look (this included change of txt colour to name one).
 
-- Final adjustments, Testing, Resposive and Accessablity
+- Final Adjustments, Testing, Resposiveness and Accessablity
 
 ### Entry 7: Project Reflection
+
