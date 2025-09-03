@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fam Star Quizary</title>
     <link rel="stylesheet" href="assets/style/style.css">
+
 </head>
 <body>
     <video id="bg-video" autoplay muted loop>
@@ -16,7 +17,7 @@
         <h1 class="neon-title"><span class="fam-star">FAM STAR</span> <span class="quizary">QUIZARY</span></h1>
         <div class="subtitle">The ultimate family-friendly online quiz game! Gather your team, buzz in, <br>and prove who's the trivia champion of the household.</div>
         <a href="game-settings.html" class="start-btn">Start New Game</a>
-        <div class="how-to-play-link"><a href="#how-to-play">How to Play</a></div>
+        <div class="how-to-play-link"><button id="howToPlayBtn" class="start-btn">How to Play</button></div>
         <div class="feature-box">
             <div class="features-title">GAME FEATURES</div>
             <div class="features-list">
@@ -29,8 +30,39 @@
             </div>
         </div>
     </div>
+    <!-- How to Play Modal -->
+<div id="howToPlayModal" class="modal">
+    <div class="modal-content">
+    <span class="close" id="closeHowToPlay">&times;</span>
+    <h2>How to Play</h2>
+    <ul>
+        <li>Choose your quiz settings and start a new game.</li>
+        <li>Read each question and select the correct answer before time runs out.</li>
+        <li>Earn points for each correct answer. Wrong answers will shake and show the correct one.</li>
+        <li>Try to get the highest score possible!</li>
+        <li>When the game ends, see your results and play again.</li>
+    </ul>
+    </div>
+</div>
     <footer>
         <p>&copy; 2025 Fam Star Quizary. All Rights Reserved.</p>
     </footer>
+    <script>
+// Modal logic
+const howToPlayBtn = document.getElementById('howToPlayBtn');
+const howToPlayModal = document.getElementById('howToPlayModal');
+const closeHowToPlay = document.getElementById('closeHowToPlay');
+howToPlayBtn.onclick = function() {
+    howToPlayModal.classList.add('show');
+}
+closeHowToPlay.onclick = function() {
+    howToPlayModal.classList.remove('show');
+}
+window.onclick = function(event) {
+    if (event.target === howToPlayModal) {
+        howToPlayModal.classList.remove('show');
+    }
+}
+</script>
 </body>
 </html>
