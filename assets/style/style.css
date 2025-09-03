@@ -266,12 +266,12 @@ footer {
 /* Game Settings Page Styles */
 .settings-header {
     text-align: center;
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-family: 'Roboto', sans-serif;
     font-weight: 900;
-    margin-bottom: 18px;
+    margin-bottom: 32px;
     margin-top: 0;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     color: #ff3c3c;
     text-shadow: 0 0 20px #fff, 0 0 40px #ff3c3c;
 }
@@ -281,22 +281,22 @@ footer {
 }
 .challenge-title {
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.3rem;
     font-weight: 900;
     color: #ffe600;
-    margin-bottom: 18px;
-    letter-spacing: 2px;
+    margin-bottom: 36px;
+    letter-spacing: 3px;
     text-shadow: 0 0 8px #000, 0 0 12px #ffe600;
 }
 .settings-box {
     margin: 0 auto;
-    margin-top: 18px;
+    margin-top: 32px;
     background: rgba(0,0,0,0.5);
-    border-radius: 16px;
-    box-shadow: 0 0 12px #00bfff;
-    padding: 32px 24px;
-    max-width: 700px;
-    border: 1.5px solid #00bfff;
+    border-radius: 24px;
+    box-shadow: 0 0 32px #00bfff;
+    padding: 56px 48px 48px 48px;
+    max-width: 900px;
+    border: 2.5px solid #00bfff;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -304,21 +304,21 @@ footer {
 .difficulty-cards {
     display: flex;
     justify-content: space-between;
-    gap: 24px;
-    margin-bottom: 24px;
+    gap: 40px;
+    margin-bottom: 40px;
     width: 100%;
 }
 .difficulty-card {
     background: rgba(10,20,40,0.8);
     border: 2px solid #00bfff;
-    border-radius: 12px;
-    box-shadow: 0 0 8px #00bfff;
-    padding: 24px 18px 16px 18px;
-    flex: 1 1 120px;
+    border-radius: 16px;
+    box-shadow: 0 0 12px #00bfff;
+    padding: 36px 24px 24px 24px;
+    flex: 1 1 180px;
     text-align: center;
     color: #fff;
     font-weight: 700;
-    font-size: 1.1rem;
+    font-size: 1.35rem;
     position: relative;
     transition: border 0.2s, box-shadow 0.2s, background 0.2s;
 }
@@ -329,8 +329,8 @@ footer {
     box-shadow: 0 0 16px #ffe600;
 }
 .difficulty-card .icon {
-    font-size: 2rem;
-    margin-bottom: 8px;
+    font-size: 2.7rem;
+    margin-bottom: 14px;
     display: block;
 }
 .difficulty-card.selected .icon {
@@ -338,33 +338,52 @@ footer {
     text-shadow: 0 0 8px #ff3c3c;
 }
 .diff-label {
-    font-size: 1.1rem;
+    font-size: 1.35rem;
     font-weight: 900;
-    margin-bottom: 4px;
-    letter-spacing: 1px;
+    margin-bottom: 8px;
+    letter-spacing: 2px;
 }
 .diff-time {
-    font-size: 1rem;
+    font-size: 1.15rem;
     font-weight: 500;
-    margin-bottom: 8px;
+    margin-bottom: 14px;
 }
 .difficulty-card input[type="radio"] {
-    margin-top: 8px;
-    accent-color: #ffe600;
-    transform: scale(1.2);
+    display: none;
 }
 .rounds-slider-box {
     width: 100%;
     text-align: center;
-    margin-bottom: 24px;
-    font-size: 1.2rem;
-    color: #fff;
-    font-weight: 700;
+    margin-bottom: 36px;
+    font-size: 1.7rem;
+    font-weight: 900;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .rounds-slider {
-    width: 80%;
-    margin: 12px auto 0 auto;
+    width: 420px;
+    max-width: 90vw;
+    margin: 18px auto 0 auto;
     accent-color: #00bfff;
+    height: 32px;
+    writing-mode: horizontal-tb;
+    direction: ltr;
+}
+.rounds-slider-box label {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #ffe600;
+    margin-bottom: 12px;
+    display: block;
+}
+#rounds-value {
+    font-size: 2.2rem;
+    color: #ffe600;
+    font-weight: 900;
+    margin-left: 8px;
+    margin-right: 8px;
+    vertical-align: middle;
 }
 .sga-btn {
     display: block;
@@ -496,20 +515,19 @@ footer {
     opacity: 1 !important;
     visibility: visible !important;
     background: rgba(0,0,0,0.7) !important;
-    border-radius: 16px !important;
+    border-radius: 24px !important;
     border: 2px solid #00bfff !important;
-    box-shadow: 0 0 16px #00bfff !important;
-    padding: 24px 0 !important;
+    box-shadow: 0 0 24px #00bfff !important;
+    padding: 28px 0 !important;
 }
 .answers-grid .answer {
+    width: 85% !important;
+    margin: 0 auto 0 auto !important;
     background: #fff !important;
     color: #222 !important;
     border-radius: 16px !important;
     font-size: 1.4rem !important;
-    font-weight: 900 !important;
-    padding: 28px 18px !important;
-    text-align: center !important;
-    cursor: pointer !important;
+    padding: 24px 12px !important;
     box-shadow: 0 0 16px #00bfff !important;
     border: 2px solid #00bfff !important;
     margin-bottom: 0 !important;
@@ -574,13 +592,6 @@ footer {
 }
 
 /* Standard vertical slider for rounds */
-.rounds-slider {
-    writing-mode: vertical-lr;
-    direction: rtl;
-    width: 30px;
-    height: 150px;
-    appearance: none;
-}
 
 
 #category-selection,
@@ -653,7 +664,7 @@ footer {
 #timer-progress {
     height: 100%;
     background-color: #007bff;
-    transition: width 0.3s ease;
+    transition: width 1s linear;
 }
 
 .answer {
