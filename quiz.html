@@ -33,6 +33,21 @@
         </div>
         <button id="end-game" onclick="window.location.href='index.html'">Exit</button>
     </div>
+    <!-- Game Over Modal -->
+    <div id="finishModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeFinishModal">&times;</span>
+            <h2>GAME OVER</h2>
+            <button class="play-again-btn" onclick="window.location.href='index.html'">Replay</button>
+        </div>
+    </div>
     <script src="quiz.js"></script>
+    <script>
+    // Show finish modal at end of game
+    function showFinishModal() {
+        document.getElementById('finishModal').classList.add('show');
+    }
+    // Replace endGame() logic in quiz.js to call showFinishModal()
+    </script>
 </body>
 </html>

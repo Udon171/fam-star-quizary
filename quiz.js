@@ -250,12 +250,18 @@ function clearTimer() {
 
 // End the game
 function endGame() {
-    isGameOver = true;
-    // Save score, difficulty, and player info to localStorage
-    localStorage.setItem('final_score', score);
-    localStorage.setItem('final_difficulty', localStorage.getItem('quiz_difficulty') || 'medium');
-    localStorage.setItem('final_player', 'Player');
-    window.location.href = 'game-over.html';
+    // If player has points, redirect to winner page
+    if (score > 0) {
+        localStorage.setItem('final_score', score);
+        localStorage.setItem('final_player', playerNameElement.textContent || 'Player');
+        window.location.href = 'winner.html';
+    } else {
+        // Show Game Over modal
+        const finishModal = document.getElementById('finishModal');
+        if (finishModal) {
+            finishModal.classList.add('show');
+        }
+    }
 }
 
 // Start the quiz on page load

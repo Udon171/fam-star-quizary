@@ -1,0 +1,38 @@
+<!-- game-over.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Game Over!</title>
+	<link rel="stylesheet" href="assets/style/style.css">
+</head>
+<body class="game-over-bg">
+	<video class="bg-video-game-over" autoplay muted loop>
+        <source src="assets/video/Particle Flow.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="winner-box">
+        <h2 class="winner-title">CONGRATULATIONS!</h2>
+        <div class="winner-section">
+            <div class="winner-label">Winner! <span>🏆</span></div>
+            <div class="winner-icon">😊</div>
+            <div class="winner-name" id="winner-name">Player</div>
+            <div class="winner-score" id="winner-score">115 pts</div>
+        </div>
+        <div class="final-scores">Bonus Points:</div>
+        <div class="score-list">
+            <div class="score-row"><span class="icon">💙</span> <span class="score" id="score1">115 pts</span></div>
+        </div>
+        <button class="play-again-btn" onclick="window.location.href='index.html'">Play Again</button>
+    </div>
+    <script>
+        // Populate winner info from localStorage
+        const score = localStorage.getItem('final_score') || 0;
+        const player = localStorage.getItem('final_player') || 'Player';
+        document.getElementById('winner-name').textContent = player;
+        document.getElementById('winner-score').textContent = score + ' pts';
+        document.getElementById('score1').textContent = score + ' pts';
+    </script>
+</body>
+</html>
