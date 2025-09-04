@@ -543,9 +543,30 @@ footer {
     transition: box-shadow 0.3s, background 0.3s, color 0.3s, transform 0.2s !important;
 }
 .answers-grid .answer:hover {
+    animation: shake 0.4s cubic-bezier(.36,.07,.19,.97) both;
     background-color: #00bfff;
     color: #fff;
     box-shadow: 0 0 24px #00bfff, 0 0 48px #00bfff;
+}
+@keyframes shake {
+    10%, 90% { transform: translateX(-2px); }
+    20%, 80% { transform: translateX(4px); }
+    30%, 50%, 70% { transform: translateX(-8px); }
+    40%, 60% { transform: translateX(8px); }
+}
+.answers-grid .answer.correct {
+    background: #2fff7f !important;
+    color: #fff !important;
+    border-color: #2fff7f !important;
+    box-shadow: 0 0 32px #2fff7f !important;
+    animation: none !important;
+}
+.answers-grid .answer.incorrect {
+    background: #ff3c3c !important;
+    color: #fff !important;
+    border-color: #ff3c3c !important;
+    box-shadow: 0 0 32px #ff3c3c !important;
+    animation: none !important;
 }
 #player-section {
     display: flex;
