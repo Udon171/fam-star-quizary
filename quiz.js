@@ -21,6 +21,7 @@ let questions = [];
 let isAnswerSelected = false;
 let preQuestionTimer = null;
 let preQuestionSeconds = 3;
+let bonusTimeTotal = 0; // Track total bonus time
 
 // Fetch categories from the Open Trivia Database API
 async function fetchCategories() {
@@ -103,6 +104,8 @@ function selectAnswer(event) {
     const isCorrect = selectedAnswer === decodeHtml(currentQuestion.correct_answer);
     if (isCorrect) {
         score += 10;
+        // Add remaining time to bonus if correct
+        bonusTimeTotal += timerValue;
         event.target.classList.add('correct');
     } else {
         event.target.classList.add('incorrect');
@@ -254,6 +257,7 @@ function endGame() {
     if (score > 0) {
         localStorage.setItem('final_score', score);
         localStorage.setItem('final_player', playerNameElement.textContent || 'Player');
+        localStorage.setItem('bonus_time_total', bonusTimeTotal); // Save bonus time
         window.location.href = 'winner.html';
     } else {
         // Show Game Over modal

@@ -23,6 +23,7 @@
         <div class="final-scores">Bonus Points:</div>
         <div class="score-list">
             <div class="score-row"><span class="icon">💙</span> <span class="score" id="score1">115 pts</span></div>
+            <div class="score-row"><span class="icon">⏱️</span> <span class="score" id="bonus-score">0 bonus</span></div>
         </div>
         <button class="play-again-btn" onclick="window.location.href='index.html'">Play Again</button>
     </div>
@@ -30,9 +31,11 @@
         // Populate winner info from localStorage
         const score = localStorage.getItem('final_score') || 0;
         const player = localStorage.getItem('final_player') || 'Player';
+        const bonus = localStorage.getItem('bonus_time_total') || 0;
         document.getElementById('winner-name').textContent = player;
         document.getElementById('winner-score').textContent = score + ' pts';
         document.getElementById('score1').textContent = score + ' pts';
+        document.getElementById('bonus-score').textContent = bonus + ' bonus';
     </script>
 </body>
 </html>
