@@ -496,19 +496,23 @@ footer {
 /* Quiz Page Styles (Single Player) */
 #quiz-header {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     width: 100%;
     max-width: 700px;
     margin: 0 auto 24px auto;
     font-family: 'Roboto', sans-serif;
 }
 #quiz-title {
+    text-align: center;
     font-size: 2.5rem;
     font-weight: 900;
-    color: #fff;
+    color: #b97aff;
     letter-spacing: 2px;
-    text-shadow: 0 0 8px #000, 0 0 16px #00bfff;
+    margin-bottom: 12px;
+    width: 100%;
+    display: block;
 }
 #round-info {
     font-size: 1.3rem;

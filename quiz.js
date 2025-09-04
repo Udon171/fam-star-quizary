@@ -41,10 +41,11 @@ async function fetchQuestions() {
     if (isNaN(rounds) || rounds < 1) rounds = 5;
     totalQuestions = rounds;
 
-    // For hard mode, use only Math, Science, Tech categories
-    let apiUrl;
-    if (difficulty.toLowerCase() === 'hard') {
-        // Open Trivia DB categories: Science & Nature (17), Computers (18), Mathematics (19)
+    // For sick mode, use only Math, Science, Tech categories, but with 'hard' difficulty
+    if (difficulty.toLowerCase() === 'sick') {
+        const sickCategories = [17, 18, 19];
+        apiUrl = `https://opentdb.com/api.php?amount=${totalQuestions}&type=multiple&difficulty=hard&category=${sickCategories[Math.floor(Math.random()*sickCategories.length)]}`;
+    } else if (difficulty.toLowerCase() === 'hard') {
         const hardCategories = [17, 18, 19];
         apiUrl = `https://opentdb.com/api.php?amount=${totalQuestions}&type=multiple&difficulty=hard&category=${hardCategories[Math.floor(Math.random()*hardCategories.length)]}`;
     } else {
@@ -209,15 +210,20 @@ function startTimer() {
         updateTimerBar();
         if (timerValue === 0) {
             clearTimer();
-            // Show correct answer
             const answerElements = answersElement.getElementsByClassName('answer');
             Array.from(answerElements).forEach(answerElement => {
                 answerElement.removeEventListener('click', selectAnswer);
-                if (answerElement.textContent === decodeHtml(currentQuestion.correct_answer)) {
-                    answerElement.classList.add('correct');
-                }
                 answerElement.classList.add('disabled');
             });
+            // Only show correct answer if not in sick mode
+            let difficulty = localStorage.getItem('quiz_difficulty') || 'medium';
+            if (difficulty.toLowerCase() !== 'sick') {
+                Array.from(answerElements).forEach(answerElement => {
+                    if (answerElement.textContent === decodeHtml(currentQuestion.correct_answer)) {
+                        answerElement.classList.add('correct');
+                    }
+                });
+            }
             questionCount++;
             previousQuestions.push(currentQuestion);
             setTimeout(nextQuestionWithCountdown, 1200);
