@@ -33,22 +33,24 @@ async function fetchCategories() {
 
 // Fetch questions from the Open Trivia Database API
 async function fetchQuestions() {
-    // Read from localStorage if available
     let categoryId = localStorage.getItem('quiz_category');
     let difficulty = localStorage.getItem('quiz_difficulty');
     let rounds = parseInt(localStorage.getItem('quiz_rounds'), 10);
-    // Fallback defaults if not set
     if (!categoryId) categoryId = '';
     if (!difficulty) difficulty = 'medium';
     if (isNaN(rounds) || rounds < 1) rounds = 5;
     totalQuestions = rounds;
-    const apiUrl = `https://opentdb.com/api.php?amount=${totalQuestions}&type=multiple${categoryId ? `&category=${categoryId}` : ''}${difficulty ? `&difficulty=${difficulty}` : ''}`;
+
+    // For hard mode, use only Math, Science, Tech categories
+    let apiUrl;
+    if (difficulty.toLowerCase() === 'hard') {
+        // Open Trivia DB categories: Science & Nature (17), Computers (18), Mathematics (19)
+        const hardCategories = [17, 18, 19];
+        apiUrl = `https://opentdb.com/api.php?amount=${totalQuestions}&type=multiple&difficulty=hard&category=${hardCategories[Math.floor(Math.random()*hardCategories.length)]}`;
+    } else {
+        apiUrl = `https://opentdb.com/api.php?amount=${totalQuestions}&type=multiple${categoryId ? `&category=${categoryId}` : ''}${difficulty ? `&difficulty=${difficulty}` : ''}`;
+    }
     console.log('Quiz API URL:', apiUrl);
-    console.log('LocalStorage:', {
-        quiz_category: categoryId,
-        quiz_difficulty: difficulty,
-        quiz_rounds: rounds
-    });
     const response = await fetch(apiUrl);
     const data = await response.json();
     console.log('Quiz API Response:', data);
@@ -186,9 +188,21 @@ function nextQuestionWithCountdown() {
     });
 }
 
+// Get timer duration from difficulty
+function getTimerDuration() {
+    let difficulty = localStorage.getItem('quiz_difficulty') || 'medium';
+    switch (difficulty.toLowerCase()) {
+        case 'easy': return 60;
+        case 'medium': return 45;
+        case 'hard': return 30;
+        case 'sick': return 15;
+        default: return 30;
+    }
+}
+
 // Start the timer (auto-advance after timeout)
 function startTimer() {
-    timerValue = 30;
+    timerValue = getTimerDuration();
     updateTimerBar();
     timer = setInterval(() => {
         timerValue--;
@@ -214,7 +228,8 @@ function startTimer() {
 function updateTimerBar() {
     const timerBar = document.getElementById('timer-progress');
     if (timerBar) {
-        timerBar.style.width = ((timerValue / 30) * 100) + '%';
+        const duration = getTimerDuration();
+        timerBar.style.width = ((timerValue / duration) * 100) + '%';
     }
 }
 

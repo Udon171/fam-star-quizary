@@ -215,52 +215,91 @@ footer {
 .modal-content {
     background: #181f2a;
     color: #fff;
-    border-radius: 16px;
-    border: 2px solid #00bfff;
-    box-shadow: 0 0 32px #00bfff, 0 0 8px #fff;
-    padding: 48px 36px 36px 36px;
-    max-width: 440px;
-    width: 95%;
+    border-radius: 18px;
+    border: 2.5px solid #b97aff;
+    box-shadow: 0 0 32px #b97aff, 0 0 px #fff;
+    padding: 56px 48px 48px 48px;
+    max-width: 700px;
+    width: 98%;
     position: relative;
-    display: block;
-    font-size: 1.18rem;
+    font-size: 1.25rem;
     letter-spacing: 1px;
-    text-align: left;
+    margin: 40px auto;
 }
 .modal-content h2 {
     text-align: center;
-    font-size: 2rem;
-    margin-bottom: 24px;
-    color: #00bfff;
-    font-weight: 700;
+    font-size: 2.7rem;
+    margin-bottom: 32px;
+    color: #b97aff;
+    font-weight: 900;
     letter-spacing: 2px;
 }
 .modal-content ul {
-    margin: 0 0 0 0;
-    padding: 0 0 0 24px;
-    list-style: disc inside;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 .modal-content ul li {
-    margin-bottom: 18px;
-    line-height: 1.7;
-    font-size: 1.13rem;
-    color: #e0f7fa;
-    border-left: 3px solid #00bfff;
-    padding-left: 12px;
-    background: rgba(0,191,255,0.07);
-    border-radius: 6px;
+    background: #23293a;
+    border-radius: 12px;
+    margin-bottom: 22px;
+    padding: 22px 24px 18px 24px;
+    font-size: 1.18rem;
+    color: #fff;
+    box-shadow: 0 0 8px #222;
+    border: 2px solid #23293a;
+}
+.modal-content ul li strong {
+    color: #ffe600;
+    font-size: 1.25rem;
+    font-weight: 900;
+    display: block;
+    margin-bottom: 6px;
+}
+.modal-content ul li:last-child {
+    margin-bottom: 0;
+}
+.modal-content {
+    /* Make modal bigger and centered */
+    min-height: 500px;
+}
+.modal {
+    align-items: flex-start;
+    justify-content: center;
 }
 .close {
     position: absolute;
-    top: 16px;
-    right: 24px;
-    font-size: 2rem;
-    color: #00bfff;
+    top: 24px;
+    right: 32px;
+    font-size: 2.5rem;
+    color: #b97aff;
     cursor: pointer;
     transition: color 0.2s;
+    z-index: 10;
 }
 .close:hover {
     color: #fff;
+}
+/* Back to Home button styling */
+.back-home-btn {
+    display: block;
+    margin: 36px auto 0 auto;
+    background: #2fff7f;
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 900;
+    border: none;
+    border-radius: 32px;
+    padding: 18px 48px;
+    box-shadow: 0 4px 24px rgba(0,255,127,0.2);
+    cursor: pointer;
+    transition: background 0.2s;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+.back-home-btn:hover {
+    background: #1ed760;
 }
 
 /* Game Settings Page Styles */
