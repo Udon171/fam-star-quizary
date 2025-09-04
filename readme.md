@@ -235,5 +235,7 @@ With the quick help from inspiration of design I had a direction for the new bas
 
 - Final Adjustments, Testing, Resposiveness and Accessablity
 
+A: After getting the base project completed to a working stage for pre hand in. Ive now had a second look at each page to refine and test this project build. See table below for list of adjustements of these pages.
+
 ### Entry 7: Project Reflection
 
