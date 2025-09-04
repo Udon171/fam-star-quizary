@@ -19,6 +19,8 @@ let questionCount = 0;
 let totalQuestions = 10;
 let questions = [];
 let isAnswerSelected = false;
+let preQuestionTimer = null;
+let preQuestionSeconds = 3;
 
 // Fetch categories from the Open Trivia Database API
 async function fetchCategories() {
@@ -113,7 +115,7 @@ function selectAnswer(event) {
         answerElement.removeEventListener('click', selectAnswer);
         answerElement.classList.add('disabled');
     });
-    setTimeout(fetchAndDisplayQuestion, 1200);
+    setTimeout(nextQuestionWithCountdown, 1200);
 }
 
 // Fetch and display a new question
@@ -138,6 +140,52 @@ async function fetchAndDisplayQuestion() {
     startTimer();
 }
 
+function showPreQuestionCountdown(callback) {
+    // Create overlay
+    let overlay = document.getElementById('pre-question-overlay');
+    if (!overlay) {
+        overlay = document.createElement('div');
+        overlay.id = 'pre-question-overlay';
+        overlay.style.position = 'fixed';
+        overlay.style.top = '0';
+        overlay.style.left = '0';
+        overlay.style.width = '100vw';
+        overlay.style.height = '100vh';
+        overlay.style.background = 'rgba(0,0,0,0.6)';
+        overlay.style.display = 'flex';
+        overlay.style.alignItems = 'center';
+        overlay.style.justifyContent = 'center';
+        overlay.style.zIndex = '2000';
+        document.body.appendChild(overlay);
+    }
+    let seconds = preQuestionSeconds;
+    function updateCountdown() {
+        if (seconds > 0) {
+            overlay.innerHTML = `<div style="font-size:6rem; color:#fff; font-weight:900; text-align:center; text-shadow:0 0 32px #00bfff;">${seconds}</div>`;
+            seconds--;
+            preQuestionTimer = setTimeout(updateCountdown, 1000);
+        } else {
+            overlay.remove();
+            if (callback) callback();
+        }
+    }
+    updateCountdown();
+}
+
+// Show countdown before first question only
+function startGameWithCountdown() {
+    showPreQuestionCountdown(() => {
+        fetchAndDisplayQuestion();
+    });
+}
+
+// Next question after timer/answer, use:
+function nextQuestionWithCountdown() {
+    showPreQuestionCountdown(() => {
+        fetchAndDisplayQuestion();
+    });
+}
+
 // Start the timer (auto-advance after timeout)
 function startTimer() {
     timerValue = 30;
@@ -158,7 +206,7 @@ function startTimer() {
             });
             questionCount++;
             previousQuestions.push(currentQuestion);
-            setTimeout(fetchAndDisplayQuestion, 1200);
+            setTimeout(nextQuestionWithCountdown, 1200);
         }
     }, 1000);
 }
@@ -195,10 +243,10 @@ window.addEventListener('DOMContentLoaded', () => {
     isGameOver = false;
     playerNameElement.textContent = 'Player';
     playerScoreElement.textContent = score;
-    fetchAndDisplayQuestion();
+    startGameWithCountdown();
     updateTimerBar();
 });
 
-// No next question or play again button in new layout
+
 
 
