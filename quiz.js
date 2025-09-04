@@ -205,6 +205,7 @@ function getTimerDuration() {
 function startTimer() {
     timerValue = getTimerDuration();
     updateTimerBar();
+    isAnswerSelected = false; // Reset answer selection for new question
     timer = setInterval(() => {
         timerValue--;
         updateTimerBar();
@@ -224,6 +225,7 @@ function startTimer() {
                     }
                 });
             }
+            isAnswerSelected = true; // Prevent answering after timer ends
             questionCount++;
             previousQuestions.push(currentQuestion);
             setTimeout(nextQuestionWithCountdown, 1200);
