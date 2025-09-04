@@ -12,6 +12,13 @@
 
 ---
 
+## Description
+
+**Fam Star Quizary** is a web-based family trivia game designed to deliver a fun, competitive, and interactive game show experience. Players can set up their profiles, choose difficulty levels, and compete in multiplayer quiz rounds featuring a wide variety of questions sourced from the OpenTDB API. The app features immersive visuals, sound effects, and animations to replicate the excitement of a TV game show, with a celebratory victory sequence for the winner. Its goal is to provide an engaging, accessible, and family-friendly quiz platform suitable for all ages.
+
+## Website
+- **Website Link**: [View Website](https://udon171.github.io/fam-star-quizary/)
+
 ## User Goals
 - Engage in a fun, competitive, and interactive trivia game suitable for family members of all ages.
 - Enjoy a game show atmosphere with immersive visuals, sounds, and animations.
