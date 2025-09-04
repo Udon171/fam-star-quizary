@@ -236,6 +236,20 @@ With the quick help from inspiration of design I had a direction for the new bas
 - Final Adjustments, Testing, Resposiveness and Accessablity
 
 A: After getting the base project completed to a working stage for pre hand in. Ive now had a second look at each page to refine and test this project build. See table below for list of adjustements of these pages.
+| Page         | Issue Description                                         | Resolution                                                                 | Commit Date     | Author   |
+|--------------|----------------------------------------------------------|----------------------------------------------------------------------------|-----------------|----------|
+| game-over    | Background video not showing on page                     | Fixed Game Over background video not showing on page                        | Sep 4, 2025     | Udon171  |
+| game-over    | Refined stlye of sizing and spcing | Found balanced look for final adjustment.md                                 | Sep 4, 2025     | Udon171  |
+| game-settings| Difficulty cards not fully clickable or visually selectable| Adjusted game settings page to make difficulty cards fully clickable and visually selectable | Sep 3, 2025     | Udon171  |
+| quiz         | Unbalanced quiz look and non-smooth timer                | Updated quiz look for more balance and smoother timer, improving code clarity and maintainability | Sep 3, 2025     | Udon171  |
+| index        | Inconsistent names and missing features                  | Adjusted names and added features to index.html                             | Sep 3, 2025     | Udon171  |
+| game-settings| Inconsistent names and missing features                  | Adjusted names and added features to game-settings.html                     | Sep 3, 2025     | Udon171  |
+| game-over    | Inconsistent names and missing features                  | Adjusted names and added features to game-over.html                         | Sep 3, 2025     | Udon171  |
+| index        | Modal show/hide functionality using direct style manipulation | Added modal show/hide functionality using CSS class toggling with 'show' class | Sep 3, 2025     | Udon171  |
+
+B: Testing
+
+C: Resposive & Accesablility
 
 ### Entry 7: Project Reflection
 
