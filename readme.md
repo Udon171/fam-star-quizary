@@ -260,3 +260,4 @@ C: Resposive & Accesablility
 
 ### Entry 7: Project Reflection
 
+thinking about it
