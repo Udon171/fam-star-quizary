@@ -77,6 +77,12 @@ window.onclick = function(event) {
         howToPlayModal.classList.remove('show');
     }
 }
+// Check if there's a redirect path stored from 404
+const redirectedPath = sessionStorage.redirect;
+if (redirectedPath) {
+    sessionStorage.removeItem('redirect');
+    window.history.replaceState(null, '', redirectedPath);
+}
 </script>
 </body>
 </html>

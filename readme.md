@@ -272,11 +272,11 @@ Manual Testing
 
 ### Automatic Testing
 - W3C -  
-   HTML -[HTML-FSQ](docs\w3c%20html%20validation.PNG)   
-   CSS -[CSS-FSQ](docs/w3c%20css%20validation%20error.PNG)
+   HTML -[HTML-FSQ](docs\w3c%20html%20validation.PNG)   https://validator.w3.org/nu/?doc=https%3A%2F%2Fudon171.github.io%2Ffam-star-quizary%2F  
+   CSS -[CSS-FSQ](docs/w3c%20css%20validation%20error.PNG) https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fudon171.github.io%2Ffam-star-quizary%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en#css  
 - Lighthouse -  
-    - [LGSQ-p1](docs\lighthouse%20FSQ%20p1.PNG)
-    - [LGSQ-p2](docs\lighthouse%20FSQ%20p2.PNG)
+    - [LGSQ-p1](docs\lighthouse%20FSQ%20p1.PNG) 
+    - [LGSQ-p2](docs\lighthouse%20FSQ%20p2.PNG) https://lighthouse-metrics.com/lighthouse/checks/c79fb7a5-cd9f-43cb-85d1-087d10a2bec5  
 
 Events of Testing/Refining   
 First issue to get fixed a correct answer bug thathappenmed when leaving the timer to go to zero then revealing the answer in green. fixed by restricting the anwser function in quiz.js.  
