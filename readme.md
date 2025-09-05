@@ -239,9 +239,10 @@ Looking online at other quiz's JS code through github to understand the natue of
 
 With the quick help from inspiration of design I had a direction for the new basic build of the project. Getting the first pages done was a breeze and established the new look for the first time. With no hicups i moved on to the quiz page and applied the same style elements to the quiz with a few changes of timer location and other bits moving to a prevous page nothing too drastic. Once done the quiz was gone, but the style was almost there but no quiz. after trying some basic changes like changing z-index as well as otheres, I moved on to making element @important which fixed the none showing quiz section further adjustments to style to get the quiz completley right became a bit more of a challenge with sevral attempts to achive the final look (this included change of txt colour to name one).
 
-- Final Adjustments, Testing, Resposiveness and Accessablity
+### Final Adjustments, Testing, Resposiveness and Accessablity
 
 A: After getting the base project completed to a working stage for pre hand in. Ive now had a second look at each page to refine and test this project build. See table below for list of adjustements of these pages.
+
 | Page         | Issue Description                                         | Resolution                                                                 | Commit Date     | Author   |
 |--------------|----------------------------------------------------------|----------------------------------------------------------------------------|-----------------|----------|
 | game-over    | Background video not showing on page                     | Fixed Game Over background video not showing on page                        | Sep 4, 2025     | Udon171  |
@@ -253,7 +254,7 @@ A: After getting the base project completed to a working stage for pre hand in. 
 | game-over    | Inconsistent names and missing features                  | Adjusted names and added features to game-over.html                         | Sep 3, 2025     | Udon171  |
 | index        | Modal show/hide functionality using direct style manipulation | Added modal show/hide functionality using CSS class toggling with 'show' class | Sep 3, 2025     | Udon171  |
 
-B: Testing
+### B: Testing
 
 Manual Testing
 | Feature                        | Tested Date   | Pass | Tested Date   | Pass | Tested Date   | Pass | Tested Date   | Pass |
@@ -269,21 +270,26 @@ Manual Testing
 | Accessibility (ARIA/contrast)  | 2025-10-09   | ✅   | 2025-05-09   |       | 2025-03-09   |      | 2025-18-08   |    |
 | API question loading           | 2025-10-09   | ✅   | 2025-05-09   | ✅   | 2025-03-09   | ✅   | 2025-18-08   |    |
 
-Automatic Testing
-W3C 
-   HTML - image
-   CSS - image
-Lighthouse
-    - image
+### Automatic Testing
+- W3C -  
+   HTML -[HTML-FSQ](docs\w3c%20html%20validation.PNG)   
+   CSS -[CSS-FSQ](docs/w3c%20css%20validation%20error.PNG)
+- Lighthouse -  
+    - [LGSQ-p1](docs\lighthouse%20FSQ%20p1.PNG)
+    - [LGSQ-p2](docs\lighthouse%20FSQ%20p2.PNG)
 
-Events of Testing/Refining
-First issue to get fixed a correct answer bug thathappenmed when leaving the timer to go to zero then revealing the answer in green. fixed by restricting the anwser function in quiz.js.
-Second issue, the end page for getting a score wasnt displaying a total score +. I renamed file to winner.html and used !important in css this fixed thos issues.
+Events of Testing/Refining   
+First issue to get fixed a correct answer bug thathappenmed when leaving the timer to go to zero then revealing the answer in green. fixed by restricting the anwser function in quiz.js.  
+Second issue, the end page for getting a score wasnt displaying a total score +. I renamed file to winner.html and used !important in css this fixed thos issues.  
 Third issue, To make the score more competetive for playing the quiz i added a time bonus mode. Quicker anwsers get bigger scores. 
-Fourth thing i realised the sick mode difficulty had no function as the api doesnt suppport sick mode. I created my specfic sick mode using hard questions from 3 catogarys Maths, Science & Technology with just 15sec to answer felt good to me and after checking the api i made my sick mode option.
-After all this problem solving it came to a solid run of commits but nothing changed on the pages website hhhhmmmm why 3 weeks old i said hhhmmm. I removed the pages entry to then re upload the pages entry this has correct all issues (mainly expired issue).
+Fourth thing i realised the sick mode difficulty had no function as the api doesnt suppport sick mode. I created my specfic sick mode using hard questions from 3 catogarys Maths, Science & Technology with just 15sec to answer felt good to me and after checking the api i made my sick mode option.  
+After all this problem solving it came to a solid run of commits but nothing changed on the pages website hhhhmmmm why 3 weeks old i said hhhmmm. I removed the pages entry to then re upload the pages entry this has corrected all issues (mainly expired issue).  
 
-C: Resposive & Accesablility
+### C: Resposive & Accesablility
+600 or 768 for mobile?  
+Mobile hept a vertical look filling the screen some titles need top space,the quiz need all answers resized to be visible.  
+1080px issue with settings heading off screen adjusted via @media 1080 adding space to top of H1.  
+All buttons were made effect reactive to offer visual direction. early disision to use green fill for correct and red for wrong but I added the wobble for easy visiual selecting keeping the visual inputs fast for question time.  
 
 ### Entry 7: Project Reflection
 

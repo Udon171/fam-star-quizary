@@ -601,15 +601,13 @@ footer {
 }
 .answers-grid .answer.correct {
     background: #2fff7f !important;
-    color: #fff !important;
-    border-color: #2fff7f !important;
+    color: #fff !important;      
     box-shadow: 0 0 32px #2fff7f !important;
     animation: none !important;
 }
 .answers-grid .answer.incorrect {
     background: #ff3c3c !important;
     color: #fff !important;
-    border-color: #ff3c3c !important;
     box-shadow: 0 0 32px #ff3c3c !important;
     animation: none !important;
 }
