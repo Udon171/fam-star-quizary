@@ -1306,5 +1306,13 @@ body.game-over-bg, html {
     }
 }
 
-
-
+@media (max-width: 1080px) {
+    .fam-star {
+        font-size: 2.2rem;
+    }
+    .settings-header {
+        font-size: 2.2rem;
+        margin-top: 24px;
+        margin-bottom: 18px;
+    }
+}

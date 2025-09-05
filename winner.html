@@ -29,11 +29,17 @@
     </div>
     <script>
         // Populate winner info from localStorage
-        const score = localStorage.getItem('final_score') || 0;
+        const score = parseInt(localStorage.getItem('final_score') || 0, 10);
         const player = localStorage.getItem('final_player') || 'Player';
-        const bonus = localStorage.getItem('bonus_time_total') || 0;
+        const bonus = parseInt(localStorage.getItem('bonus_time_total') || 0, 10);
+        let total = parseInt(localStorage.getItem('final_total_score'), 10);
+        console.log('Loaded from storage:', {score, bonus, total});
+        if (isNaN(total) || total <= score) {
+            total = score + bonus;
+            console.log('Fallback total:', total);
+        }
         document.getElementById('winner-name').textContent = player;
-        document.getElementById('winner-score').textContent = score + ' pts';
+        document.getElementById('winner-score').textContent = total + ' pts';
         document.getElementById('score1').textContent = score + ' pts';
         document.getElementById('bonus-score').textContent = bonus + ' bonus';
     </script>

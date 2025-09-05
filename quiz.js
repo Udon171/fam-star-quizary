@@ -255,9 +255,12 @@ function clearTimer() {
 function endGame() {
     // If player has points, redirect to winner page
     if (score > 0) {
+        const totalScore = score + bonusTimeTotal;
+        console.log('Score:', score, 'Bonus:', bonusTimeTotal, 'Total:', totalScore);
         localStorage.setItem('final_score', score);
         localStorage.setItem('final_player', playerNameElement.textContent || 'Player');
         localStorage.setItem('bonus_time_total', bonusTimeTotal); // Save bonus time
+        localStorage.setItem('final_total_score', totalScore);
         window.location.href = 'winner.html';
     } else {
         // Show Game Over modal
