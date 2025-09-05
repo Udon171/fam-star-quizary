@@ -249,15 +249,41 @@ A: After getting the base project completed to a working stage for pre hand in. 
 | game-over    | Refined stlye of sizing and spcing | Found balanced look for final adjustment.md                                 | Sep 4, 2025     | Udon171  |
 | game-settings| Difficulty cards not fully clickable or visually selectable| Adjusted game settings page to make difficulty cards fully clickable and visually selectable | Sep 3, 2025     | Udon171  |
 | quiz         | Unbalanced quiz look and non-smooth timer                | Updated quiz look for more balance and smoother timer, improving code clarity and maintainability | Sep 3, 2025     | Udon171  |
-| index        | Inconsistent names and missing features                  | Adjusted names and added features to index.html                             | Sep 3, 2025     | Udon171  |
-| game-settings| Inconsistent names and missing features                  | Adjusted names and added features to game-settings.html                     | Sep 3, 2025     | Udon171  |
+| index        | Missing features  & size alterations                | Adjusted general sizes & position to index features.html                             | Sep 3, 2025     | Udon171  |
+| game-settings| Difficulty selection ability and sizing/positioning  | Adjusted by deleteing select dot and making card selectable in game-settings.html                     | Sep 3, 2025     | Udon171  |
 | game-over    | Inconsistent names and missing features                  | Adjusted names and added features to game-over.html                         | Sep 3, 2025     | Udon171  |
 | index        | Modal show/hide functionality using direct style manipulation | Added modal show/hide functionality using CSS class toggling with 'show' class | Sep 3, 2025     | Udon171  |
 
 B: Testing
 
+Manual Testing
+| Feature                        | Tested Date   | Pass | Tested Date   | Pass | Tested Date   | Pass | Tested Date   | Pass |
+|-------------------------------|--------------|------|--------------|------|--------------|------|--------------|------|
+| Index, settings & quiz pages   | 2025-10-09   | ✅   | 2025-05-09   | ✅   | 2025-03-09   | ✅   | 2025-18-08   | ✅   |
+| Difficulty selection function  | 2025-10-09   | ✅   | 2025-05-09   | ✅   | 2025-03-09   | ✅   | 2025-18-08   | ✅   |
+| Question count-in timer        | 2025-10-09   | ✅   | 2025-05-09   | ✅   | 2025-03-09   |       | 2025-18-08   |    |
+| Victory page (unique score)    | 2025-10-09   | ✅   | 2025-05-09   | ✅   | 2025-03-09   |       | 2025-18-08   |    |
+| Select difficulty, 4 levels    | 2025-10-09   | ✅   | 2025-05-09   | ✅   | 2025-03-09   | ✅   | 2025-18-08   |    |
+| Button effect (uniform look)   | 2025-10-09   | ✅   | 2025-05-09   | ✅   | 2025-03-09   |       | 2025-18-08   |     |
+| How to Play modal setup        | 2025-10-09   | ✅   | 2025-05-09   | ✅   | 2025-03-09   | ✅   | 2025-18-08   |    |
+| Responsive layout              | 2025-10-09   | ✅   | 2025-05-09   | ✅   | 2025-03-09   |      | 2025-18-08   |    |
+| Accessibility (ARIA/contrast)  | 2025-10-09   | ✅   | 2025-05-09   |       | 2025-03-09   |      | 2025-18-08   |    |
+| API question loading           | 2025-10-09   | ✅   | 2025-05-09   | ✅   | 2025-03-09   | ✅   | 2025-18-08   |    |
+
+Automatic Testing
+UCIA
+    - image
+Lighthouse
+    - image
+
+Events of Testing/Refining
+First issue to get fixed a correct answer bug thathappenmed when leaving the timer to go to zero then revealing the answer in green. fixed by restricting the anwser function in quiz.js.
+Second issue, the end page for getting a score wasnt displaying a total score +. I renamed file to winner.html and used !important in css this fixed thos issues.
+Third issue, To make the score more competetive for playing the quiz i added a time bonus mode. Quicker anwsers get bigger scores. 
+Fourth thing i realised the sick mode difficulty had no function as the api doesnt suppport sick mode. I created my specfic sick mode using hard questions from 3 catogarys Maths, Science & Technology with just 15sec to answer felt good to me and after checking the api i made my sick mode option.
+After all this problem solving it came to a solid run of commits but nothing changed on the pages website hhhhmmmm why 3 weeks old i said hhhmmm. I removed the pages entry to then re upload the pages entry this has correct all issues (mainly expired issue).
+
 C: Resposive & Accesablility
 
 ### Entry 7: Project Reflection
 
-thinking about it
