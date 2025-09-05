@@ -68,7 +68,23 @@ h1 {
     pointer-events: none;
 }
 
-/* Neon header styles for index.html */
+.logo-title {
+    max-width: 880px;
+    width: 60vw;
+    height: auto;
+    display: block;
+    margin: 0 auto 5px auto;
+}
+
+.quiz-logo-img {
+    width: 720px;
+    max-width: 60vw;
+    height: auto;
+    display: block;
+    margin: 0 auto 1px auto;
+}
+
+/* Neon header styles for index.html 
 .neon-title {
     text-align: center;
     font-size: 3.5rem;
@@ -85,8 +101,8 @@ h1 {
 }
 .quizary {
     color: #00bfff;
-    text-shadow: 0 0 10px #00bfff, 0 0 20px #fff;
-}
+    text-shadow: 0 0 10px #00bfff, 0 0 20px #fff; */
+
 .subtitle {
     text-align: center;
     font-size: 1.25rem;
@@ -503,7 +519,7 @@ footer {
     justify-content: center;
     width: 100%;
     max-width: 700px;
-    margin: 0 auto 24px auto;
+    margin: 0 auto 25px auto;
     font-family: 'Roboto', sans-serif;
 }
 #quiz-title {
@@ -662,6 +678,21 @@ footer {
     color: #ffe600;
 }
 
+.copyright-footer {
+    width: 100vw;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 18px 0 12px 0;
+    
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    letter-spacing: 1px;
+    text-shadow: 0 0 8px #000, 0 0 12px #ffe600;
+}
 /* Standard vertical slider for rounds */
 
 
@@ -1314,3 +1345,5 @@ body.game-over-bg, html {
         margin-bottom: 18px;
     }
 }
+
+
