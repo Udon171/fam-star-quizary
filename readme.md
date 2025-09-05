@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <img src="../fam-star-quizary/docs/trophy.webp" width="60" alt="King of the Fam Trophy" />
+  <img src="..\images\trophy.png" width="60" alt="King of the Fam Trophy" />
 </p>
 
 <p align="center">
@@ -273,7 +273,8 @@ Manual Testing
 ### Automatic Testing
 - W3C -  
    HTML -[HTML-FSQ](docs\w3c%20html%20validation.PNG)   https://validator.w3.org/nu/?doc=https%3A%2F%2Fudon171.github.io%2Ffam-star-quizary%2F  
-   CSS -[CSS-FSQ](docs/w3c%20css%20validation%20error.PNG) https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fudon171.github.io%2Ffam-star-quizary%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en#css  
+   CSS error -[CSS-FSQ error](docs/w3c%20css%20validation%20error.PNG)   
+   CSS -[CSS-FSQ](docs\w3c%20css%20validation.PNG)     https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fudon171.github.io%2Ffam-star-quizary%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en#css  
 - Lighthouse -  
     - [LGSQ-p1](docs\lighthouse%20FSQ%20p1.PNG) 
     - [LGSQ-p2](docs\lighthouse%20FSQ%20p2.PNG) https://lighthouse-metrics.com/lighthouse/checks/c79fb7a5-cd9f-43cb-85d1-087d10a2bec5  
@@ -290,6 +291,7 @@ After all this problem solving it came to a solid run of commits but nothing cha
 Mobile hept a vertical look filling the screen some titles need top space,the quiz need all answers resized to be visible.  
 1080px issue with settings heading off screen adjusted via @media 1080 adding space to top of H1.  
 All buttons were made effect reactive to offer visual direction. early disision to use green fill for correct and red for wrong but I added the wobble for easy visiual selecting keeping the visual inputs fast for question time.  
+Changing video name Defomers = v1 Turbulance = v2 particle flow = v5 particle = v3 particle 2 = v4. All converted and being modified in the code.
 
 ### Entry 7: Project Reflection
 
