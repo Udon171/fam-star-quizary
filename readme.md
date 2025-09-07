@@ -1,14 +1,12 @@
-<p align="center">
-  <h1 align="center">🎉 Fam Star Quizary 🎉</h1>
-</p>
+<div align="center">
 
-<p align="center">
-  <img src="..\images\trophy.png" width="60" alt="King of the Fam Trophy" />
-</p>
+<video src="assets/video/famstarquizary-logo-video.mp4" width="320" autoplay loop muted playsinline style="display:block; margin: 0 auto; border-radius: 12px;"></video>
 
-<p align="center">
-  <b>The Ultimate Family Game Show Experience!</b>
-</p>
+<br/>
+
+<b>The Ultimate Family Game Show Experience!</b>
+
+</div>
 
 ---
 
@@ -173,9 +171,23 @@ Two colour palette options were considered to evoke a vibrant, game show atmosph
 3. Serve locally using a tool like Live Server or deploy to a web server.
 
 ## Images of Website
-- **Game Interface**: [View Banner](docs/fam-star-quizary-banner.webp)
-- **Victory Animation**: [View Poppers](docs/poppers.gif), [View Fireworks](docs/fireworks.gif)
-- **Trophy**: [View Trophy](docs/trophy.webp)
+## Images of Website
+
+Below are screenshots showcasing the Fam Star Quizary website and its main features:
+
+| Page / Feature                | Screenshot                                                                                   |
+|-------------------------------|---------------------------------------------------------------------------------------------|
+| **Game Over Screen**          | ![Game Over](docs/fsq-game-over.PNG)                                                        |
+| **How to Play Modal**         | ![How to Play](docs/fsq-index-how2play.PNG)                                                 |
+| **Home / Index Page**         | ![Index](docs/fsq-index.PNG)                                                                |
+| **Quiz - Incorrect Answer**   | ![Quiz Incorrect](docs/fsq-quiz-close-up-inccorect.PNG)                                     |
+| **Quiz - Correct Answer**     | ![Quiz Correct](docs/fsq-quiz-correct-count-out.PNG)                                        |
+| **Quiz In Progress**          | ![Quiz](docs/fsq-quiz.PNG)                                                                  |
+| **Settings - Difficulty Selection** | ![Settings Selection](docs/fsq-settings-selection.PNG)                                 |
+| **Settings Page**             | ![Settings](docs/fsq-settings.PNG)                                                          |
+| **Winner / Victory Screen**   | ![Winner](docs/fsq-winner.PNG)                                                              |
+
+These images demonstrate the user flow from setup, gameplay, and feedback to the final victory celebration.
 
 ## Website
 - **Website Link**: [View Website](https://udon171.github.io/fam-star-quizary/)
