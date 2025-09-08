@@ -1295,8 +1295,23 @@ body.game-over-bg, html {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .logo-title {
+        margin-top: auto;
+        max-width: 96vw;
+        width: 96vw;
+    }
+
+    .subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 12px;
+    }
+
+    .quiz-header {
+        margin-top: auto !important;
+        margin-bottom: 18px;
+    }
     .settings-header {
-        margin-top: 24px;
+        margin-top: 58px !important;
         margin-bottom: 18px;
         font-size: 2.2rem;
     }
@@ -1332,6 +1347,9 @@ body.game-over-bg, html {
     }
     .category-select-box {
         padding: 0 4px;
+    }
+    .winner-title {
+        font-size: 2.1rem !important;
     }
 }
 
