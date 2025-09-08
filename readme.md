@@ -122,7 +122,7 @@ Style A was selected for its energetic, TV show-inspired aesthetic, appealing to
 - **GitHub**: For JS quiz inspiration(e.g., other quiz apps).
 
 ### Framework
-- No full frameworks (e.g., React) i'm used to keep the project lightweight. Future iterations may consider React for mobile support.
+- No full frameworks (e.g., React) I am used to keeping the project lightweight. Future iterations may consider React for mobile support.
 
 ### Tools
 - **Microsoft Visio**: For creating wireframes.
@@ -159,7 +159,7 @@ The project has changed so much this is more a feature check and change list rel
 - **Simplified Setup:** Users start the game with minimal setup—no profile icons or name entry—allowing for quick access to gameplay.
 - **Difficulty Selection:** Players can choose from several difficulty levels, each affecting question complexity and timer duration, but there are no lifelines or finale rounds.
 - **Direct Gameplay:** The quiz presents questions one after another, with instant feedback for correct or incorrect answers. There are no head-to-head or competitive elements.
-- **Score System:** Scoring is based on correct answers and speed, with a time bonus added for faster responses, making each playthrough unique.
+- **Score System:** Scoring is based on correct answers and speed, with a time bonus added for faster responses, making each play through unique.
 - **Visual & Audio Feedback:** The interface uses bright colors, clear layouts, and simple sound effects to maintain engagement, but advanced animations and immersive effects are limited.
 - **Victory Screen:** At the end of the quiz, a summary screen displays the player’s score and a celebratory message, but there are no elaborate victory sequences or character celebrations.
 - **How to Play:** The instructions modal is available and consistently works, ensuring users understand the game flow.
@@ -167,7 +167,7 @@ The project has changed so much this is more a feature check and change list rel
 - **Accessibility:** The interface remains accessible and responsive, but advanced multiplayer and customisation features are not present in this version.
 
 ### Manual Testing Results
-Tracking component progress through vigorus testing as i built after core pages created:
+Tracking component progress through vigorus testing as I built this project after the core pages were created:
 | Feature                        | Tested Date   | Pass | Tested Date   | Pass | Tested Date   | Pass | Tested Date   | Pass |
 |-------------------------------|--------------|------|--------------|------|--------------|------|--------------|------|
 | Index, settings & quiz pages   | 2025-10-09   | ✅   | 2025-05-09   | ✅   | 2025-03-09   | ✅   | 2025-18-08   | ✅   |
@@ -186,7 +186,7 @@ Kept a custom record of specfic problems and solutions near the end of the proje
 | Page         | Issue Description                                         | Resolution                                                                 | Commit Date     | Author   |
 |--------------|----------------------------------------------------------|----------------------------------------------------------------------------|-----------------|----------|
 | game-over    | Background video not showing on page                     | Fixed Game Over background video not showing on page                        | Sep 4, 2025     | D.Wells  |
-| game-over    | Refined stlye of sizing and spcing | Found balanced look for final adjustment.md                                 | Sep 4, 2025     | D.Wells  |
+| game-over    | Refined stlye of sizing and spacing | Found balanced look for final adjustment.md                                 | Sep 4, 2025     | D.Wells  |
 | game-settings| Difficulty cards not fully clickable or visually selectable| Adjusted game settings page to make difficulty cards fully clickable and visually selectable | Sep 3, 2025     | D.Wells  |
 | quiz         | Unbalanced quiz look and non-smooth timer                | Updated quiz look for more balance and smoother timer, improving code clarity and maintainability | Sep 3, 2025     | D.Wells  |
 | index        | Missing features  & size alterations                | Adjusted general sizes & position to index features.html                             | Sep 3, 2025     | D.Wells  |
@@ -218,7 +218,7 @@ Kept a custom record of specfic problems and solutions near the end of the proje
     - Best Practices: 96/100  
     - SEO: 90/100
 
-All automated tests confirm the site is well-structured, accessible, and performant, with only minor CSS warnings that do not affect functionality.
+All automated tests confirm the site is well-structured, accessible, and performance, with only minor CSS warnings that do not affect functionality.
 
 ### Accessibility Testing
 - Ensured high-contrast colours (Style A+B palettes) for readability.
@@ -317,30 +317,30 @@ These images demonstrate the user flow from starting, setup, gameplay and to the
 - Used projects in github for build goals
 
 ### Entry 6: Development Insight
-- Change of prioriatise using Minimum Viable Product (MVP) Princables
+- Change of prioritize using Minimum Viable Product (MVP) Princables
 
 Starting out I had my project section of github loaded with my planned development path. 
-One thing I wanted to implement (but couldn't) was the tick box for the inner content which would have helped after using MVP pricables. Regardless, I used the project section of github, to manage the extra tasks from the basic, for a working product. The first complication of having 4 players over a one player setup were easy to see, needed a redirection to the one player setup. Server, database or external modile/tablet use was removed for none applicable reasons.
+One thing I wanted to implement (but couldn't) was the tick box for the inner content which would have helped after using MVP principals. Regardless, I used the project section of github, to manage the extra tasks from the basic, for a working product. The first complication of having 4 players over a one player setup were easy to see, needed a redirection to the one player setup. Server, database or external modile/tablet use was removed for none applicable reasons.
 
-This was then followed by a complete overlook at some features of show elements and was cut from the current direction of the project. This brought it back to a handfull of my project titles and content to produce a functioning one player quiz with a settings page and a start page to work (this is reflected in my projects section). 
-Looking online at other quiz's JS code through github to understand the natue of using the api also made me realize I can call the single api instead of pre 50 questions as researched prior(as shown above int he diary). Making the basic working site was rewarding in itself but was done for a timed deadline and still needs more work to style and add any missing elements. I did not expect any issues as I had the basic's working. 
+This was then followed by a complete overhaul at some features of show elements and was cut from the current direction of the project. This brought it back to a handfull of my project titles and content to produce a functioning one player quiz with a settings page and a start page to work (this is reflected in my projects section). 
+Looking online at other quiz's JS code through github to understand the natue of using the api also made me realize I can call the single api instead of pre 50 questions as researched prior (as shown above in the diary). Making the basic working site was rewarding in itself but was done for a timed deadline and still needs more work to style and add any missing elements. I did not expect any issues as I had the basic's working. 
 
 - The re-direct of style for the application of CSS
 
-With the quick help from inspiration of design I had a direction for the new basic build of the project. Getting the first pages done was a breeze and established the new look for the first time. With no hicups i moved on to the quiz page and applied the same style elements to the quiz with a few changes of timer location and other bits moving to a prevous page nothing too drastic. Once done the quiz was gone, but the style was almost there but no quiz. after trying some basic changes like changing z-index as well as otheres, I moved on to making element @important which fixed the none showing quiz section further adjustments to style to get the quiz completley right became a bit more of a challenge with sevral attempts to achive the final look (this included change of txt colour to name one).
+With the quick help from inspiration of design I had a direction for the new basic build of the project. Getting the first pages done was a breeze and established the new look for the first time. With no hiccups I moved on to the quiz page and applied the same style elements to the quiz with a few changes of timer location and other bits moving to a prevous page nothing too drastic. Once done the quiz was gone, but the style was almost there but no quiz. After trying some basic changes like changing z-index as well as others, I moved on to making elements @important which fixed the none showing quiz section further adjustments to style to get the quiz completley right became a bit more of a challenge with sevral attempts to achieve the final look (this included a change of text colour to name one).
 
 ### Final Adjustments, Testing, Resposiveness and Accessablity
 
-A: After getting the base project completed to a working stage for pre hand in. Ive now had a second look at each page to refine and test this project build. See table below for list of adjustements of these pages.
+A: After getting the base project completed to a working stage for pre hand in. I have now had a second look at each page to refine and test this project build. See table below for list of adjustements of these pages.
 
 | Page         | Issue Description                                         | Resolution                                                                 | Commit Date     | Author   |
 |--------------|----------------------------------------------------------|----------------------------------------------------------------------------|-----------------|----------|
 | game-over    | Background video not showing on page                     | Fixed Game Over background video not showing on page                        | Sep 4, 2025     | D.Wells  |
 | game-over    | Refined stlye of sizing and spcing | Found balanced look for final adjustment.md                                 | Sep 4, 2025     | D.Wells  |
 | game-settings| Difficulty cards not fully clickable or visually selectable| Adjusted game settings page to make difficulty cards fully clickable and visually selectable | Sep 3, 2025     | D.Wells  |
-| quiz         | Unbalanced quiz look and non-smooth timer                | Updated quiz look for more balance and smoother timer, improving code clarity and maintainability | Sep 3, 2025     | D.Wells  |
+| quiz         | Unbalanced quiz look and non-smooth timer                | Updated quiz appearance, for a more balanced look and smoother timer, improving code clarity and maintainability | Sep 3, 2025     | D.Wells  |
 | index        | Missing features  & size alterations                | Adjusted general sizes & position to index features.html                             | Sep 3, 2025     | D.Wells  |
-| game-settings| Difficulty selection ability and sizing/positioning  | Adjusted by deleteing select dot and making card selectable in game-settings.html                     | Sep 3, 2025     | D.Wells  |
+| game-settings| Difficulty selection ability and sizing/positioning  | Adjusted by deleting select dot and making card selectable in game-settings.html                     | Sep 3, 2025     | D.Wells  |
 | game-over    | Inconsistent names and missing features                  | Adjusted names and added features to game-over.html                         | Sep 3, 2025     | D.Wells  |
 | index        | Modal show/hide functionality using direct style manipulation | Added modal show/hide functionality using CSS class toggling with 'show' class | Sep 3, 2025     | D.Wells  |
 
@@ -371,24 +371,24 @@ Manual Testing
     - [LGSQ-p2](docs\lighthouse%20FSQ%20p2.PNG) https://lighthouse-metrics.com/lighthouse/checks/c79fb7a5-cd9f-43cb-85d1-087d10a2bec5  
 
 **Events of Testing/Refining**   
-- First issue to get fixed a correct answer bug that happened when leaving the timer to go to zero then revealing the answer in green. fixed by restricting the anwser function in quiz.js.  
-- Second issue, the end page for getting a score wasnt displaying a total score +. I renamed file to winner.html and used !important in css this fixed thos issues.  
-- Third issue, To make the score more competetive for playing the quiz i added a time bonus mode. Quicker anwsers get bigger scores. 
-- Fourth thing i realised the sick mode difficulty had no function as the api doesnt suppport sick mode. I created my specfic sick mode using hard questions from 3 catogarys Maths, Science & Technology with just 15sec to answer felt good to me and after checking the api i made my sick mode option.  
-After all this problem solving it came to a solid run of commits but nothing changed on the pages website hhhhmmmm why 3 weeks old i said hhhmmm. I removed the pages entry to then re upload the pages entry this has corrected all issues (mainly expired issue).  
+- First issue to get fixed a correct answer bug that happened when leaving the timer to go to zero then revealing the answer in green. Fixed by restricting the anwser function in quiz.js.  
+- Second issue, the end page for getting a score was not displaying a total score +. I renamed file to winner.html and used !important in css this fixed those issues.  
+- Third issue, To make the score more competetive for playing the quiz I added a time bonus mode. Quicker anwsers get bigger scores. 
+- Fourth thing I realised the sick mode difficulty had no function as the api does not suppport sick mode. I created my specfic sick mode using hard questions from 3 catogarys Maths, Science & Technology with just 15sec to answer felt good to me and after checking the api I made my sick mode optional.  
+After all this problem solving it came to a solid run of commits but nothing changed on the pages website hhhhmmmm why 3 weeks old I said hhhmmm. I removed the pages entry to then re upload the pages entry this has corrected all issues (mainly expired issue).  
 
 ### C: Resposive & Accesablility
 - 600 or 768 for mobile? 768 pixels allowing certain higher amount of devices use the mobile layout. 
 - Mobile kept a vertical look filling the screen some titles need top space,the quiz need all answers resized to be visible.  
 1080px issue with settings heading off screen adjusted via @media 1080 adding space to top of H1.  
-- All buttons were made effect reactive to offer visual direction. early disision to use green fill for correct and red for wrong but I added the wobble for easy visiual selecting keeping the visual inputs fast for question time.  
+- All buttons were made effect reactive to offer visual direction. Early decision to use green fill for correct and red for wrong but I added the wobble for easy visual selecting, keeping the visual inputs fast for question time.  
 - Changing video name Defomers = v1 Turbulance = v2 particle flow = v5 particle = v3 particle 2 = v4. All converted and being modified in the code.
-- A lot of my design choices were to create a more minimual adjustments for resolution changes keeping a centre of screen focused aproach and using video for the contrast with a minimal layout concept. This aspect worked better than i expected.
+- A lot of my design choices were to create a more minimal adjustments for resolution changes keeping a centre of screen focused approach and using video for the contrast with a minimal layout concept. This aspect worked better than I expected.
 
 ### Entry 7: Project Reflection
-- **Final Thoughts**: After finishing the project and having such drasting changes when faced with time constraints as deadlines came closer and closer. Design focus changed using MPV aproach for the core functions to be built and then refine a design around that with infuence from the planning.
+- **Final Thoughts**: After finishing the project and having such drasting changes when faced with time constraints as deadlines came closer and closer. Design focus changed using MPV approach for the core functions to be built and then refine a design around that with infuence from the planning.
 - My ablitiy with creating video let me take my intial concept and use in a more modern blend with pastal colours of the background and bright 80s feel logo the function became a bug and error monster it was always going to be...
-- **Logic Ideas**: After making some changes and developmants through the project with the logice elements. I've come to further realise the time and questions are a good start but adding a (x) times element to the rounds that get a special multiplier if consecutive correct answers are achived. This would create the most fairest outcome with time based rounds as low (x) values for easy mode & the higher (x) values for hard mode. The skill of anwsering the questions should reward the user the most.
+- **Logic Ideas**: After making some changes and developmants through the project with the logic elements. I've come to further realise the time and questions are a good start but adding a (x) times element to the rounds that get a special multiplier if consecutive correct answers are achived. This would create the most fairest outcome with time based rounds as low (x) values for easy mode & the higher (x) values for hard mode. The skill of anwsering the questions should reward the user the most.
 - Creating the 4 player element with rounds leading to a head to head would best suite the use of Python and would really benfit from a server enabling remote use of mobile/tablets for multiplayer connections and participtaion.
 
 Stay Frosty...
