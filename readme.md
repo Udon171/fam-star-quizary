@@ -39,8 +39,11 @@
 - Support future enhancements, such as additional categories, custom question sets, and mobile interactivity.
 
 ## Wireframes
-- **Main Game Concept**: [View Wireframe Concept (PDF)](docs/FamStarQ%20Concept.pdf)
-- **Setup Menu Concept**: [View Wireframe Concept (PDF)](docs/FamStarQ%20Setup%20Game%20Concept.pdf)
+- **Main Game Concept**: [View Wireframe Concept (PDF)](docs/FamStarQ%20Concept.pdf)  
+  ![Main Game Wireframe](docs\FamStarQ%20Concept.PNG)
+
+- **Setup Menu Concept**: [View Wireframe Concept (PDF)](docs/FamStarQ%20Setup%20Game%20Concept.pdf)  
+  ![Setup Menu Wireframe](docs/FamStarQ%20Menu%20Concept.PNG)
 
 Wireframes outline the initial design for the game interface, including player setup, question display, and round transitions. These were created using Microsoft Visio for clarity and structure.
 
@@ -61,16 +64,34 @@ The design aims to replicate a TV game show experience with vibrant visuals, int
 - **Font Weights**: Regular (400) for body text, Bold (700) for headings and emphasis.
 
 ## Colour Scheme
+
 Two colour palette options were considered to evoke a vibrant, game show atmosphere:
-- **Style A**: Bright and bold with gold (#FFD700), red (#FF0000), blue (#1E90FF), and black (#000000) accents. [View Palette](docs/Fam-star-quizary-pallete-A.png)
-- **Style B**: Softer tones with pastel blue (#87CEEB), pink (#FF69B4), and cream (#FFF8DC) for a friendlier feel. [View Palette](docs/Fam-star-quizary-pallete-B.png)
-- **Chosen Palette**: Style A was selected for its energetic, TV show-inspired aesthetic, appealing to a younger demographic.
+
+### Style A: Bright & Bold
+![Style A Palette](docs/Fam-star-quizary-pallete-A.png)
+- Gold (`#FFD700`)
+- Red (`#FF0000`)
+- Blue (`#1E90FF`)
+- Black (`#000000`)
+- [View Palette](docs/Fam-star-quizary-pallete-A.png)
+
+### Style B: Soft & Pastel
+![Style B Palette](docs/Fam-star-quizary-pallete-B.png)
+- Pastel Blue (`#87CEEB`)
+- Pink (`#FF69B4`)
+- Cream (`#FFF8DC`)
+- [View Palette](docs/Fam-star-quizary-pallete-B.png)
+
+**Chosen Palette:**  
+Style A was selected for its energetic, TV show-inspired aesthetic, appealing to a younger demographic.
 
 ## Images
 - **Trophy Icon**: Used in the victory sequence to crown the "King of the Fam". [View Image](docs/trophy.webp)
 - **Banner**: Main promotional graphic for the game. [View Image](docs/fam-star-quizary-banner.webp)
 - **Poppers and Fireworks**: Animated GIFs for the victory celebration. [View Poppers](docs/poppers.gif), [View Fireworks](docs/fireworks.gif)
 - All images are optimised for web use, ensuring fast loading times without compromising quality.
+- **FInal Images**: None used for final product one logo image used and icons:
+![Logo Webp](docs/famstarquizary-logo-only.webp)
 
 ## Responsiveness
 - The game is designed to be responsive across desktops and laptops, with plans for mobile and tablet support in future updates.
@@ -82,9 +103,9 @@ Two colour palette options were considered to evoke a vibrant, game show atmosph
 
 ### Existing Features
 - **Header**: Displays the game title and a navigation menu for setup and instructions.
-- **Instructions**: Clear, collapsible sections explaining setup, rounds, and the head-to-head finale.
-- **Feedback**: Visual and audio cues for correct ("bad da dinggg") and incorrect ("dwurhhh") answers.
-- **Index**: Main game interface with a central question display, player buzzers, and animated lights.
+- **Instructions**: Clear, collapsible sections explaining setup, rounds, and the timed score finale.
+- **Feedback**: Visual cues for correct answers (Wiggle hover) and incorrect (Red fill), correct answers (Green fill).
+- **Index**: Main game interface with a central question display, player icon & name, and animated background.
 - **Footer**: Includes credits, API attribution (opentdb.com), and links to social media (future development).
 
 ## Technologies Used
@@ -92,65 +113,124 @@ Two colour palette options were considered to evoke a vibrant, game show atmosph
 ### Languages
 - **HTML5**: For structuring the game interface and content.
 - **CSS3**: For styling, animations, and responsive design.
-- **JavaScript**: For game logic, API integration, and dynamic interactions.
+- **JavaScript**: For game logic, API integration, Automatic proccessing and dynamic interactions.
 
 ### Libraries
-- **jQuery**: Simplifies DOM manipulation and event handling.
+- **Font Awesome**: For UI icons (sourced from fontawesome.com).
+- **Google Material Icons**: For additional interface icons (fonts.google.com/icons).
 - **Google Fonts**: For Roboto and Bebas Neue fonts.
-- **Animate.css**: For smooth animations (e.g., curtain transitions, buzzers).
+- **GitHub**: For JS quiz inspiration(e.g., other quiz apps).
 
 ### Framework
-- No full frameworks (e.g., React) were used to keep the project lightweight. Future iterations may consider React for mobile support.
+- No full frameworks (e.g., React) i'm used to keep the project lightweight. Future iterations may consider React for mobile support.
 
 ### Tools
 - **Microsoft Visio**: For creating wireframes.
 - **Git**: For version control.
 - **GitHub**: For hosting the repository and deployment.
+- **Co-Pilot:** For assisted coding and explaining.
 - **VS Code**: For coding and debugging.
-- **OpenTDB API**: For sourcing trivia questions (e.g., [50 General Knowledge Easy Questions](https://opentdb.com/api.php?amount=50&category=9&difficulty=easy)).
+- **Notch**: For creating visual effects video files.
+- **OpenTDB API**: For sourcing trivia questions (e.g., https://opentdb.com/api_category.php).
 
 ## Testing
 
 ### Bugs Fixed
 - **Timer Issue**: Fixed a bug where the 60-second timer would occasionally reset prematurely.
 - **API Latency**: Added fallback questions to handle slow API responses.
-- **Buzzer Overlap**: Adjusted CSS to prevent overlapping buzzers on smaller screens.
+- **Answer Shown**: Used !important and added some js to fix end of round answers showing.
 
 ### Responsiveness Tests
 - Tested on Chrome, Firefox, and Edge across desktop resolutions (1920x1080, 1366x768, 1280x720).
 - Simulated mobile devices using Chrome DevTools (iPhone 12, Galaxy S20).
-- Planned mobile support pending Python server integration.
+- Planned mobile support pending Python server integration for multi player functions.
 
 ### Code Validation
 - **HTML**: Validated using W3C Markup Validator with no errors.
 - **CSS**: Validated using W3C CSS Validator with no critical issues.
 
-### User Story Testing
-- Player setup: Confirmed users can add names and icons easily.
-- Difficulty selection: Verified all levels (1, 2, 3 minutes, Sick Mode) function as expected.
-- Lifelines: Tested "AI Clue" and "Ask Google" functionality in the H2H finale.
-- Victory sequence: Ensured fireworks and poppers display correctly for the winner.
+### External Testing
+- **Mark**: Checked vie testing final build for external issues on diffrent browsers.
+- **Ben**: Helped test through final two weeks with @media testing live during my development.
 
-### Feature Testing
-- Buzzers: Respond within 60 seconds and register correct/incorrect answers.
-- Animations: Curtains, lights, and timers animate smoothly without lag.
-- Sound effects: Correct and incorrect answer sounds play reliably.
+### User Story Testing
+The project has changed so much this is more a feature check and change list related to user stories entrys.
+- **Single Player Focus:** The game now supports only one player per session, removing multiplayer and family profile features for a streamlined solo experience.
+- **Simplified Setup:** Users start the game with minimal setup—no profile icons or name entry—allowing for quick access to gameplay.
+- **Difficulty Selection:** Players can choose from several difficulty levels, each affecting question complexity and timer duration, but there are no lifelines or finale rounds.
+- **Direct Gameplay:** The quiz presents questions one after another, with instant feedback for correct or incorrect answers. There are no head-to-head or competitive elements.
+- **Score System:** Scoring is based on correct answers and speed, with a time bonus added for faster responses, making each playthrough unique.
+- **Visual & Audio Feedback:** The interface uses bright colors, clear layouts, and simple sound effects to maintain engagement, but advanced animations and immersive effects are limited.
+- **Victory Screen:** At the end of the quiz, a summary screen displays the player’s score and a celebratory message, but there are no elaborate victory sequences or character celebrations.
+- **How to Play:** The instructions modal is available and consistently works, ensuring users understand the game flow.
+- **Logo Update:** The main heading was replaced with a logo image for a cleaner visual presentation.
+- **Accessibility:** The interface remains accessible and responsive, but advanced multiplayer and customisation features are not present in this version.
+
+### Manual Testing Results
+Tracking component progress through vigorus testing as i built after core pages created:
+| Feature                        | Tested Date   | Pass | Tested Date   | Pass | Tested Date   | Pass | Tested Date   | Pass |
+|-------------------------------|--------------|------|--------------|------|--------------|------|--------------|------|
+| Index, settings & quiz pages   | 2025-10-09   | ✅   | 2025-05-09   | ✅   | 2025-03-09   | ✅   | 2025-18-08   | ✅   |
+| Difficulty selection function  | 2025-10-09   | ✅   | 2025-05-09   | ✅   | 2025-03-09   | ✅   | 2025-18-08   | ✅   |
+| Question count-in timer        | 2025-10-09   | ✅   | 2025-05-09   | ✅   | 2025-03-09   |       | 2025-18-08   |    |
+| Victory page (unique score)    | 2025-10-09   | ✅   | 2025-05-09   | ✅   | 2025-03-09   |       | 2025-18-08   |    |
+| Select difficulty, 4 levels    | 2025-10-09   | ✅   | 2025-05-09   | ✅   | 2025-03-09   | ✅   | 2025-18-08   |    |
+| Button effect (uniform look)   | 2025-10-09   | ✅   | 2025-05-09   | ✅   | 2025-03-09   |       | 2025-18-08   |     |
+| How to Play modal setup        | 2025-10-09   | ✅   | 2025-05-09   | ✅   | 2025-03-09   | ✅   | 2025-18-08   |    |
+| Responsive layout              | 2025-10-09   | ✅   | 2025-05-09   | ✅   | 2025-03-09   |      | 2025-18-08   |    |
+| Accessibility (ARIA/contrast)  | 2025-10-09   | ✅   | 2025-05-09   |       | 2025-03-09   |      | 2025-18-08   |    |
+| API question loading           | 2025-10-09   | ✅   | 2025-05-09   | ✅   | 2025-03-09   | ✅   | 2025-18-08   |    |
+| 404.html auto homepage  | 2025-10-09   | ✅   | 2025-05-09   |    | 2025-03-09   |    | 2025-18-08   |    |
+
+Kept a custom record of specfic problems and solutions near the end of the project:
+| Page         | Issue Description                                         | Resolution                                                                 | Commit Date     | Author   |
+|--------------|----------------------------------------------------------|----------------------------------------------------------------------------|-----------------|----------|
+| game-over    | Background video not showing on page                     | Fixed Game Over background video not showing on page                        | Sep 4, 2025     | D.Wells  |
+| game-over    | Refined stlye of sizing and spcing | Found balanced look for final adjustment.md                                 | Sep 4, 2025     | D.Wells  |
+| game-settings| Difficulty cards not fully clickable or visually selectable| Adjusted game settings page to make difficulty cards fully clickable and visually selectable | Sep 3, 2025     | D.Wells  |
+| quiz         | Unbalanced quiz look and non-smooth timer                | Updated quiz look for more balance and smoother timer, improving code clarity and maintainability | Sep 3, 2025     | D.Wells  |
+| index        | Missing features  & size alterations                | Adjusted general sizes & position to index features.html                             | Sep 3, 2025     | D.Wells  |
+| game-settings| Difficulty selection ability and sizing/positioning  | Adjusted by deleteing select dot and making card selectable in game-settings.html                     | Sep 3, 2025     | D.Wells  |
+| game-over    | Inconsistent names and missing features                  | Adjusted names and added features to game-over.html                         | Sep 3, 2025     | D.Wells  |
+| index        | Modal show/hide functionality using direct style manipulation | Added modal show/hide functionality using CSS class toggling with 'show' class | Sep 3, 2025     | D.Wells  |
+
+
+### Automated Testing Results
+
+**W3C Validation**
+- **HTML**:  
+  - ![HTML Validation Screenshot](docs/w3c%20html%20validation.PNG)  
+  - [View Full Report](https://validator.w3.org/nu/?doc=https%3A%2F%2Fudon171.github.io%2Ffam-star-quizary%2F)
+  - **Result**: Passed with no critical errors.
+- **CSS**:  
+  - ![CSS Validation Screenshot](docs/w3c%20css%20validation.PNG)  
+  - [View Full Report](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fudon171.github.io%2Ffam-star-quizary%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en#css)
+  - **Result**: Passed, with minor warnings (see [CSS error screenshot](docs/w3c%20css%20validation%20error.PNG)).
+
+**Lighthouse Audits**
+- **Performance, Accessibility, Best Practices, SEO**:
+  - ![Lighthouse Audit Page 1](docs/lighthouse%20FSQ%20p1.PNG)
+  - ![Lighthouse Audit Page 2](docs/lighthouse%20FSQ%20p2.PNG)
+  - [View Online Report](https://lighthouse-metrics.com/lighthouse/checks/c79fb7a5-cd9f-43cb-85d1-087d10a2bec5)
+  - **Scores**:  
+    - Performance: 88/100  
+    - Accessibility: 100/100  
+    - Best Practices: 96/100  
+    - SEO: 90/100
+
+All automated tests confirm the site is well-structured, accessible, and performant, with only minor CSS warnings that do not affect functionality.
 
 ### Accessibility Testing
-- Ensured high-contrast colours (Style A palette) for readability.
+- Ensured high-contrast colours (Style A+B palettes) for readability.
 - Added ARIA labels for buzzers and interactive elements.
 - Tested with screen readers (NVDA, VoiceOver) for basic compatibility.
 
-### Lighthouse Testing
-- **Performance**: 85/100 (optimised images and minified CSS/JS).
-- **Accessibility**: 90/100 (minor ARIA improvements needed).
-- **Best Practices**: 92/100.
-- **SEO**: 88/100 (added meta tags for better indexing).
 
 ### Browser Testing
 - **Chrome**: Fully functional.
 - **Firefox**: Minor animation delay fixed.
 - **Edge**: No issues.
+- **Brave**: No issues.
 - **Safari**: Planned for future testing with mobile support.
 
 ## Deployment
@@ -170,7 +250,7 @@ Two colour palette options were considered to evoke a vibrant, game show atmosph
 2. Open the project in a code editor (e.g., VS Code).
 3. Serve locally using a tool like Live Server or deploy to a web server.
 
-## Images of Website
+
 ## Images of Website
 
 Below are screenshots showcasing the Fam Star Quizary website and its main features:
@@ -187,16 +267,14 @@ Below are screenshots showcasing the Fam Star Quizary website and its main featu
 | **Settings Page**             | ![Settings](docs/fsq-settings.PNG)                                                          |
 | **Winner / Victory Screen**   | ![Winner](docs/fsq-winner.PNG)                                                              |
 
-These images demonstrate the user flow from setup, gameplay, and feedback to the final victory celebration.
-
-## Website
-- **Website Link**: [View Website](https://udon171.github.io/fam-star-quizary/)
+These images demonstrate the user flow from starting, setup, gameplay and to the final feedback victory celebration. Images show a representation of the background video files used for each experiance of the game.
 
 ## Credits
 - **OpenTDB API**: For providing unlimited trivia questions ([opentdb.com](https://opentdb.com)).
 - **Google Fonts**: For Roboto and Bebas Neue fonts.
 - **Animate.css**: For animation effects.
-- **Images**: Trophy, poppers, and fireworks sourced from royalty-free libraries (to be credited in final deployment).
+- **Images**: Logo sourced from kling.ai generated with custom refrence.
+- **Code Institute**: Coding education in HTML, CSS & JS.
 
 ## Project Diary
 
@@ -226,7 +304,7 @@ These images demonstrate the user flow from setup, gameplay, and feedback to the
 - Added clear question displays, lifeline progress, and profile characters.
 - Designed curtain and camera movement animations for round transitions.
 - Named "Fam Star Quizary" to appeal to younger demographics.
-- USe all catergory API: https://opentdb.com/api_category.php
+- USe all catergorys API: https://opentdb.com/api_category.php
 
 ### Entry 4: Wireframe Design
 - Created wireframes for main game and setup menu using Visio:
@@ -242,7 +320,7 @@ These images demonstrate the user flow from setup, gameplay, and feedback to the
 - Change of prioriatise using Minimum Viable Product (MVP) Princables
 
 Starting out I had my project section of github loaded with my planned development path. 
-One thing I wanted to implement (but couldn't) was the tick box for the inner content which would have helped after using MVP pricables. Regardless, I used the project section of github, to manage the extra tasks from the basic, for a working product. The first complication of having 4 players over a one player setup were easy to see, needed a redirection to the one player setup.
+One thing I wanted to implement (but couldn't) was the tick box for the inner content which would have helped after using MVP pricables. Regardless, I used the project section of github, to manage the extra tasks from the basic, for a working product. The first complication of having 4 players over a one player setup were easy to see, needed a redirection to the one player setup. Server, database or external modile/tablet use was removed for none applicable reasons.
 
 This was then followed by a complete overlook at some features of show elements and was cut from the current direction of the project. This brought it back to a handfull of my project titles and content to produce a functioning one player quiz with a settings page and a start page to work (this is reflected in my projects section). 
 Looking online at other quiz's JS code through github to understand the natue of using the api also made me realize I can call the single api instead of pre 50 questions as researched prior(as shown above int he diary). Making the basic working site was rewarding in itself but was done for a timed deadline and still needs more work to style and add any missing elements. I did not expect any issues as I had the basic's working. 
@@ -257,14 +335,14 @@ A: After getting the base project completed to a working stage for pre hand in. 
 
 | Page         | Issue Description                                         | Resolution                                                                 | Commit Date     | Author   |
 |--------------|----------------------------------------------------------|----------------------------------------------------------------------------|-----------------|----------|
-| game-over    | Background video not showing on page                     | Fixed Game Over background video not showing on page                        | Sep 4, 2025     | Udon171  |
-| game-over    | Refined stlye of sizing and spcing | Found balanced look for final adjustment.md                                 | Sep 4, 2025     | Udon171  |
-| game-settings| Difficulty cards not fully clickable or visually selectable| Adjusted game settings page to make difficulty cards fully clickable and visually selectable | Sep 3, 2025     | Udon171  |
-| quiz         | Unbalanced quiz look and non-smooth timer                | Updated quiz look for more balance and smoother timer, improving code clarity and maintainability | Sep 3, 2025     | Udon171  |
-| index        | Missing features  & size alterations                | Adjusted general sizes & position to index features.html                             | Sep 3, 2025     | Udon171  |
-| game-settings| Difficulty selection ability and sizing/positioning  | Adjusted by deleteing select dot and making card selectable in game-settings.html                     | Sep 3, 2025     | Udon171  |
-| game-over    | Inconsistent names and missing features                  | Adjusted names and added features to game-over.html                         | Sep 3, 2025     | Udon171  |
-| index        | Modal show/hide functionality using direct style manipulation | Added modal show/hide functionality using CSS class toggling with 'show' class | Sep 3, 2025     | Udon171  |
+| game-over    | Background video not showing on page                     | Fixed Game Over background video not showing on page                        | Sep 4, 2025     | D.Wells  |
+| game-over    | Refined stlye of sizing and spcing | Found balanced look for final adjustment.md                                 | Sep 4, 2025     | D.Wells  |
+| game-settings| Difficulty cards not fully clickable or visually selectable| Adjusted game settings page to make difficulty cards fully clickable and visually selectable | Sep 3, 2025     | D.Wells  |
+| quiz         | Unbalanced quiz look and non-smooth timer                | Updated quiz look for more balance and smoother timer, improving code clarity and maintainability | Sep 3, 2025     | D.Wells  |
+| index        | Missing features  & size alterations                | Adjusted general sizes & position to index features.html                             | Sep 3, 2025     | D.Wells  |
+| game-settings| Difficulty selection ability and sizing/positioning  | Adjusted by deleteing select dot and making card selectable in game-settings.html                     | Sep 3, 2025     | D.Wells  |
+| game-over    | Inconsistent names and missing features                  | Adjusted names and added features to game-over.html                         | Sep 3, 2025     | D.Wells  |
+| index        | Modal show/hide functionality using direct style manipulation | Added modal show/hide functionality using CSS class toggling with 'show' class | Sep 3, 2025     | D.Wells  |
 
 ### B: Testing
 
@@ -281,6 +359,7 @@ Manual Testing
 | Responsive layout              | 2025-10-09   | ✅   | 2025-05-09   | ✅   | 2025-03-09   |      | 2025-18-08   |    |
 | Accessibility (ARIA/contrast)  | 2025-10-09   | ✅   | 2025-05-09   |       | 2025-03-09   |      | 2025-18-08   |    |
 | API question loading           | 2025-10-09   | ✅   | 2025-05-09   | ✅   | 2025-03-09   | ✅   | 2025-18-08   |    |
+| 404.html auto homepage  | 2025-10-09   | ✅   | 2025-05-09   |    | 2025-03-09   |    | 2025-18-08   |    |
 
 ### Automatic Testing
 - W3C -  
@@ -291,19 +370,25 @@ Manual Testing
     - [LGSQ-p1](docs\lighthouse%20FSQ%20p1.PNG) 
     - [LGSQ-p2](docs\lighthouse%20FSQ%20p2.PNG) https://lighthouse-metrics.com/lighthouse/checks/c79fb7a5-cd9f-43cb-85d1-087d10a2bec5  
 
-Events of Testing/Refining   
-First issue to get fixed a correct answer bug thathappenmed when leaving the timer to go to zero then revealing the answer in green. fixed by restricting the anwser function in quiz.js.  
-Second issue, the end page for getting a score wasnt displaying a total score +. I renamed file to winner.html and used !important in css this fixed thos issues.  
-Third issue, To make the score more competetive for playing the quiz i added a time bonus mode. Quicker anwsers get bigger scores. 
-Fourth thing i realised the sick mode difficulty had no function as the api doesnt suppport sick mode. I created my specfic sick mode using hard questions from 3 catogarys Maths, Science & Technology with just 15sec to answer felt good to me and after checking the api i made my sick mode option.  
+**Events of Testing/Refining**   
+- First issue to get fixed a correct answer bug that happened when leaving the timer to go to zero then revealing the answer in green. fixed by restricting the anwser function in quiz.js.  
+- Second issue, the end page for getting a score wasnt displaying a total score +. I renamed file to winner.html and used !important in css this fixed thos issues.  
+- Third issue, To make the score more competetive for playing the quiz i added a time bonus mode. Quicker anwsers get bigger scores. 
+- Fourth thing i realised the sick mode difficulty had no function as the api doesnt suppport sick mode. I created my specfic sick mode using hard questions from 3 catogarys Maths, Science & Technology with just 15sec to answer felt good to me and after checking the api i made my sick mode option.  
 After all this problem solving it came to a solid run of commits but nothing changed on the pages website hhhhmmmm why 3 weeks old i said hhhmmm. I removed the pages entry to then re upload the pages entry this has corrected all issues (mainly expired issue).  
 
 ### C: Resposive & Accesablility
-600 or 768 for mobile?  
-Mobile hept a vertical look filling the screen some titles need top space,the quiz need all answers resized to be visible.  
+- 600 or 768 for mobile? 768 pixels allowing certain higher amount of devices use the mobile layout. 
+- Mobile kept a vertical look filling the screen some titles need top space,the quiz need all answers resized to be visible.  
 1080px issue with settings heading off screen adjusted via @media 1080 adding space to top of H1.  
-All buttons were made effect reactive to offer visual direction. early disision to use green fill for correct and red for wrong but I added the wobble for easy visiual selecting keeping the visual inputs fast for question time.  
-Changing video name Defomers = v1 Turbulance = v2 particle flow = v5 particle = v3 particle 2 = v4. All converted and being modified in the code.
+- All buttons were made effect reactive to offer visual direction. early disision to use green fill for correct and red for wrong but I added the wobble for easy visiual selecting keeping the visual inputs fast for question time.  
+- Changing video name Defomers = v1 Turbulance = v2 particle flow = v5 particle = v3 particle 2 = v4. All converted and being modified in the code.
+- A lot of my design choices were to create a more minimual adjustments for resolution changes keeping a centre of screen focused aproach and using video for the contrast with a minimal layout concept. This aspect worked better than i expected.
 
 ### Entry 7: Project Reflection
+- **Final Thoughts**: After finishing the project and having such drasting changes when faced with time constraints as deadlines came closer and closer. Design focus changed using MPV aproach for the core functions to be built and then refine a design around that with infuence from the planning.
+- My ablitiy with creating video let me take my intial concept and use in a more modern blend with pastal colours of the background and bright 80s feel logo the function became a bug and error monster it was always going to be...
+- **Logic Ideas**: After making some changes and developmants through the project with the logice elements. I've come to further realise the time and questions are a good start but adding a (x) times element to the rounds that get a special multiplier if consecutive correct answers are achived. This would create the most fairest outcome with time based rounds as low (x) values for easy mode & the higher (x) values for hard mode. The skill of anwsering the questions should reward the user the most.
+- Creating the 4 player element with rounds leading to a head to head would best suite the use of Python and would really benfit from a server enabling remote use of mobile/tablets for multiplayer connections and participtaion.
 
+Stay Frosty...
