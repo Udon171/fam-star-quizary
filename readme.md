@@ -1,12 +1,8 @@
-<div align="center">
+<p align="center">
+  <img src="assets/images/famstarquizary-logo-video.gif" alt="Fam Star Quizary Logo Animation" width="320" style="border-radius:12px;">
+</p>
 
-<video src="assets/video/famstarquizary-logo-video.mp4" width="320" autoplay loop muted playsinline style="display:block; margin: 0 auto; border-radius: 12px;"></video>
-
-<br/>
-
-<b>The Ultimate Family Game Show Experience!</b>
-
-</div>
+<p align="center"><b>The Ultimate Family Game Show Experience!</b></p>
 
 ---
 
