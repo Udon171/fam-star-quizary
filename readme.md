@@ -86,7 +86,8 @@ Style A was selected for its energetic, TV show-inspired aesthetic, appealing to
 - **Banner**: Main promotional graphic for the game. [View Image](docs/fam-star-quizary-banner.webp)
 - **Poppers and Fireworks**: Animated GIFs for the victory celebration. [View Poppers](docs/poppers.gif), [View Fireworks](docs/fireworks.gif)
 - All images are optimised for web use, ensuring fast loading times without compromising quality.
-- **FInal Images**: None used for final product one logo image used and icons:
+- **FInal Images**: None used for final product one logo image used and icons.
+
 ![Logo Webp](docs/famstarquizary-logo-only.webp)
 
 ## Responsiveness
