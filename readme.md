@@ -104,6 +104,24 @@ Style A was selected for its energetic, TV show-inspired aesthetic, appealing to
 - **Index**: Main game interface with a central question display, player icon & name, and animated background.
 - **Footer**: Includes credits, API attribution (opentdb.com), and links to social media (future development).
 
+## Images of Website
+Below are screenshots showcasing the Fam Star Quizary website and its main features:
+
+| Page / Feature                | Screenshot                                                                                   |
+|-------------------------------|---------------------------------------------------------------------------------------------|
+| **Game Over Screen**          | ![Game Over](docs/fsq-game-over.PNG)                                                        |
+| **How to Play Modal**         | ![How to Play](docs/fsq-index-how2play.PNG)                                                 |
+| **Home / Index Page**         | ![Index](docs/fsq-index.PNG)                                                                |
+| **Quiz - Incorrect Answer**   | ![Quiz Incorrect](docs/fsq-quiz-close-up-inccorect.PNG)                                     |
+| **Quiz - Correct Answer**     | ![Quiz Correct](docs/fsq-quiz-correct-count-out.PNG)                                        |
+| **Quiz In Progress**          | ![Quiz](docs/fsq-quiz.PNG)                                                                  |
+| **Settings - Difficulty Selection** | ![Settings Selection](docs/fsq-settings-selection.PNG)                                 |
+| **Settings Page**             | ![Settings](docs/fsq-settings.PNG)                                                          |
+| **Winner / Victory Screen**   | ![Winner](docs/fsq-winner.PNG)                                                              |
+
+These images demonstrate the user flow from starting, setup, gameplay and to the final feedback victory celebration. Images show a representation of the background video files used for each experiance of the game.
+
+
 ## Technologies Used
 
 ### Languages
@@ -245,25 +263,6 @@ All automated tests confirm the site is well-structured, accessible, and perform
 1. Run `git clone https://github.com/Udon171/fam-star-quizary`.
 2. Open the project in a code editor (e.g., VS Code).
 3. Serve locally using a tool like Live Server or deploy to a web server.
-
-
-## Images of Website
-
-Below are screenshots showcasing the Fam Star Quizary website and its main features:
-
-| Page / Feature                | Screenshot                                                                                   |
-|-------------------------------|---------------------------------------------------------------------------------------------|
-| **Game Over Screen**          | ![Game Over](docs/fsq-game-over.PNG)                                                        |
-| **How to Play Modal**         | ![How to Play](docs/fsq-index-how2play.PNG)                                                 |
-| **Home / Index Page**         | ![Index](docs/fsq-index.PNG)                                                                |
-| **Quiz - Incorrect Answer**   | ![Quiz Incorrect](docs/fsq-quiz-close-up-inccorect.PNG)                                     |
-| **Quiz - Correct Answer**     | ![Quiz Correct](docs/fsq-quiz-correct-count-out.PNG)                                        |
-| **Quiz In Progress**          | ![Quiz](docs/fsq-quiz.PNG)                                                                  |
-| **Settings - Difficulty Selection** | ![Settings Selection](docs/fsq-settings-selection.PNG)                                 |
-| **Settings Page**             | ![Settings](docs/fsq-settings.PNG)                                                          |
-| **Winner / Victory Screen**   | ![Winner](docs/fsq-winner.PNG)                                                              |
-
-These images demonstrate the user flow from starting, setup, gameplay and to the final feedback victory celebration. Images show a representation of the background video files used for each experiance of the game.
 
 ## Credits
 - **OpenTDB API**: For providing unlimited trivia questions ([opentdb.com](https://opentdb.com)).
