@@ -36,7 +36,7 @@
 
 ## Wireframes
 - **Main Game Concept**: [View Wireframe Concept (PDF)](docs/FamStarQ%20Concept.pdf)  
-  ![Main Game Wireframe](docs\FamStarQ%20Concept.PNG)
+  ![Main Game Wireframe](docs/FamStarQ%20Concept.PNG)
 
 - **Setup Menu Concept**: [View Wireframe Concept (PDF)](docs/FamStarQ%20Setup%20Game%20Concept.pdf)  
   ![Setup Menu Wireframe](docs/FamStarQ%20Menu%20Concept.PNG)
