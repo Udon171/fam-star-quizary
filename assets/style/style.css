@@ -1276,9 +1276,10 @@ body.game-over-bg, html {
 }
 
 /* Name Input Modal Styles */
+
 #nameModal {
     position: fixed;
-    z-index: 1000;
+    z-index: 99999 !important;
     left: 0;
     top: 0;
     width: 100vw;
@@ -1291,20 +1292,21 @@ body.game-over-bg, html {
 }
 
 #nameModal.show {
-    display: flex;
+    display: flex !important;
+    z-index: 99999 !important;
 }
 #nameModal .modal-content {
     background: #181f2a;
     color: #fff;
-    border-radius: 18px;
-    border: 2.5px solid #b97aff;
-    box-shadow: 0 0 32px #b97aff, 0 0 px #fff;
-    padding: 48px 32px 32px 32px;
-    max-width: 400px;
-    width: 95vw;
+    border-radius: 24px;
+    border: 3.5px solid #e0e0ff;
+    box-shadow: 0 0 48px #b97aff, 0 0 12px #fff;
+    padding: 64px 48px 48px 48px;
+    max-width: 520px;
+    width: 98vw;
     position: relative;
-    font-size: 1.25rem;
-    letter-spacing: 1px;
+    font-size: 1.45rem;
+    letter-spacing: 1.2px;
     margin: 0 auto;
     text-align: center;
     display: flex;
@@ -1313,6 +1315,7 @@ body.game-over-bg, html {
     justify-content: center;
     overflow: hidden;
 }
+/* Clean border for name modal, no animation or conic-gradient */
 #nameModal .modal-content::before {
     content: "";
     position: absolute;
@@ -1320,24 +1323,8 @@ body.game-over-bg, html {
     border-radius: 20px;
     pointer-events: none;
     z-index: 2;
-    border: 3px solid transparent;
-    background: conic-gradient(
-        from 0deg,
-        #b97aff 0deg 60deg,
-        #fff 61deg 120deg,
-        #b97aff 121deg 360deg
-    );
-    /* animation glint-rotate */
-    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    opacity: 0.8;
-    animation: glint-rotate 1.2s linear 1 !important;
-    will-change: transform, opacity;
-}
-@keyframes glint-rotate {
-    0% { transform: rotate(0deg) scale(1); opacity: 0.8; }
-    80% { opacity: 1; }
-    100% { transform: rotate(360deg) scale(1.05); opacity: 0; }
-}
+    border: 3px solid #b97aff;
+    background: none;
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -1427,3 +1414,6 @@ body.game-over-bg, html {
 }
 
 
+#startWithNameBtn {
+    margin-top: 0;
+}

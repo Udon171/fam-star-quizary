@@ -17,7 +17,7 @@
         <img src="assets/images/famstarquizary-logo-only.webp" alt="Fam Star Quizary Logo" class="logo-title">
         <!-- <h1 class="neon-title"><span class="fam-star">FAM STAR</span> <span class="quizary">QUIZARY</span></h1> -->
         <div class="subtitle">The ultimate family-friendly online quiz game! Compete on points, <br>and prove who's the trivia champion of the household.</div>
-        <a href="#" id="startGameBtn" class="start-btn">Start New Game</a>
+    <button id="startGameBtn" class="start-btn">Start New Game</button>
         <div class="how-to-play-link"><button id="howToPlayBtn" class="start-btn">How to Play</button></div>
         <div class="feature-box">
             <div class="features-title">GAME FEATURES</div>
@@ -63,64 +63,13 @@
     <div id="nameModal" class="modal">
         <div class="modal-content">
             <h2>Enter Your Name</h2>
-            <input type="text" id="playerNameInput" maxlength="16" placeholder="Your name..." style="font-size:1.3rem;padding:12px 18px;border-radius:8px;border:1.5px solid #b97aff;width:80%;margin-bottom:18px;">
-            <button id="startWithNameBtn" class="start-btn" style="margin-top:0;">Start</button>
+            <input type="text" id="playerNameInput" maxlength="16" placeholder="Your name...">
+            <button id="startWithNameBtn" class="start-btn">Start</button>
         </div>
     </div>
     <footer>
         <p>&copy; 2025 Fam Star Quizary. All Rights Reserved.</p>
     </footer>
-    <script>
-// Modal logic
-const howToPlayBtn = document.getElementById('howToPlayBtn');
-const howToPlayModal = document.getElementById('howToPlayModal');
-const closeHowToPlay = document.getElementById('closeHowToPlay');
-const startGameBtn = document.getElementById('startGameBtn');
-const nameModal = document.getElementById('nameModal');
-const playerNameInput = document.getElementById('playerNameInput');
-const startWithNameBtn = document.getElementById('startWithNameBtn');
-
-howToPlayBtn.onclick = function() {
-    howToPlayModal.classList.add('show');
-}
-closeHowToPlay.onclick = function() {
-    howToPlayModal.classList.remove('show');
-}
-window.onclick = function(event) {
-    if (event.target === howToPlayModal) {
-        howToPlayModal.classList.remove('show');
-    }
-    if (event.target === nameModal) {
-        nameModal.classList.remove('show');
-    }
-}
-
-startGameBtn.onclick = function(e) {
-    e.preventDefault();
-    nameModal.classList.add('show');
-    playerNameInput.value = '';
-    playerNameInput.focus();
-}
-
-startWithNameBtn.onclick = function() {
-    const name = playerNameInput.value.trim() || 'Player';
-    localStorage.setItem('quiz_player_name', name);
-    nameModal.classList.remove('show');
-    window.location.href = 'game-settings.html';
-}
-
-playerNameInput.addEventListener('keydown', function(e) {
-    if (e.key === 'Enter') {
-        startWithNameBtn.click();
-    }
-});
-
-// Check if there's a redirect path stored from 404
-const redirectedPath = sessionStorage.redirect;
-if (redirectedPath) {
-    sessionStorage.removeItem('redirect');
-    window.history.replaceState(null, '', redirectedPath);
-}
-</script>
+    <script src="assets/JS/index.js"></script>
 </body>
 </html>

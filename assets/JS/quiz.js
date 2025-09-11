@@ -219,15 +219,7 @@ function startTimer() {
                 answerElement.removeEventListener('click', selectAnswer);
                 answerElement.classList.add('disabled');
             });
-            // Only show correct answer if not in sick mode
-            let difficulty = localStorage.getItem('quiz_difficulty') || 'medium';
-            if (difficulty.toLowerCase() !== 'sick') {
-                Array.from(answerElements).forEach(answerElement => {
-                    if (answerElement.textContent === decodeHtml(currentQuestion.correct_answer)) {
-                        answerElement.classList.add('correct');
-                    }
-                });
-            }
+            // Do not reveal the correct answer when timer runs out
             isAnswerSelected = true; // Prevent answering after timer ends
             questionCount++;
             previousQuestions.push(currentQuestion);
