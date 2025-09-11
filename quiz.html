@@ -11,7 +11,7 @@
 </head>
 <body>
     <video id="bg-video-quiz" autoplay muted loop>
-        <source src="assets/video/visual-03.mp4" type="video/mp4">
+        <source id="bg-video-source" src="assets/video/visual-03.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
     <div id="quiz-header">
@@ -48,6 +48,24 @@
         </div>
     </div>
     <script src="assets\JS\quiz.js"></script>
+    <script>
+    // Alternate quiz background video between visual-03.mp4 and visual-04.mp4
+    (function() {
+        const videoSource = document.getElementById('bg-video-source');
+        const lastVideo = localStorage.getItem('quiz_bg_video');
+        let nextVideo;
+        if (lastVideo === 'visual-03.mp4') {
+            nextVideo = 'visual-04.mp4';
+        } else {
+            nextVideo = 'visual-03.mp4';
+        }
+        videoSource.src = `assets/video/${nextVideo}`;
+        // Force reload of video
+        const video = document.getElementById('bg-video-quiz');
+        video.load();
+        localStorage.setItem('quiz_bg_video', nextVideo);
+    })();
+    </script>
     <script>
     // Show finish modal at end of game
     function showFinishModal() {
