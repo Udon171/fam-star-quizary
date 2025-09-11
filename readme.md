@@ -373,7 +373,7 @@ Manual Testing
 - Fourth thing I realised the sick mode difficulty had no function as the api does not suppport sick mode. I created my specfic sick mode using hard questions from 3 catogarys Maths, Science & Technology with just 15sec to answer felt good to me and after checking the api I made my sick mode optional.  
 After all this problem solving it came to a solid run of commits but nothing changed on the pages website hhhhmmmm why 3 weeks old I said hhhmmm. I removed the pages entry to then re upload the pages entry this has corrected all issues (mainly a expired issue).  
 
-### C: Responsive & Accesablility
+### C: Responsiveness & Accesablility
 - 600 or 768 for mobile? 768 pixels allowing certain higher amount of devices use the mobile layout. 
 - Mobile kept a vertical look filling the screen some titles need top space, the quiz element needed all answers resized to be visible.  
 1080px issue with settings heading off screen adjusted via @media 1080 adding space to top of H1.  
