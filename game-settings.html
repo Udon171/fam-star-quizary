@@ -57,25 +57,25 @@
             </div>
             <button class="sga-btn">START GAME!</button>
         </section>
-        <script>
-        // Difficulty selection logic (preserves previous select behavior)
-        // Make the whole difficulty card clickable and select radio
-        document.querySelectorAll('.difficulty-card').forEach(card => {
-            card.addEventListener('click', function() {
-                document.querySelectorAll('.difficulty-card').forEach(c => c.classList.remove('selected'));
-                card.classList.add('selected');
-                card.querySelector('input[type="radio"]').checked = true;
-            });
-        });
-        // Default select medium
-        document.getElementById('diff-medium').checked = true;
-        document.getElementById('diff-medium').parentElement.classList.add('selected');
-        // Rounds slider logic
-        document.getElementById('rounds-slider').addEventListener('input', function() {
-            document.getElementById('rounds-value').textContent = this.value;
-        });
-        </script>
     </main>
+    <script>
+    // Difficulty selection logic (preserves previous select behavior)
+    // Make the whole difficulty card clickable and select radio
+    document.querySelectorAll('.difficulty-card').forEach(card => {
+        card.addEventListener('click', function() {
+            document.querySelectorAll('.difficulty-card').forEach(c => c.classList.remove('selected'));
+            card.classList.add('selected');
+            card.querySelector('input[type="radio"]').checked = true;
+        });
+    });
+    // Default select medium
+    document.getElementById('diff-medium').checked = true;
+    document.getElementById('diff-medium').parentElement.classList.add('selected');
+    // Rounds slider logic
+    document.getElementById('rounds-slider').addEventListener('input', function() {
+        document.getElementById('rounds-value').textContent = this.value;
+    });
+    </script>
     <script src="assets\JS\game-settings.js"></script>
 </body>
 </html>

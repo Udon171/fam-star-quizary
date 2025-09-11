@@ -25,7 +25,8 @@ if (document.readyState === 'loading') {
     populateCategoryOptions();
 }
 
-// Save settings to localStorage and go to quiz page
+// Only category/difficulty/rounds logic
+
 function startGame() {
     const category = document.getElementById('category') ? document.getElementById('category').value : '';
     const difficultyRadio = document.querySelector('.difficulty-card input[type="radio"]:checked');

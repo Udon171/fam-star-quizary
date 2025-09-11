@@ -30,7 +30,7 @@
     <script>
         // Populate winner info from localStorage
         const score = parseInt(localStorage.getItem('final_score') || 0, 10);
-        const player = localStorage.getItem('final_player') || 'Player';
+        const player = localStorage.getItem('quiz_player_name') || localStorage.getItem('final_player') || 'Player';
         const bonus = parseInt(localStorage.getItem('bonus_time_total') || 0, 10);
         let total = parseInt(localStorage.getItem('final_total_score'), 10);
         console.log('Loaded from storage:', {score, bonus, total});

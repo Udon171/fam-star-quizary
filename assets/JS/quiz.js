@@ -277,7 +277,7 @@ window.addEventListener('DOMContentLoaded', () => {
     score = 0;
     previousQuestions = [];
     isGameOver = false;
-    playerNameElement.textContent = 'Player';
+    playerNameElement.textContent = localStorage.getItem('quiz_player_name') || 'Player';
     playerScoreElement.textContent = score;
     startGameWithCountdown();
     updateTimerBar();
