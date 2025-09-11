@@ -195,6 +195,7 @@ footer {
 }
 
 /* Modal styles for How to Play */
+/* Modal styles for How to Play and all modals */
 .modal {
     position: fixed;
     z-index: 1000;
@@ -210,15 +211,17 @@ footer {
 }
 .modal.show {
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .modal-content {
     background: #181f2a;
     color: #fff;
     border-radius: 18px;
     border: 2.5px solid #b97aff;
-    box-shadow: 0 0 32px #b97aff, 0 0 px #fff;
+    box-shadow: 0 0 32px #b97aff, 0 0 8px #fff;
     padding: 48px 32px 32px 32px;
-    max-width: 400px;
+    max-width: 600px;
     width: 95vw;
     position: relative;
     font-size: 1.25rem;
@@ -229,6 +232,7 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    min-height: 400px;
 }
 .modal-content h2 {
     text-align: center;
@@ -263,14 +267,7 @@ footer {
 .modal-content ul li:last-child {
     margin-bottom: 0;
 }
-.modal-content {
-    /* Make modal bigger and centered */
-    min-height: 500px;
-}
-.modal {
-    align-items: flex-start;
-    justify-content: center;
-}
+/* Remove duplicate/overriding modal rules above */
 .close {
     position: absolute;
     top: 24px;
@@ -1325,6 +1322,11 @@ body.game-over-bg, html {
     z-index: 2;
     border: 3px solid #b97aff;
     background: none;
+}
+
+#startWithNameBtn {
+    margin-top: 0;
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -1399,7 +1401,7 @@ body.game-over-bg, html {
 
 /* Added to make the How to Play modal wider and less squashed on desktop, but still responsive for mobile */
 #howToPlayModal .modal-content {
-    max-width: 700px;
+    max-width: 700px !important;
     width: 98vw;
     min-width: 320px;
     padding: 56px 48px 48px 48px;
@@ -1411,9 +1413,4 @@ body.game-over-bg, html {
         max-width: 98vw;
         padding: 32px 8px 32px 8px;
     }
-}
-
-
-#startWithNameBtn {
-    margin-top: 0;
 }
