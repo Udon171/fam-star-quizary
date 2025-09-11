@@ -371,15 +371,16 @@ Manual Testing
 - Second issue, the end page for getting a score was not displaying a total score +. I renamed file to winner.html and used !important in css this fixed those issues.  
 - Third issue, To make the score more competetive for playing the quiz I added a time bonus mode. Quicker anwsers get bigger scores. 
 - Fourth thing I realised the sick mode difficulty had no function as the api does not suppport sick mode. I created my specfic sick mode using hard questions from 3 catogarys Maths, Science & Technology with just 15sec to answer felt good to me and after checking the api I made my sick mode optional.  
-After all this problem solving it came to a solid run of commits but nothing changed on the pages website hhhhmmmm why 3 weeks old I said hhhmmm. I removed the pages entry to then re upload the pages entry this has corrected all issues (mainly expired issue).  
+After all this problem solving it came to a solid run of commits but nothing changed on the pages website hhhhmmmm why 3 weeks old I said hhhmmm. I removed the pages entry to then re upload the pages entry this has corrected all issues (mainly a expired issue).  
 
-### C: Resposive & Accesablility
+### C: Responsive & Accesablility
 - 600 or 768 for mobile? 768 pixels allowing certain higher amount of devices use the mobile layout. 
-- Mobile kept a vertical look filling the screen some titles need top space,the quiz need all answers resized to be visible.  
+- Mobile kept a vertical look filling the screen some titles need top space, the quiz element needed all answers resized to be visible.  
 1080px issue with settings heading off screen adjusted via @media 1080 adding space to top of H1.  
 - All buttons were made effect reactive to offer visual direction. Early decision to use green fill for correct and red for wrong but I added the wobble for easy visual selecting, keeping the visual inputs fast for question time.  
-- Changing video name Defomers = v1 Turbulance = v2 particle flow = v5 particle = v3 particle 2 = v4. All converted and being modified in the code.
+- Changing video name from Defomers = visual-01 Turbulance = 02 particle flow = 05 particle = 03 particle 2 = 04. All converted and has been modified in the code.
 - A lot of my design choices were to create a more minimal adjustments for resolution changes keeping a centre of screen focused approach and using video for the contrast with a minimal layout concept. This aspect worked better than I expected.
+- Adding the 404.html and relivant js code to the index came from researching online rather than the use of ai questioning as this was the last elemnt entry for this project.
 
 ### Entry 7: Project Reflection
 - **Final Thoughts**: After finishing the project and having such drasting changes when faced with time constraints as deadlines came closer and closer. Design focus changed using MPV approach for the core functions to be built and then refine a design around that with infuence from the planning.
