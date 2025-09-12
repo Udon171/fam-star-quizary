@@ -387,5 +387,6 @@ After all this problem solving it came to a solid run of commits but nothing cha
 - My ablitiy with creating video let me take my intial concept and use in a more modern blend with pastal colours of the background and bright 80s feel logo the function became a bug and error monster it was always going to be...
 - **Logic Ideas**: After making some changes and developmants through the project with the logic elements. I've come to further realise the time and questions are a good start but adding a (x) times element to the rounds that get a special multiplier if consecutive correct answers are achived. This would create the most fairest outcome with time based rounds as low (x) values for easy mode & the higher (x) values for hard mode. The skill of anwsering the questions should reward the user the most.
 - Creating the 4 player element with rounds leading to a head to head would best suite the use of Python and would really benfit from a server enabling remote use of mobile/tablets for multiplayer connections and participtaion.
+- **Added Content**: I realised i forgot to add the name entry of the player which was a key bit of the unique players experiance. Adding a pre pop up modal before going to settings resolved this with some CSS changes to balance the layout.
 
 Stay Frosty...

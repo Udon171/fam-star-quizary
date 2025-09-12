@@ -1107,7 +1107,6 @@ footer {
 }
 
 /* Winner Box Styles */
-
 .winner-box {
     position: fixed;
     top: 50%;
@@ -1203,7 +1202,6 @@ footer {
 }
 
 /* Game Over Page Styles */
-
 body.game-over-bg, html {
     width: 100vw;
     height: 100vh;
@@ -1235,7 +1233,6 @@ body.game-over-bg, html {
 }
 
 /* Winner Box Styles */
-
 .play-again-btn,
 .start-btn {
     font-size: 1.3rem;
@@ -1280,7 +1277,6 @@ body.game-over-bg, html {
 }
 
 /* Name Input Modal Styles */
-
 #nameModal {
     position: fixed;
     z-index: 99999 !important;
