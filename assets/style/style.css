@@ -197,14 +197,14 @@ footer {
 /* Modal styles for How to Play */
 /* Modal styles for How to Play and all modals */
 .modal {
-    position: fixed;
-    z-index: 1000;
+    position: absolute;
+    z-index: 100;
     left: 0;
-    top: 0;
+    top: 50px;
     margin-top: 40px;
     width: 100vw;
     height: 100vh;
-    overflow: auto;
+    overflow: scroll;
     background: rgba(0,0,0,0.7);
     display: none;
     align-items: center;
@@ -235,8 +235,11 @@ footer {
     align-items: center;
     justify-content: center;
     min-height: 400px;
-    max-height: 80vh;
+    height: auto;
+    max-height: none;
     overflow-y: auto;
+    scroll-padding-bottom: 32px;
+    scroll-padding-top: 32px;
 }
 .modal-content h2 {
     text-align: center;
@@ -1320,7 +1323,7 @@ body.game-over-bg, html {
 #playerNameInput {
     margin-bottom: 32px;
 }
-/* Clean border for name modal, no animation or conic-gradient */
+/* Clean border for name modal */
 #nameModal .modal-content::before {
     content: "";
     position: absolute;
