@@ -201,6 +201,7 @@ footer {
     z-index: 1000;
     left: 0;
     top: 0;
+    margin-top: 40px;
     width: 100vw;
     height: 100vh;
     overflow: auto;
@@ -220,7 +221,8 @@ footer {
     border-radius: 18px;
     border: 2.5px solid #b97aff;
     box-shadow: 0 0 32px #b97aff, 0 0 8px #fff;
-    padding: 48px 32px 32px 32px;
+    padding: 48px 32px 72px 32px;
+    box-sizing: border-box;
     max-width: 600px;
     width: 95vw;
     position: relative;
@@ -233,6 +235,8 @@ footer {
     align-items: center;
     justify-content: center;
     min-height: 400px;
+    max-height: 80vh;
+    overflow-y: auto;
 }
 .modal-content h2 {
     text-align: center;
@@ -1281,6 +1285,7 @@ body.game-over-bg, html {
     top: 0;
     width: 100vw;
     height: 100vh;
+    
     overflow: auto;
     background: rgba(0,0,0,0.7) !important;
     display: none !important;
@@ -1312,6 +1317,9 @@ body.game-over-bg, html {
     justify-content: center;
     overflow: hidden;
 }
+#playerNameInput {
+    margin-bottom: 32px;
+}
 /* Clean border for name modal, no animation or conic-gradient */
 #nameModal .modal-content::before {
     content: "";
@@ -1325,7 +1333,7 @@ body.game-over-bg, html {
 }
 
 #startWithNameBtn {
-    margin-top: 0;
+    margin-top: 8px;
 }
 
 /* Responsive Design */
