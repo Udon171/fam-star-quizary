@@ -43,10 +43,17 @@
 
 Wireframes outline the initial design for the game interface, including player setup, question display, and round transitions. These were created using Microsoft Visio for clarity and structure.
 
+## Final Wireframe
+After many changes due to requirement restraints to optimise time on the project. A complete rlook at the wire frames for a more understood and finale product as illustrated:
+
+- **Final v2 Wireframe A**: [View V2 (pdf)](docs\FamStartQuizary-v2-wireframe.pdf)
+![Final v2 Wireframe A](docs\Final%20Wireframe%20v2%20A.PNG)
+![Final v2 Wireframe B](docs\Final%20Wireframe%20v2%20B.PNG)
+
 ## Design Choices
 The design aims to replicate a TV game show experience with vibrant visuals, intuitive navigation, and immersive effects:
 - **Layout**: Central question display with player buzzers and profile icons for clear visibility.
-- **Animations**: Curtain transitions, animated lights, and countdown timers to enhance immersion.
+- **Modal Pop Out**: Enter player name to enhance immersion and claim that score.
 - **Interactivity**: Simplified setup process and interactive buzzers for ease of use.
 - **Theme**: Bright, bold colours and game show-inspired elements to appeal to a wide audience, particularly younger players.
 
