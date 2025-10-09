@@ -47,8 +47,8 @@ Wireframes outline the initial design for the game interface, including player s
 After many changes due to requirement restraints to optimise time on the project. A complete rlook at the wire frames for a more understood and finale product as illustrated:
 
 - **Final v2 Wireframe A**: [View V2 (pdf)](docs\FamStartQuizary-v2-wireframe.pdf)
-![Final v2 Wireframe A](docs\Final%20Wireframe%20v2%20A.PNG)
-![Final v2 Wireframe B](docs\Final%20Wireframe%20v2%20B.PNG)
+  ![Final v2 Wireframe A](docs\Final%20Wireframe%20v2%20A.PNG)
+  ![Final v2 Wireframe B](docs\Final%20Wireframe%20v2%20B.PNG)
 
 ## Design Choices
 The design aims to replicate a TV game show experience with vibrant visuals, intuitive navigation, and immersive effects:
@@ -349,7 +349,7 @@ A: After getting the base project completed to a working stage for pre hand in. 
 
 ### B: Testing
 
-Manual Testing
+**Manual Testing**
 | Feature                        | Tested Date   | Pass | Tested Date   | Pass | Tested Date   | Pass | Tested Date   | Pass |
 |-------------------------------|--------------|------|--------------|------|--------------|------|--------------|------|
 | Index, settings & quiz pages   | 2025-10-09   | ✅   | 2025-05-09   | ✅   | 2025-03-09   | ✅   | 2025-18-08   | ✅   |
@@ -364,7 +364,7 @@ Manual Testing
 | API question loading           | 2025-10-09   | ✅   | 2025-05-09   | ✅   | 2025-03-09   | ✅   | 2025-18-08   |    |
 | 404.html auto homepage  | 2025-10-09   | ✅   | 2025-05-09   |    | 2025-03-09   |    | 2025-18-08   |    |
 
-### Automatic Testing
+**Automatic Testing**
 - W3C -  
    HTML -[HTML-FSQ](docs\w3c%20html%20validation.PNG)   https://validator.w3.org/nu/?doc=https%3A%2F%2Fudon171.github.io%2Ffam-star-quizary%2F  
    CSS error -[CSS-FSQ error](docs/w3c%20css%20validation%20error.PNG)   
@@ -378,7 +378,7 @@ Manual Testing
 - Second issue, the end page for getting a score was not displaying a total score +. I renamed file to winner.html and used !important in css this fixed those issues.  
 - Third issue, To make the score more competetive for playing the quiz I added a time bonus mode. Quicker anwsers get bigger scores. 
 - Fourth thing I realised the sick mode difficulty had no function as the api does not suppport sick mode. I created my specfic sick mode using hard questions from 3 catogarys Maths, Science & Technology with just 15sec to answer felt good to me and after checking the api I made my sick mode optional.  
-After all this problem solving it came to a solid run of commits but nothing changed on the pages website hhhhmmmm why 3 weeks old I said hhhmmm. I removed the pages entry to then re upload the pages entry this has corrected all issues (mainly a expired issue).  
+After all this problem solving it came to a solid run of commits but nothing changed on the pages website hhhhmmmm why 3 weeks old I said hhhmmm. I removed the pages entry to then re-upload the pages entry this has corrected all issues (mainly a expired issue).  
 
 ### C: Responsiveness & Accesablility
 - 600 or 768 for mobile? 768 pixels allowing certain higher amount of devices use the mobile layout. 
