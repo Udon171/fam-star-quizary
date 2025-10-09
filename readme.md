@@ -188,6 +188,10 @@ The project has changed so much this is more a feature check and change list rel
 - **Logo Update:** The main heading was replaced with a logo image for a cleaner visual presentation.
 - **Accessibility:** The interface remains accessible and responsive, but advanced multiplayer and customisation features are not present in this version.
 
+**Manual vs Automatic Testing**
+Manual is the type of testing to continualy be doing through the project as so issues may need fixing before continueing. Using tables to capture over time testing periods can show the development of manual testing.
+Automatic tests are reserved for the ennd of the project when you want the most accurate scrutany and have any hidden or unseen issues come to light. Attached images from industry standard website testing below.
+
 ### Manual Testing Results
 Tracking component progress through vigorus testing as I built this project after the core pages were created:
 | Feature                        | Tested Date   | Pass | Tested Date   | Pass | Tested Date   | Pass | Tested Date   | Pass |
@@ -218,7 +222,6 @@ Kept a custom record of specfic problems and solutions near the end of the proje
 
 
 ### Automated Testing Results
-
 **W3C Validation**
 - **HTML**:  
   - ![HTML Validation Screenshot](docs/w3c%20html%20validation.PNG)  
@@ -395,5 +398,7 @@ After all this problem solving it came to a solid run of commits but nothing cha
 - **Logic Ideas**: After making some changes and developmants through the project with the logic elements. I've come to further realise the time and questions are a good start but adding a (x) times element to the rounds that get a special multiplier if consecutive correct answers are achived. This would create the most fairest outcome with time based rounds as low (x) values for easy mode & the higher (x) values for hard mode. The skill of anwsering the questions should reward the user the most.
 - Creating the 4 player element with rounds leading to a head to head would best suite the use of Python and would really benfit from a server enabling remote use of mobile/tablets for multiplayer connections and participtaion.
 - **Added Content**: I realised i forgot to add the name entry of the player which was a key bit of the unique players experiance. Adding a pre pop up modal before going to settings resolved this with some CSS changes to balance the layout.
+
+Adjusted media @768p from auto to 40px on the logo to make all phones fit the logo except the iphone ce unfortunatly.
 
 Stay Frosty...

@@ -1338,7 +1338,7 @@ body.game-over-bg, html {
 /* Responsive Design */
 @media (max-width: 768px) {
     .logo-title {
-        margin-top: auto;
+        margin-top: 40px;
         max-width: 96vw;
         width: 96vw;
     }
