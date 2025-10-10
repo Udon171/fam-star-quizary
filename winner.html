@@ -33,10 +33,10 @@
         const player = localStorage.getItem('quiz_player_name') || localStorage.getItem('final_player') || 'Player';
         const bonus = parseInt(localStorage.getItem('bonus_time_total') || 0, 10);
         let total = parseInt(localStorage.getItem('final_total_score'), 10);
-        console.log('Loaded from storage:', {score, bonus, total});
+        // console.log('Loaded from storage:', {score, bonus, total});
         if (isNaN(total) || total <= score) {
             total = score + bonus;
-            console.log('Fallback total:', total);
+            // console.log('Fallback total:', total);
         }
         document.getElementById('winner-name').textContent = player;
         document.getElementById('winner-score').textContent = total + ' pts';

@@ -52,10 +52,10 @@ async function fetchQuestions() {
     } else {
         apiUrl = `https://opentdb.com/api.php?amount=${totalQuestions}&type=multiple${categoryId ? `&category=${categoryId}` : ''}${difficulty ? `&difficulty=${difficulty}` : ''}`;
     }
-    console.log('Quiz API URL:', apiUrl);
+    // console.log('Quiz API URL:', apiUrl);
     const response = await fetch(apiUrl);
     const data = await response.json();
-    console.log('Quiz API Response:', data);
+    // console.log('Quiz API Response:', data);
     if (!data.results || data.results.length === 0) {
         questionElement.textContent = 'No questions found for your selection. Please try a different category or difficulty.';
         answersElement.innerHTML = '';
@@ -66,7 +66,7 @@ async function fetchQuestions() {
 
 // Display the question and answers
 function displayQuestion(question) {
-    console.log('displayQuestion called with:', question);
+    // console.log('displayQuestion called with:', question);
     if (!question || !question.question) {
         questionElement.textContent = 'No questions available. Please try a different category or difficulty, or wait and try again.';
         answersElement.innerHTML = '';
@@ -126,7 +126,7 @@ function selectAnswer(event) {
 
 // Fetch and display a new question
 async function fetchAndDisplayQuestion() {
-    console.log('fetchAndDisplayQuestion called, questionCount:', questionCount, 'totalQuestions:', totalQuestions);
+    // console.log('fetchAndDisplayQuestion called, questionCount:', questionCount, 'totalQuestions:', totalQuestions);
     if (questionCount === totalQuestions) {
         endGame();
         return;
@@ -136,10 +136,10 @@ async function fetchAndDisplayQuestion() {
     do {
         if (questions.length === 0) {
             questions = await fetchQuestions();
-            console.log('Questions fetched:', questions);
+            // console.log('Questions fetched:', questions);
         }
         question = questions.shift();
-        console.log('Next question:', question);
+        // console.log('Next question:', question);
     } while (previousQuestions.includes(question));
 
     displayQuestion(question);
@@ -248,7 +248,7 @@ function endGame() {
     // If player has points, redirect to winner page
     if (score > 0) {
         const totalScore = score + bonusTimeTotal;
-        console.log('Score:', score, 'Bonus:', bonusTimeTotal, 'Total:', totalScore);
+        // console.log('Score:', score, 'Bonus:', bonusTimeTotal, 'Total:', totalScore);
         localStorage.setItem('final_score', score);
         localStorage.setItem('final_player', playerNameElement.textContent || 'Player');
         localStorage.setItem('bonus_time_total', bonusTimeTotal); // Save bonus time

@@ -1,7 +1,7 @@
 // index.js - handles modal and start button logic for index.html
 
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('index.js loaded');
+    // console.log('index.js loaded');
     // Modal logic
     const howToPlayBtn = document.getElementById('howToPlayBtn');
     const howToPlayModal = document.getElementById('howToPlayModal');
@@ -27,10 +27,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     startGameBtn.onclick = function(e) {
-        console.log('Start New Game button clicked');
+        // console.log('Start New Game button clicked');
         e.preventDefault();
         nameModal.classList.add('show');
-        console.log('Name modal should now be visible');
+        // console.log('Name modal should now be visible');
         playerNameInput.value = '';
         playerNameInput.focus();
     }

@@ -44,7 +44,7 @@
 Wireframes outline the initial design for the game interface, including player setup, question display, and round transitions. These were created using Microsoft Visio for clarity and structure.
 
 ## Final Wireframe
-After many changes due to requirement restraints to optimise time on the project. A complete rlook at the wire frames for a more understood and finale product as illustrated:
+After many changes due to requirement restraints to optimise time on the project. A complete re-look at the wireframes for a more understood and finale product as illustrated:
 
 - **Final v2 Wireframe A**: [View V2 (pdf)](docs\FamStartQuizary-v2-wireframe.pdf)
   ![Final v2 Wireframe A](docs\Final%20Wireframe%20v2%20A.PNG)
@@ -56,6 +56,7 @@ The design aims to replicate a TV game show experience with vibrant visuals, int
 - **Modal Pop Out**: Enter player name to enhance immersion and claim that score.
 - **Interactivity**: Simplified setup process and interactive buzzers for ease of use.
 - **Theme**: Bright, bold colours and game show-inspired elements to appeal to a wide audience, particularly younger players.
+- **video backgrounds**: Custom visual effect videos made in Notch to create a more viberant setting for the clean quiz elements
 
 ## Typography
 - **Primary Font**: *Roboto* (Google Fonts) for its clean, modern look and readability across devices.
@@ -93,7 +94,7 @@ Style A was selected for its energetic, TV show-inspired aesthetic, appealing to
 - **Banner**: Main promotional graphic for the game. 
 - **Poppers and Fireworks**: Animated GIFs for the victory celebration.
 - All images are optimised for web use, ensuring fast loading times without compromising quality.
-- **FInal Images**: None used for final product one logo image used and icons:
+- **Final Images**: None used for final product one logo image used and icons:
 
 ![Logo Webp](docs/famstarquizary-logo-only.webp)
 
@@ -155,6 +156,13 @@ These images demonstrate the user flow from starting, setup, gameplay and to the
 - **Notch**: For creating visual effects video files.
 - **OpenTDB API**: For sourcing trivia questions (e.g., https://opentdb.com/api_category.php).
 
+### videos
+- **visual-01**: Lava blob constantly changing with colours and lava lamp like movemoment.
+- **visual-02**: Particle rounds making trail lines and sqiggles.
+- **visual-03**: Blue and white mix of colour using swirling particle balls.
+- **visual-04**: Yellow & red mix of colour using swirling particle balls
+- **visual-05**: Made by mistake the attempt to create a visual of atoms ended up creating a distorted but bright visual.
+
 ## Testing
 
 ### Bugs Fixed
@@ -189,8 +197,8 @@ The project has changed so much this is more a feature check and change list rel
 - **Accessibility:** The interface remains accessible and responsive, but advanced multiplayer and customisation features are not present in this version.
 
 **Manual vs Automatic Testing**
-Manual is the type of testing to continualy be doing through the project as so issues may need fixing before continueing. Using tables to capture over time testing periods can show the development of manual testing.
-Automatic tests are reserved for the ennd of the project when you want the most accurate scrutany and have any hidden or unseen issues come to light. Attached images from industry standard website testing below.
+Manual testing is a process that should be conducted continually throughout the project lifecycle. This approach allows teams to identify and address issues promptly, ensuring they are resolved before proceeding further. Outsourcing manual testing to friends or colleagues can provide eye-opening insights, as a fresh pair of eyes often uncovers overlooked flaws that internal reviewers might miss. By using tables to log results over various testing periods, you can effectively track and demonstrate the evolution and progress of the project from manual testing efforts.
+In contrast, automated tests are typically reserved for the end of the project. At this stage, they provide the most rigorous and accurate scrutiny, helping to uncover any hidden or overlooked issues that may not have surfaced earlier. Below are attached images illustrating industry-standard website testing practices.
 
 ### Manual Testing Results
 Tracking component progress through vigorus testing as I built this project after the core pages were created:
