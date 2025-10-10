@@ -6,6 +6,28 @@
 
 ---
 
+## Table of Contents
+
+- [Description](#description)
+- [Website](#website)
+- [User Goals](#user-goals)
+- [User Stories](#user-stories)
+- [Website Goals & Objectives](#website-goals--objectives)
+- [Wireframes](#wireframes)
+- [Final Wireframe](#final-wireframe)
+- [Design Choices](#design-choices)
+- [Typography](#typography)
+- [Colour Scheme](#colour-scheme)
+- [Images](#images)
+- [Responsiveness](#responsiveness)
+- [Features](#features)
+- [Images of Website](#images-of-website)
+- [Technologies Used](#technologies-used)
+- [Testing](#testing)
+- [Deployment](#deployment)
+- [Credits](#credits)
+- [Project Diary](#project-diary)
+
 ## Description
 **Fam Star Quizary** is a web-based family trivia game designed to deliver a fun, competitive, and interactive game show experience. Players can set up their profiles, choose difficulty levels, and compete in multiplayer quiz rounds featuring a wide variety of questions sourced from the OpenTDB API. The app features immersive visuals, wobble effects, and animations to replicate the excitement of a TV game show, with a celebratory victory sequence for the winner. Its goal is to provide an engaging, accessible, and family-friendly quiz platform suitable for all ages.
 
@@ -157,11 +179,11 @@ These images demonstrate the user flow from starting, setup, gameplay and to the
 - **OpenTDB API**: For sourcing trivia questions (e.g., https://opentdb.com/api_category.php).
 
 ### videos
-- **visual-01**: Lava blob constantly changing with colours and lava lamp like movemoment.
-- **visual-02**: Particle rounds making trail lines and sqiggles.
-- **visual-03**: Blue and white mix of colour using swirling particle balls.
-- **visual-04**: Yellow & red mix of colour using swirling particle balls
-- **visual-05**: Made by mistake the attempt to create a visual of atoms ended up creating a distorted but bright visual.
+- **visual-01**: A constantly changing lava blob with shifting colors, mimicking the fluid movement of a lava lamp.
+- **visual-02**: Round particles creating trail lines and squiggles as they move.
+- **visual-03**: A mix of blue and white colors achieved through swirling particle balls.
+- **visual-04**: A mix of yellow and red colors achieved through swirling particle balls.
+- **visual-05**: Created by mistake, an attempt to visualize atoms resulted in a distorted yet bright visual effect.
 
 ## Testing
 
@@ -390,6 +412,11 @@ A: After getting the base project completed to a working stage for pre hand in. 
 - Third issue, To make the score more competetive for playing the quiz I added a time bonus mode. Quicker anwsers get bigger scores. 
 - Fourth thing I realised the sick mode difficulty had no function as the api does not suppport sick mode. I created my specfic sick mode using hard questions from 3 catogarys Maths, Science & Technology with just 15sec to answer felt good to me and after checking the api I made my sick mode optional.  
 After all this problem solving it came to a solid run of commits but nothing changed on the pages website hhhhmmmm why 3 weeks old I said hhhmmm. I removed the pages entry to then re-upload the pages entry this has corrected all issues (mainly a expired issue).  
+
+### Screenshots of Devices
+- **Mobile**:
+- **Tablet**:
+- **Desktop**:
 
 ### C: Responsiveness & Accesablility
 - 600 or 768 for mobile? 768 pixels allowing certain higher amount of devices use the mobile layout. 
