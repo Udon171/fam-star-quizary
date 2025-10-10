@@ -1403,9 +1403,6 @@ body.game-over-bg, html {
         margin-top: 28px;
         margin-bottom: 18px;
     }
-    .logo-title {
-        
-    }
 }
 
 /* Added to make the How to Play modal wider and less squashed on desktop, but still responsive for mobile */

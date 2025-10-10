@@ -218,7 +218,8 @@ The project has changed so much this is more a feature check and change list rel
 - **Logo Update:** The main heading was replaced with a logo image for a cleaner visual presentation.
 - **Accessibility:** The interface remains accessible and responsive, but advanced multiplayer and customisation features are not present in this version.
 
-**Manual vs Automatic Testing**
+### Manual vs Automatic Testing
+
 Manual testing is a process that should be conducted continually throughout the project lifecycle. This approach allows teams to identify and address issues promptly, ensuring they are resolved before proceeding further. Outsourcing manual testing to friends or colleagues can provide eye-opening insights, as a fresh pair of eyes often uncovers overlooked flaws that internal reviewers might miss. By using tables to log results over various testing periods, you can effectively track and demonstrate the evolution and progress of the project from manual testing efforts.
 In contrast, automated tests are typically reserved for the end of the project. At this stage, they provide the most rigorous and accurate scrutiny, helping to uncover any hidden or overlooked issues that may not have surfaced earlier. Below are attached images illustrating industry-standard website testing practices.
 
@@ -287,6 +288,19 @@ All automated tests confirm the site is well-structured, accessible, and perform
 - **Edge**: No issues.
 - **Brave**: No issues.
 - **Safari**: Planned for future testing with mobile support.
+
+### Screenshots of Devices
+- **Mobile**:  
+  ![Mobile Home](docs/FSQ-Mobile-home.PNG)  
+  ![Mobile Quiz](docs/FSQ-Mobile-quiz.PNG)
+
+- **Tablet**:  
+  ![Tablet Home](docs/FSQ-Tablet-home.PNG)  
+  ![Tablet Quiz](docs/FSQ-Tablet-quiz.PNG)
+
+- **Desktop**:  
+  ![Desktop Home](docs/FSQ-Desktop-home.PNG)  
+  ![Desktop Quiz](docs/FSQ-Desktop-quiz.PNG)
 
 ## Deployment
 
@@ -413,10 +427,6 @@ A: After getting the base project completed to a working stage for pre hand in. 
 - Fourth thing I realised the sick mode difficulty had no function as the api does not suppport sick mode. I created my specfic sick mode using hard questions from 3 catogarys Maths, Science & Technology with just 15sec to answer felt good to me and after checking the api I made my sick mode optional.  
 After all this problem solving it came to a solid run of commits but nothing changed on the pages website hhhhmmmm why 3 weeks old I said hhhmmm. I removed the pages entry to then re-upload the pages entry this has corrected all issues (mainly a expired issue).  
 
-### Screenshots of Devices
-- **Mobile**:
-- **Tablet**:
-- **Desktop**:
 
 ### C: Responsiveness & Accesablility
 - 600 or 768 for mobile? 768 pixels allowing certain higher amount of devices use the mobile layout. 
