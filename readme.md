@@ -290,17 +290,11 @@ All automated tests confirm the site is well-structured, accessible, and perform
 - **Safari**: Planned for future testing with mobile support.
 
 ### Screenshots of Devices
-- **Mobile**:  
-  ![Mobile Home](docs/FSQ-Mobile-home.PNG)  
-  ![Mobile Quiz](docs/FSQ-Mobile-quiz.PNG)
-
-- **Tablet**:  
-  ![Tablet Home](docs/FSQ-Tablet-home.PNG)  
-  ![Tablet Quiz](docs/FSQ-Tablet-quiz.PNG)
-
-- **Desktop**:  
-  ![Desktop Home](docs/FSQ-Desktop-home.PNG)  
-  ![Desktop Quiz](docs/FSQ-Desktop-quiz.PNG)
+| Device   | Home Screen                                                                 | Quiz Screen                                                                 |
+|----------|----------------------------------------------------------------------------|-----------------------------------------------------------------------------|
+| **Mobile** | ![Mobile Home](docs/FSQ-Mobile-home.PNG)<br><br>*Compact layout with large buttons and clear logo for easy thumb navigation. Optimized for vertical scrolling and quick access to game features.* | ![Mobile Quiz](docs/FSQ-Mobile-quiz.PNG)<br><br>*Single-column question display, touch-friendly answer buttons, and timer positioned for visibility. Designed for fast-paced play on smaller screens.* |
+| **Tablet** | ![Tablet Home](docs/FSQ-Tablet-home.PNG)<br><br>*Balanced layout with more space for instructions and visuals. Larger logo and navigation elements for comfortable tablet use.* | ![Tablet Quiz](docs/FSQ-Tablet-quiz.PNG)<br><br>*Wider question area and answer buttons, allowing for multi-touch input. Enhanced readability and smooth transitions between questions.* |
+| **Desktop** | ![Desktop Home](docs/FSQ-Desktop-home.PNG)<br><br>*Full-width layout with prominent logo, navigation, and feature highlights. Designed for mouse and keyboard interaction with clear separation of sections.* | ![Desktop Quiz](docs/FSQ-Desktop-quiz.PNG)<br><br>*Multi-column layout for questions and answers, larger timer display, and additional visual effects. Optimized for immersive gameplay on large screens.* |
 
 ## Deployment
 
@@ -444,6 +438,10 @@ After all this problem solving it came to a solid run of commits but nothing cha
 - Creating the 4 player element with rounds leading to a head to head would best suite the use of Python and would really benfit from a server enabling remote use of mobile/tablets for multiplayer connections and participtaion.
 - **Added Content**: I realised i forgot to add the name entry of the player which was a key bit of the unique players experiance. Adding a pre pop up modal before going to settings resolved this with some CSS changes to balance the layout.
 
+### Additional Changes
+
 Adjusted media @768p from auto to 40px on the logo to make all phones fit the logo except the iphone ce unfortunatly.
+
+How to Play - final solution, channging display:flex to block and removing the prevous attempt at adding margin-top. This correct the top of How to Play for all devices. 
 
 Stay Frosty...
